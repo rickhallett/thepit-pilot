@@ -43,7 +43,13 @@
     <div class="sloptics-term">
       <h3>clear slop</h3>
       <p>
-        Sloptic patterns below the visibility threshold. Resistant to casual expert review. Logic that follows from unstated premises. Evidence cited but mischaracterised. Confidence that correlates with fluency rather than accuracy. Clear slop passes through verification the way clear water passes through a net. It is the threat.
+        Sloptic patterns below the visibility threshold. Resistant to casual expert review. Clear slop passes through verification the way clear water passes through a net. It has a domain axis.
+      </p>
+      <p>
+        <strong>Prose clear slop:</strong> Logic that follows from unstated premises. Evidence cited but mischaracterised. Confidence that correlates with fluency rather than accuracy. The immune evasion mechanism is grammatical correctness — it sounds right, so the reader accepts it.
+      </p>
+      <p>
+        <strong>Analytical clear slop:</strong> Numbers that are mathematically correct but measure the wrong thing, trained on an undeclared demographic, produced by a monoculture with no independent verification. The immune evasion mechanism is numerical precision — it has data, so the reader trusts it. Harder to detect than prose clear slop because numbers feel more objective than words. They are not.
       </p>
     </div>
 
@@ -121,6 +127,15 @@
         A fresh-context evaluation that breaks consensus by establishing an independent baseline. Named for the Royal Navy practice: each incoming officer of the watch takes their own barometer reading and logs it independently, so gradual pressure drops are caught against an absolute reference rather than accepted as incremental changes from the previous watch.
       </p>
     </div>
+  </section>
+
+  <hr>
+
+  <section style="margin-bottom: 3rem;">
+    <h2 style="margin-top: 0;">calibration note</h2>
+    <p>
+      A <a href="https://github.com/rickhallett/thepit/tree/master/slopodar-ext">chrome extension</a> was built to run these detectors on any web page. Calibrating it against 46 pages of known-human and known-AI text revealed something the detectors themselves couldn't: the structural rhetoric patterns (epigram, isocolon, anadiplosis, antithesis) measure <em>writing quality</em>, not writing origin. Good human writers trigger them as much or more than AI. What actually discriminates is voice — contractions, first-person pronouns, questions, and the absence of formal transition words. The tool was renamed accordingly. It previously called itself an "LLM slop detector." It contained more slop than science.
+    </p>
   </section>
 
   <hr>
@@ -219,12 +234,25 @@
     </div>
 
     <div class="sloptics-term">
+      <h3>analytical clear slop <span class="sloptics-pos">n.</span></h3>
+      <p>
+        Clear slop in the domain of data and measurement. Numbers that are correct, constructs that are mislabelled, baselines that are undeclared demographics, analysis layers that share blind spots. The immune evasion mechanism: numerical precision. A finding presented with effect sizes and p-values inherits the reader's trust in statistics, regardless of whether the construct, the sample, or the analytical pipeline deserves that trust. Discovered when the calibration tool produced flattering results about the Captain's writing and the Captain asked: "How do I control for slop inside the analysis?" The question surfaced five confounds and three deeper bias layers, none of which had been flagged by the agent that produced them.
+      </p>
+    </div>
+
+    <div class="sloptics-term">
       <h3>sloppesque <span class="sloptics-pos">/slɒp.ˈɛsk/ adj.</span></h3>
       <p>
         Having the quality or cadence of slop without being definitively identifiable as LLM-generated. The uncanny valley of text. A passage is sloppesque when the slopodar fires but the reader cannot yet name why. The felt wrongness precedes the diagnosis. Sloppesque text may be LLM-generated, LLM-edited, or human-written under secondary contamination — the origin is ambiguous, which is precisely the problem. From <em>slop</em> + <em>-esque</em> (suffix denoting resemblance, from French, from Italian <em>-esco</em>).
       </p>
     </div>
   </footer>
+
+  <section style="margin-top: 2rem;">
+    <p style="color: var(--muted); font-size: 0.8rem;">
+      The slopodar is <a href="https://github.com/rickhallett/thepit/tree/master/slopodar-ext">available as a chrome extension</a> if you want to try it. At its current version I am not sure it is worth the Google developer fee. People who know enough about sample sizes, false positives, and calibration to use it properly probably don't need a half-baked chrome extension for support. People who don't know those things need a tool reliable enough that they don't need to understand why it's broken. It is not that tool yet.
+    </p>
+  </section>
 </article>
 <script>
 // === PHASE 1: paragraph-level detectors ===
