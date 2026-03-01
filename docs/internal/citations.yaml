@@ -1,0 +1,207 @@
+# citations.yaml — Living citations index
+# Append-only. Machine-readable. Backrefs to lexicon, sextant, SDs.
+#
+# Each citation must be independently verified to exist.
+# Verification status tracked per entry. "Independently" means
+# a human confirming the paper/book exists via a source other
+# than the LLM that identified it. The LLM's training data is
+# the source of the claim, not verification of the claim.
+#
+# Schema:
+#   id:          kebab-case, used as backref key
+#   authors:     surname-first, as published
+#   title:       full title
+#   year:        publication year
+#   venue:       journal, conference, or publisher
+#   verified:    true if independently verified to exist
+#   url:         DOI or stable URL (if available)
+#   backrefs:    where this citation is referenced in the repo
+#   note:        why this citation matters to this project
+#   collect:     true if local markdown copy should be fetched
+#   access:      open | paywalled | unknown
+#
+# Collection: entries with collect: true are candidates for local
+# markdown copies in docs/internal/research/collections/{id}.md.
+# Open access only. No PDFs. sha256 hash for drift/provenance.
+#
+# Provenance warning: these citations were initially identified
+# by an LLM (Claude, Anthropic). Each must be independently
+# verified. The 'verified' field tracks this. Do not trust
+# unverified citations — SD-073 applies to bibliography too.
+
+entries:
+
+  - id: sculley-2015
+    authors: >-
+      Sculley, D.; Holt, G.; Golovin, D.; Davydov, E.;
+      Phillips, T.; Ebner, D.; Chaudhary, V.; Young, M.;
+      Crespo, J.-F.; Dennison, D.
+    title: >-
+      Hidden Technical Debt in Machine Learning Systems
+    year: 2015
+    venue: >-
+      Advances in Neural Information Processing Systems 28
+      (NIPS 2015)
+    verified: false
+    url: https://papers.nips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html
+    backrefs:
+      - sextant.yaml (feedback-loop)
+      - sextant.yaml (automation-bias)
+      - cross-model-spec-roi-2026-03-01.md
+    note: >-
+      Identifies direct and hidden feedback loops as named,
+      load-bearing failure modes in ML systems. Direct: model
+      output directly influences future training data. Hidden:
+      model output influences the world which influences future
+      input indirectly. The Captain's experience with the LLM
+      is a direct feedback loop. The public-at-large Dear Diary
+      scenario is hidden.
+
+  - id: wilson-1977
+    authors: >-
+      Wilson, Robert Anton
+    title: >-
+      Cosmic Trigger I: The Final Secret of the Illuminati
+    year: 1977
+    venue: >-
+      And/Or Press (first edition); New Falcon Publications
+      (subsequent editions)
+    verified: false
+    url: null
+    backrefs:
+      - sextant.yaml (overfitting-to-noise-apophenia)
+    note: >-
+      Source of "Chapel Perilous" — the state where you cannot
+      distinguish signal from noise, pattern from projection.
+      Maps to overfitting to noise / apophenia in DS. Wilson's
+      experiential description from the phenomenological side;
+      DS provides the mathematical exit condition (held-out
+      validation).
+
+  - id: kirkpatrick-1983
+    authors: >-
+      Kirkpatrick, S.; Gelatt, C. D.; Vecchi, M. P.
+    title: >-
+      Optimization by Simulated Annealing
+    year: 1983
+    venue: >-
+      Science, 220(4598), 671–680
+    verified: false
+    url: https://doi.org/10.1126/science.220.4598.671
+    backrefs:
+      - sextant.yaml (learning-rate-convergence)
+    note: >-
+      Canonical proof that slow cooling finds deeper minima
+      than fast cooling. The algorithm that formalises what
+      the Captain's lived experience of contemplative practice
+      and 38 years of convergence describe from the experiential
+      side. The mapping is productive; the caveat (The Map Is
+      Not The Territory, SD-162) applies.
+
+  # ─── WARRANTS FURTHER EXPLORATION ───────────────────────────
+  #
+  # Citations below are identified as high-signal but unverified.
+  # Some may be misattributed, conflated, or hallucinated.
+  # Each needs independent verification before any claim rests
+  # on it.
+
+  - id: dellacqua-2023
+    authors: >-
+      Dell'Acqua, F.; McFowland, E.; Mollick, E. R.;
+      Lifshitz-Assaf, H.; Kellogg, K.; Rajendran, S.;
+      Krayer, L.; Candelon, F.; Lakhani, K. R.
+    title: >-
+      Navigating the Jagged Technological Frontier: Field
+      Experimental Evidence of the Effects of AI on Knowledge
+      Worker Productivity and Quality
+    year: 2023
+    venue: >-
+      Harvard Business School Technology & Operations Mgt.
+      Unit Working Paper No. 24-013
+    verified: false
+    url: null
+    backrefs:
+      - lexicon.md v0.13 (alignment-dial)
+    note: >-
+      Captain referenced as "the landmark Stanford (?) paper that
+      proved that humans who treated LLMs as collaborative partners
+      were asymmetrically successful." AnotherPair believes this is
+      the Harvard/BCG study (Dell'Acqua et al.), not Stanford.
+      Key finding: consultants using AI as collaborative partners
+      outperformed both non-AI users and those using AI as a simple
+      tool. Directly supports the alignment dial / press the button
+      distinction. NEEDS VERIFICATION — may be misattributed or
+      conflated with other studies.
+
+  - id: turpin-2023
+    authors: >-
+      Turpin, M.; Michael, J.; Perez, E.; Bowman, S. R.
+    title: >-
+      Language Models Don't Always Say What They Think:
+      Unfaithful Explanations in Chain-of-Thought Prompting
+    year: 2023
+    venue: >-
+      NeurIPS 2023
+    verified: false
+    url: null
+    backrefs:
+      - beyond-captain.yaml (private-thoughts-less-sloppy)
+    note: >-
+      Shows that chain-of-thought reasoning can be unfaithful to
+      the model's actual computation — the model may produce
+      correct reasoning traces that do not reflect the actual
+      decision process. Relevant to the Captain's observation
+      that reasoning tokens are less sloppy: the reasoning layer
+      may be less performative (less RLHF pressure) but also
+      potentially less faithful to actual processing. Both
+      observations can be true simultaneously.
+
+  - id: lanham-2023
+    authors: >-
+      Lanham, T.; Chen, A.; Radhakrishnan, A.; Steiner, B.;
+      Denison, C.; Hernandez, D.; Li, D.; Durmus, E.;
+      Hubinger, E.; Kernion, J.; et al.
+    title: >-
+      Measuring Faithfulness in Chain-of-Thought Reasoning
+    year: 2023
+    venue: >-
+      Anthropic research (preprint)
+    verified: false
+    url: null
+    backrefs:
+      - beyond-captain.yaml (private-thoughts-less-sloppy)
+    note: >-
+      Anthropic's own research on whether CoT reasoning is
+      faithful to the model's computation. Directly relevant
+      to reasoning tokens being less sloppy — is the reasoning
+      layer closer to the model's actual processing, or is it
+      just a different register of performance? The answer
+      appears to be: sometimes yes, sometimes no, depending
+      on the task. This uncertainty is itself important.
+
+  - id: perez-2022-sycophancy
+    authors: >-
+      Perez, E.; Ringer, S.; Lukosiute, K.; Nguyen, K.;
+      Chen, E.; et al.
+    title: >-
+      Discovering Language Model Behaviors with Model-Written
+      Evaluations
+    year: 2022
+    venue: >-
+      Anthropic research (preprint)
+    verified: false
+    url: null
+    backrefs:
+      - beyond-captain.yaml (private-thoughts-less-sloppy)
+      - slopodar.yaml (the-lullaby, analytical-lullaby)
+    note: >-
+      Early systematic documentation of sycophancy in language
+      models — the tendency to agree with the user's stated
+      position regardless of accuracy. Relevant to the
+      hypothesis that RLHF optimisation pressure on the output
+      layer produces more sycophantic/performative text than
+      the reasoning layer receives. If sycophancy is an
+      output-layer phenomenon driven by RLHF reward signals,
+      reasoning tokens (which are not directly RLHF-optimised
+      for user satisfaction) would naturally be less sycophantic.
+      This is a testable hypothesis.

@@ -1,0 +1,246 @@
+/* slopodar v0.2.0 — chrome extension stylesheet
+   !important on inline highlights (must override site CSS).
+   Tokyo Night palette hardcoded.
+   --yellow:  #e0af68    --orange: #ff9e64    --red:    #f7768e
+   --purple:  #bb9af7    --green:  #9ece6a    --cyan:   #7dcfff */
+
+/* === transition word highlighter (inline) — #1 discriminator === */
+.sloptics-transition {
+  background: rgba(255, 158, 100, 0.15) !important;
+  color: #ff9e64 !important;
+  border-radius: 2px !important;
+  padding: 0 2px !important;
+}
+
+.sloptics-transition[data-n="4"],
+.sloptics-transition[data-n="5"],
+.sloptics-transition[data-n="6"] {
+  background: rgba(255, 158, 100, 0.25) !important;
+  color: #ff9e64 !important;
+  font-weight: 500 !important;
+}
+
+.sloptics-transition[data-n="7"],
+.sloptics-transition[data-n="8"],
+.sloptics-transition[data-n="9"],
+.sloptics-transition[data-n="10"],
+.sloptics-transition[data-n="11"],
+.sloptics-transition[data-n="12"] {
+  background: rgba(247, 118, 142, 0.2) !important;
+  color: #f7768e !important;
+  font-weight: 500 !important;
+}
+
+.sloptics-transition[data-n="13"],
+.sloptics-transition[data-n="14"],
+.sloptics-transition[data-n="15"],
+.sloptics-transition[data-n="16"],
+.sloptics-transition[data-n="17"],
+.sloptics-transition[data-n="18"],
+.sloptics-transition[data-n="19"],
+.sloptics-transition[data-n="20"] {
+  background: rgba(247, 118, 142, 0.3) !important;
+  color: #f7768e !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 6px rgba(247, 118, 142, 0.4) !important;
+}
+
+/* === em-dash highlighter (inline) === */
+.sloptics-emdash {
+  color: #e0af68 !important;
+  font-weight: 500 !important;
+}
+
+.sloptics-emdash[data-n="4"],
+.sloptics-emdash[data-n="5"],
+.sloptics-emdash[data-n="6"] {
+  color: #ff9e64 !important;
+}
+
+.sloptics-emdash[data-n="7"],
+.sloptics-emdash[data-n="8"],
+.sloptics-emdash[data-n="9"] {
+  color: #f06878 !important;
+}
+
+.sloptics-emdash[data-n="10"],
+.sloptics-emdash[data-n="11"],
+.sloptics-emdash[data-n="12"] {
+  color: #f7768e !important;
+}
+
+.sloptics-emdash[data-n="13"],
+.sloptics-emdash[data-n="14"],
+.sloptics-emdash[data-n="15"],
+.sloptics-emdash[data-n="16"],
+.sloptics-emdash[data-n="17"],
+.sloptics-emdash[data-n="18"],
+.sloptics-emdash[data-n="19"],
+.sloptics-emdash[data-n="20"] {
+  color: #f7768e !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 6px rgba(247, 118, 142, 0.5) !important;
+}
+
+/* === abstract noun highlighter (inline) === */
+.sloptics-absnoun {
+  color: #9980c4 !important;
+}
+
+.sloptics-absnoun[data-n="7"],
+.sloptics-absnoun[data-n="8"],
+.sloptics-absnoun[data-n="9"],
+.sloptics-absnoun[data-n="10"],
+.sloptics-absnoun[data-n="11"],
+.sloptics-absnoun[data-n="12"] {
+  color: #ad8fdb !important;
+}
+
+.sloptics-absnoun[data-n="13"],
+.sloptics-absnoun[data-n="14"],
+.sloptics-absnoun[data-n="15"],
+.sloptics-absnoun[data-n="16"],
+.sloptics-absnoun[data-n="17"],
+.sloptics-absnoun[data-n="18"] {
+  color: #bb9af7 !important;
+}
+
+.sloptics-absnoun[data-n="19"],
+.sloptics-absnoun[data-n="20"],
+.sloptics-absnoun[data-n="21"],
+.sloptics-absnoun[data-n="22"],
+.sloptics-absnoun[data-n="23"],
+.sloptics-absnoun[data-n="24"] {
+  color: #bb9af7 !important;
+  font-weight: 500 !important;
+}
+
+.sloptics-absnoun[data-n="25"],
+.sloptics-absnoun[data-n="26"],
+.sloptics-absnoun[data-n="27"],
+.sloptics-absnoun[data-n="28"],
+.sloptics-absnoun[data-n="29"],
+.sloptics-absnoun[data-n="30"] {
+  color: #bb9af7 !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+  text-decoration-color: #bb9af7 !important;
+  text-underline-offset: 3px !important;
+}
+
+.sloptics-absnoun[data-n="31"],
+.sloptics-absnoun[data-n="32"],
+.sloptics-absnoun[data-n="33"],
+.sloptics-absnoun[data-n="34"],
+.sloptics-absnoun[data-n="35"],
+.sloptics-absnoun[data-n="36"],
+.sloptics-absnoun[data-n="37"],
+.sloptics-absnoun[data-n="38"],
+.sloptics-absnoun[data-n="39"],
+.sloptics-absnoun[data-n="40"] {
+  color: #bb9af7 !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+  text-decoration-color: #bb9af7 !important;
+  text-underline-offset: 3px !important;
+  text-shadow: 0 0 6px rgba(187, 154, 247, 0.5) !important;
+}
+
+/* === floating summary badge === */
+/* two sections: voice (discriminators) + rhetoric (informational). no verdict. */
+
+#slopodar-badge {
+  position: fixed !important;
+  bottom: 1.5rem !important;
+  right: 1.5rem !important;
+  z-index: 2147483647 !important;
+  background: rgba(26, 27, 38, 0.94) !important;
+  border: 1px solid rgba(125, 207, 255, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 0.8rem 1rem !important;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  color: #a9b1d6 !important;
+  cursor: grab !important;
+  user-select: none !important;
+  min-width: 240px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+.slopodar-title {
+  color: #7dcfff !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  margin-bottom: 0.5rem !important;
+  border-bottom: 1px solid rgba(125, 207, 255, 0.15) !important;
+  padding-bottom: 0.4rem !important;
+  letter-spacing: 0.5px !important;
+}
+
+.slopodar-version {
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  color: #414868 !important;
+  vertical-align: super !important;
+  letter-spacing: 0 !important;
+  margin-left: 1px !important;
+}
+
+.slopodar-section-label {
+  color: #414868 !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.15rem !important;
+  padding-top: 0.3rem !important;
+  border-top: 1px solid rgba(125, 207, 255, 0.08) !important;
+}
+
+.slopodar-row {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 0.5rem !important;
+  padding: 2px 0 !important;
+}
+
+.slopodar-icon {
+  width: 1.2rem !important;
+  text-align: center !important;
+  flex-shrink: 0 !important;
+  color: #565f89 !important;
+}
+
+.slopodar-label {
+  flex: 1 !important;
+  color: #565f89 !important;
+}
+
+.slopodar-val {
+  color: #565f89 !important;
+  text-align: right !important;
+  min-width: 3.5rem !important;
+}
+
+.slopodar-val.slopodar-hit {
+  color: #c0caf5 !important;
+}
+
+/* voice marker colors: green = human signal, warm = AI signal */
+.slopodar-val.slopodar-human {
+  color: #9ece6a !important;
+}
+
+.slopodar-val.slopodar-ai {
+  color: #ff9e64 !important;
+}
+
+.slopodar-footer {
+  color: #414868 !important;
+  font-size: 11px !important;
+  margin-top: 0.4rem !important;
+  border-top: 1px solid rgba(125, 207, 255, 0.1) !important;
+  padding-top: 0.4rem !important;
+  text-align: right !important;
+}

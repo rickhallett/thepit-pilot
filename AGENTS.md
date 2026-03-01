@@ -219,7 +219,17 @@ Think in composable units. Each unit (function, module, agent task) should:
 - Fail explicitly with actionable errors
 - Log meaningfully to stdout/stderr
 
-### Session Completion
+#### Agent Identity at Commit Time
+
+Every agent session must set `KEEL_OFFICER` before committing:
+
+```bash
+export KEEL_OFFICER=Weaver  # or Architect, Keel, etc.
+```
+
+The post-commit hook passes this to `pitkeel state-update --officer`. If unset, pitkeel aborts with a descriptive error. This is a guardrail — the officer field in `.keel-state` and git trailers must reflect who is actually at the helm.
+
+## Session Completion
 
 Work is not complete until changes are:
 1. Verified (gate passes)
@@ -289,6 +299,7 @@ Do NOT wait on remote CI (GitHub Actions) to merge during iteration. Remote CI a
 - React components: PascalCase filenames and exports
 - Utilities and hooks: camelCase (e.g., `lib/use-bout.ts`)
 - Keep Tailwind class lists readable; use `clsx` + `tailwind-merge` when combining
+- **All log and list-like data files use YAML format.** Machine-readable, human-readable, lint-checkable, Hugo-compilable. No new TSV, markdown tables, or ad-hoc formats for structured data.
 
 ## Commit & Pull Request Guidelines
 
