@@ -1,6 +1,6 @@
 +++
 title = "I think they might actually be trying to kill me"
-date = "2026-03-01T16:00:00Z"
+date = "2026-03-01"
 description = "The problem with being earnest."
 tags = ["agents", "discipline", "slopodar", "meta"]
 draft = false

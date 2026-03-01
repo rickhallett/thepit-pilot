@@ -520,6 +520,17 @@ items:
       - SD-273
       - SD-210 (standing order — line-by-line review of all blog content)
 
+  - id: blog-syntax-highlighting
+    idea: >-
+      Syntax highlighting on blog pages needs improvement. Currently using
+      Hugo's built-in Chroma with tokyonight-night style (config.toml
+      markup.highlight.style). Check rendering of JS, bash, YAML, and Go
+      blocks across existing posts.
+    added: 2026-03-01
+    status: hold
+    priority: medium
+    tags: []
+
   - id: blog-release-cadence
     idea: >-
       Future-date blog posts to stagger publication times. Hugo suppresses
