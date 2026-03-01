@@ -432,6 +432,7 @@ items:
       - hud-context-pressure (observability class)
       - agent-boot-audit (boot sequence scope)
       - ktok-reduction-anomaly (context pressure patterns — 105ktok was harness render cycle ghost, dropped to 32ktok after one response)
+      - ktok-reduction-anomaly-2 (2026-03-01, ~80%→~70% during Phase 4 session. Two Maturin subagent dispatches + large file reads preceded the drop. Second sighting of same shape.)
       - SD-275 (execution)
 
   - id: keel-state-schema-contract
