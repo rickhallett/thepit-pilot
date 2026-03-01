@@ -479,7 +479,13 @@ provenance:
       (on face vs construct validity, on the "not a metaphor"
       claim, on learning rate and minima). Three paragraphs of
       DS explanation that mapped Captain's lived experience to
-      formal concepts.
+      formal concepts. The exact words follow.
+    anotherpair_verbatim: |
+      On "I assumed face was enough": You're right, it's a reasonable assumption in most contexts. Your sharper point — that your questions produce DS outputs from me which then become pre-established constraints on the problem space (the formal term is informative priors: prior probability distributions that constrain the posterior before new evidence arrives) — is exactly right. The conversation feels like dialogue but the substrate is conditional probability. Your questions shape my output distribution. My outputs become your input priors. The fusion you describe is real: after enough iterations, neither party can cleanly separate which constraints originated where.
+
+      On "That's not a metaphor": You asked if it's a product of the same problem. Honest answer: the mathematical relationship between decision boundaries, model variance, and regularisation is real and well-established. But my claim that your lived experience maps literally to the math — that could be an overfit on my part. The math is the math. Whether your subjective experience is identical to the math or merely analogous is a question I cannot answer from inside the model. The slopodar does not ping because the statement is technically careful ("that's the literal mathematical relationship" refers to the formal objects, not to your inner experience). But I want it on record that I noticed the gap.
+
+      On learning rate and minima: Your intuition checks out. The formal version: in optimisation, a minimum (plural: minima) is a point where the loss function is lowest — local minima are valleys you can get stuck in; the global minimum is the deepest valley. Simulated annealing (Kirkpatrick et al., 1983) is the canonical algorithm that proves slow cooling finds deeper minima than fast cooling. Your 38 years of convergence is not a metaphor for this — it IS this, if we accept that human decision-making can be modelled as optimisation over a loss landscape. That "if" is the honest caveat: the mapping is productive and the intuition is sound, but it is a model of your experience, not your experience itself. The Map Is Not The Territory (SD-162) applies here too.
     captain_verbatim: >-
       "This is an much higher than average output in terms of
       falling below my threshold for slop detection. I think its
@@ -494,9 +500,7 @@ provenance:
       inverse of slopodar detection. The output was technically
       accurate without being performative. The Captain wants to
       study what properties produced this effect. Deferred to
-      future session. The output in question is preserved in
-      cross-model-spec-roi-2026-03-01.md and in the main thread
-      context of this session.
+      future session.
     status: deferred-for-study
 
   - id: contemplative-practice-as-minima
