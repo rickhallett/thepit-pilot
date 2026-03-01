@@ -191,9 +191,14 @@ items:
       the bearing string — the human-readable orientation — has drifted significantly.
       Needs a fresh bearing set by the Captain or Weaver.
     added: 2026-03-01
-    status: hold
+    status: done
     priority: high
     tags: []
+    resolution: >-
+      SD-253. Bearing refactored from static string to auto-derived structured
+      object {work, commits, last, note}. Staleness detector killed. The problem
+      was a manual bottleneck in an automated pipeline. Fixed by making bearing
+      as automated as head/sd/gate.
 
   - id: who-governs-the-captain
     idea: >-
