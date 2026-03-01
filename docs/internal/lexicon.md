@@ -1,4 +1,4 @@
-# The Lexicon — v0.13
+# The Lexicon — v0.14
 
 Back-reference: SD-120 (naval metaphor as scaffold), SD-121 (loose weave), SD-122 (taxonomy), SD-123 (this file)
 Status: APPROVED by Captain. Read-only by convention. Edits bump version number.
@@ -111,6 +111,7 @@ last_known:
 | **The Round Table** | Structured multi-agent assessment. Convened formally, reports filed to disk. | RT L1–L5. A specific operation dispatched below decks. |
 | **Main Thread** | The command channel. Captain↔Weaver direct. Protected from context compaction (SD-095). | Not a space — the communication line itself. |
 | **Dispatched** | Sent below decks for execution. Off the Main Thread. | "Dispatched Architect for H8 infrastructure." |
+| **Clear the Decks** | Force compaction of the context window. Captain's order when context pressure is high and all durable writes are confirmed. Equivalent to `compaction --force-push --admin`. Everything not on file is lost. Everything on file survives. The order confirms: all decisions recorded, all code committed, all holding-deck items written. | "Clear the decks." / Pre-compaction checklist: SDs on file? Holding deck current? Uncommitted work? |
 
 ### The Recursive Act
 
@@ -154,6 +155,7 @@ last_known:
 | v0.11 | 2026-02-27 | Three terms added. "Bump the slopodar" / "slopodar upgrade" / "moreslop" (Communication & Record). "Extra rations" — Captain's commendation, logged to agent's log.md (Communication & Record). "Knows the line" — agent attunement to this vessel's particulars (Integrity & Verification). | SD-209 |
 | v0.12 | 2026-03-01 | **The Sextant** — separate file for Captain's cognitive calibration instruments (`docs/internal/sextant.yaml`). 11 entries mapping Captain's lived experience to DS/ML/statistics concepts. Separated from operational lexicon: naval terms govern the ship, sextant terms govern the navigator. Supporting infrastructure: `citations.yaml` (living citations index), `category-one-index.yaml` (named Category One risks). New Cat One risk: Overfitting Through Repeated Exposure. Format: YAML (machine-readable first, transformation-ready). "Bugs" added (Communication & Record). Lexicon format standardisation deferred to holding deck. | SD-252 |
 | v0.13 | 2026-03-01 | **Alignment Dial** and **Press the Button** added to Communication & Record. Alignment dial: practices that measurably improve intent→interpretation alignment (muster is the first named dial). Press the button: human→LLM antipattern, treating the model as a vending machine, atrophying critical thinking. Complementary pair — one names what works, the other names what doesn't. | SD-252 |
+| v0.14 | 2026-03-01 | **Clear the Decks** added to Spaces & Registers. Force compaction order — confirms all durable writes complete before context window reset. | SD-267 |
 
 ---
 
