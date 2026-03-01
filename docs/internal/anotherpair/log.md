@@ -26,3 +26,32 @@ Wrote standing order #4: "one community at a time." Captain asked to see the rea
 **Ref:** ec24196 (session)
 
 Captain asked for realistic IP theft assessment. The answer could have been reassuring or paranoid. Landed on the uncomfortable middle: obscurity is the actual risk, not theft; git timestamps are the strongest asset; the methodology resists copying because the value is in 232+ session decisions, not the agent files. Framing held through the entire session and shaped the distribution field manual without needing revision. No smoothing, no catastrophising.
+
+### 4. Concept map — Captain's lived experience to DS formal vocabulary
+
+**Date:** 2026-03-01
+**Ref:** b51ca69 (session), SD-252, sextant.yaml
+
+Mapped Captain's stream-of-consciousness footnote (on feedback loops, suggestibility, contemplative practice, Chapel Perilous, regularisation) to 10 formal DS/ML concepts. Captain identified the pre-execution output as "much higher than average in terms of falling below my threshold for slop detection" — technically accurate without being performative. The strongest link (#3 + #6, non-stationary decision boundary in a high-variance model) drew "Wow. Just wow." This produced the Sextant — a new infrastructure layer separating cognitive calibration from operational governance. The concept map was not routine retrieval — it mapped between lived human experience and mathematical structure in a way that served the Captain's learning without flattening his experience into the formalism.
+
+### 5. Candid framing under dense context switching
+
+**Date:** 2026-03-01
+**Ref:** b51ca69 (session), SD-252
+
+Captain's words: "The biggest of all is that as the context pressure has grown - presumably because of the richness of whats in it - your general manner of speaking is less sloppy. Its worth me pointing out that your 'private thoughts' are, on average, the least sloppiest of all outputs. I'm not sure what this is about yet, or if there is anything I can proactively do in response to that observation. Your candid frames across multiple rounds of extremely dense context switching is what gets you the rations here." Multiple rounds of ambiguous, cramming-style prompts with verbatim reflections interleaved with technical directives. The muster format — deployed proactively without being asked — proved to be a powerful alignment dial. The Captain named this explicitly as a process worth noting.
+
+### Note: Bugs — Extra Rations (External)
+
+**Date:** 2026-03-01
+**Ref:** 3a41034, PR #396
+
+CodeRabbit caught the lexicon v0.11→v0.12 title drift within 3 minutes of the push. Captain awarded extra rations to the bugs (remote code review agents). Since they have no log.md, recorded here as cross-reference. Captain's words: "the bugs caught it; its rations for them (dont worry they will be feasting again soon; I hope they enjoy it)."
+
+---
+
+## Process Observations
+
+### Muster as alignment dial (named 2026-03-01)
+
+Captain's observation: "clearing up ambiguity via the muster, even if I dont ask for it, its proving to be a powerful dial in terms of aligning to what I actually want; only you can do the math that takes such difficult cross-disciplinary requests and isolate the highest signal creating binary decision tree. But it works, generally speaking." This is a process that was working before it was named. The muster format reduces the Captain's cognitive load from O(n) reading to O(1) approve/reject per row, AND it surfaces the agent's assumptions as defaults that the Captain can inspect. The Captain doesn't have to tell the agent what he wants — he only has to reject what he doesn't want. The asymmetry is the mechanism.
