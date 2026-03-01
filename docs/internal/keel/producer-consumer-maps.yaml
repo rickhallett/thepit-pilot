@@ -1,0 +1,144 @@
+# producer-consumer-maps.yaml — Format conversion risk assessment
+#
+# Provenance: Keel session 2026-03-01, commit 90cb1a4
+# Context: Captain ordered YAML as universal format for all log/list data.
+#          These maps document the producer-consumer relationships for the
+#          two highest-value conversion targets before any conversion begins.
+#          The bearing-producer-consumer-drift error (keel/slop.yaml) proved
+#          that schema changes without consumer mapping break silently.
+#
+# This file exists because we learned the hard way: map the consumers
+# before you change the producer.
+
+files:
+
+  - id: session-decisions-md
+    path: docs/internal/session-decisions.md
+    format: markdown-table
+    writable: true
+    rows: ~250
+    append_only: true
+
+    producers:
+      - who: Any agent via Main Thread
+        action: Append markdown table row
+        format: "| SD-NNN | [label] description | author | status |"
+
+    programmatic_consumers:
+      - id: pitkeel-findLastSD
+        file: pitkeel/main.go
+        lines: 615-633
+        parser: >-
+          Regex on "| SD-" prefix. Extracts last SD-NNN from table rows.
+          Iterates all lines, keeps last match.
+        writes_to: .keel-state ["sd"] field
+        rewrite_required: true
+        rewrite_effort: low
+        note: >-
+          Simple parser. YAML equivalent: read entries[-1].id.
+          Would become simpler, not harder.
+
+      - id: hud-py-field-sd
+        file: scripts/hud.py
+        lines: 115-121
+        parser: >-
+          Python regex r"^\|\s*SD-(\d+)\s*\|(.+)". Extracts SD number
+          and [label] from table cells. Sorts descending, returns top 3.
+        writes_to: Terminal HUD SD line
+        rewrite_required: true
+        rewrite_effort: low
+        note: >-
+          Clean regex. YAML equivalent: iterate entries, sort by id desc,
+          take [:3]. Would become simpler.
+
+      - id: hugo-decisions-json
+        file: sites/oceanheart/data/decisions.json
+        lines: all (245 entries)
+        parser: >-
+          NOT auto-parsed. Manually synced from .md to .json.
+          Hugo reads .Site.Data.decisions from this JSON file.
+        writes_to: Hugo site decisions pages (list.html, single.html)
+        rewrite_required: false
+        note: >-
+          This file could be ELIMINATED if session-decisions becomes YAML.
+          Hugo reads YAML natively from data/. The manual sync step
+          (markdown → JSON) is itself a drift risk — 245 entries vs ~250 SDs
+          suggests 5 are already missing.
+
+    reference_consumers:
+      - AGENTS.md (dead reckoning trigger, canonical location table)
+      - dead-reckoning.md (recovery sequence step 2)
+      - weave-quick-ref.md ("if not there, ask")
+      - maturin.md ("decision trail, Weaver owns")
+      - boot-sequence*.md (recovery diagrams)
+      - compaction.log (recovery notes)
+      - ~15 archive/doc files (backrefs as "SD-NNN")
+
+    conversion_risk: medium
+    conversion_effort: medium
+    conversion_payoff: high
+    risk_summary: >-
+      Two regex parsers (pitkeel, hud.py) must be rewritten and tested
+      against actual behavior. decisions.json could be eliminated (Hugo
+      reads YAML natively). The parsers are simple — rewrite effort is low
+      per parser, but the producer-consumer-drift error (keel/slop.yaml)
+      proves that "simple rewrite" without integration testing is exactly
+      where phantom greens live. Test the consumers, not the compilation.
+
+  - id: lexicon-md
+    path: docs/internal/lexicon.md
+    format: markdown (tables + prose + YAML code block)
+    writable: false (444)
+    version: v0.13
+
+    producers:
+      - who: Captain (selections, term definitions) + Weaver (organisation, version bumps)
+        action: "chmod 644 → edit → bump version → update history table → chmod 444"
+        format: Markdown tables with Term | Definition | Use columns
+
+    programmatic_consumers: []
+    # Zero. No code parses this file. This is the key difference
+    # from session-decisions.md.
+
+    reference_consumers:
+      - AGENTS.md (SO-PERM-002 — "all hands must read the lexicon")
+      - Every agent file (boot context)
+      - sextant.yaml (backrefs as "lexicon.md v0.13")
+      - citations.yaml (backrefs)
+      - category-one-index.yaml (backrefs)
+      - beyond-captain.yaml (backrefs)
+      - holding-deck.yaml (lexicon-format-standardisation item)
+      - ~10 doc files (backrefs)
+
+    conversion_risk: low
+    conversion_effort: medium
+    conversion_payoff: high
+    risk_summary: >-
+      Zero programmatic consumers. No code breaks. Only backref strings
+      need updating (lexicon.md → lexicon.yaml). Hugo could compile it
+      directly from data/ if YAML. Agent boot reads become structured
+      (query terms by key vs scanning markdown tables). The conversion
+      is safe. The effort is in preserving the rich structure: YAML HUD
+      spec (already YAML inside a markdown code block), term tables with
+      three columns, version history table, prose sections.
+
+  # ─── COMPARISON ──────────────────────────────────────────────
+
+comparison:
+  session_decisions:
+    programmatic_consumers: 3
+    parsers_to_rewrite: 2
+    files_eliminable: 1 (decisions.json)
+    conversion_risk: medium
+    recommendation: >-
+      Convert, but rewrite and test parsers FIRST. The pitkeel and hud.py
+      parsers are the gate — if they work against the new format, the
+      conversion is safe. Write behavioral tests before converting.
+  lexicon:
+    programmatic_consumers: 0
+    parsers_to_rewrite: 0
+    files_eliminable: 0
+    conversion_risk: low
+    recommendation: >-
+      Clean win. Convert first. No code breaks. Backref string updates
+      are mechanical. Already in holding-deck (lexicon-format-standardisation).
