@@ -33,7 +33,15 @@ import { POST } from '@/app/api/agents/route';
 
 describe('POST /api/agents (clone flow)', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish DB mock chain (wiped by resetAllMocks)
+    mockValuesCall.mockResolvedValue(undefined);
+    mockInsert.mockReturnValue({ values: mockValuesCall });
+    mockUpdate.mockReturnValue({
+      set: vi.fn().mockReturnValue({ where: vi.fn().mockResolvedValue(undefined) }),
+    });
+
     authMock.mockResolvedValue({ userId: null });
   });
 

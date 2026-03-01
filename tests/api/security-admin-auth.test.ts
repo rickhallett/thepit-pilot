@@ -65,7 +65,7 @@ vi.mock('@/lib/form-utils', () => ({
 }));
 
 beforeEach(() => {
-  vi.clearAllMocks();
+  vi.resetAllMocks();
 });
 
 describe('grantTestCredits admin authorization', () => {

@@ -12,7 +12,7 @@ import { POST } from '@/app/api/agents/route';
 
 describe('agents api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     // Default: unauthenticated
     authMock.mockResolvedValue({ userId: null });
   });

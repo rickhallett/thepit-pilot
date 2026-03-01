@@ -218,7 +218,7 @@ const setupStreamMocks = () => {
 
 describe('run-bout arena mode', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: 'user-1' });
     // By default, getPresetById returns undefined for 'arena' — the route
     // then falls through to the DB lookup path.

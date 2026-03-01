@@ -171,7 +171,15 @@ const setupUpdate = () => {
 // ---------------------------------------------------------------------------
 describe('POST /api/credits/webhook', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish mock implementations wiped by resetAllMocks
+    mockApplyCreditDelta.mockResolvedValue(undefined);
+    mockEnsureCreditAccount.mockResolvedValue(undefined);
+    mockHeaders.fn.mockResolvedValue({
+      get: (name: string) => mockHeaders.map.get(name) ?? null,
+    });
+
     mockHeaders.map.clear();
     setWebhookSecret('whsec_test_secret');
     setSignatureHeader('sig_valid');

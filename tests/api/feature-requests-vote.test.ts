@@ -76,7 +76,7 @@ import { POST } from '@/app/api/feature-requests/vote/route';
 
 describe('feature-requests/vote api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: 'user_123' });
     checkRateLimitMock.mockReturnValue({
       success: true,

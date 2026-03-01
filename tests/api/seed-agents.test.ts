@@ -137,7 +137,7 @@ const defaultRegistration = {
 // ---------------------------------------------------------------------------
 describe('POST /api/admin/seed-agents', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     process.env.ADMIN_SEED_TOKEN = 'test-secret';
     setupSelectEmpty();
     setupInsert();

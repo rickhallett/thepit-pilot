@@ -76,7 +76,13 @@ const VALID_DESCRIPTION =
 
 describe('feature-requests POST api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish DB mock chain (wiped by resetAllMocks)
+    _mockReturning.mockResolvedValue([{ id: 42 }]);
+    mockValues.mockReturnValue({ returning: _mockReturning });
+    mockInsert.mockReturnValue({ values: mockValues });
+
     authMock.mockResolvedValue({ userId: 'user_123' });
     checkRateLimitMock.mockReturnValue({
       success: true,
@@ -246,7 +252,13 @@ describe('feature-requests POST api', () => {
     const categories = ['agents', 'arena', 'presets', 'research', 'ui', 'other'];
 
     for (const cat of categories) {
-      vi.clearAllMocks();
+      vi.resetAllMocks();
+
+      // Re-establish DB mock chain (wiped by resetAllMocks)
+      _mockReturning.mockResolvedValue([{ id: 42 }]);
+      mockValues.mockReturnValue({ returning: _mockReturning });
+      mockInsert.mockReturnValue({ values: mockValues });
+
       authMock.mockResolvedValue({ userId: 'user_123' });
       checkRateLimitMock.mockReturnValue({
         success: true,

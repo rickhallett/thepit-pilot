@@ -29,7 +29,11 @@ import { GET } from '@/app/s/[slug]/route';
 
 describe('GET /s/:slug', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish mock implementations wiped by resetAllMocks
+    recordClickMock.mockResolvedValue(undefined);
+
     resolveShortLinkMock.mockResolvedValue({
       id: 42,
       boutId: 'bout_xyz',

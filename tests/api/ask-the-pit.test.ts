@@ -60,7 +60,7 @@ import { POST } from '@/app/api/ask-the-pit/route';
 
 describe('ask-the-pit route', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     getClientIdentifierMock.mockReturnValue('127.0.0.1');
     checkRateLimitMock.mockReturnValue({
       success: true,

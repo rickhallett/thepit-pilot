@@ -48,7 +48,13 @@ import { POST } from '@/app/api/short-links/route';
 
 describe('POST /api/short-links', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish mock implementations wiped by resetAllMocks
+    mockSelectLimit.mockResolvedValue([{ id: 'bout_123' }]);
+    _mockSelectWhere.mockReturnValue({ limit: mockSelectLimit });
+    mockSelectFrom.mockReturnValue({ where: _mockSelectWhere });
+
     checkRateLimitMock.mockReturnValue({
       success: true,
       remaining: 29,
@@ -58,7 +64,6 @@ describe('POST /api/short-links', () => {
       slug: 'aBcDeFgH',
       created: true,
     });
-    mockSelectLimit.mockResolvedValue([{ id: 'bout_123' }]);
   });
 
   function makeReq(body: unknown) {

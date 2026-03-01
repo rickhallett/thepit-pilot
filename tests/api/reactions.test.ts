@@ -15,7 +15,7 @@ import { POST } from '@/app/api/reactions/route';
 
 describe('reactions api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     // Default: allow all requests
     getClientIdentifierMock.mockReturnValue('127.0.0.1');
     checkRateLimitMock.mockReturnValue({

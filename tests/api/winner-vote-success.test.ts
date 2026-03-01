@@ -58,7 +58,13 @@ import { POST } from '@/app/api/winner-vote/route';
 
 describe('winner-vote success paths', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish mock implementations wiped by resetAllMocks
+    mockOnConflictDoNothing.mockResolvedValue(undefined);
+    mockValues.mockReturnValue({ onConflictDoNothing: mockOnConflictDoNothing });
+    mockInsert.mockReturnValue({ values: mockValues });
+
     authMock.mockResolvedValue({ userId: 'user_123' });
     // Default: bout exists
     mockSelectLimit.mockResolvedValue([{ id: 'bout-1' }]);

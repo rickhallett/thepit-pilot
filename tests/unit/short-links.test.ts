@@ -72,9 +72,17 @@ import {
 
 describe('short-links lib', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish hoisted mock chain implementations wiped by resetAllMocks
     mockSelectLimit.mockResolvedValue([]);
+    _mockSelectWhere.mockReturnValue({ limit: mockSelectLimit });
+    mockSelectFrom.mockReturnValue({ where: _mockSelectWhere });
     mockInsertReturning.mockResolvedValue([{ slug: 'aBcDeFgH' }]);
+    _mockInsertOnConflict.mockReturnValue({ returning: mockInsertReturning });
+    mockInsertValues.mockReturnValue({ onConflictDoNothing: _mockInsertOnConflict });
+    mockInsertClickValues.mockResolvedValue(undefined);
+    sha256HexMock.mockResolvedValue('0xabcdef1234567890');
   });
 
   describe('generateSlug', () => {

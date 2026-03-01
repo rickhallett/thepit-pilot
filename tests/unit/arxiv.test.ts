@@ -75,7 +75,7 @@ describe('fetchArxivMetadata', () => {
   const originalFetch = globalThis.fetch;
 
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
   });
 
   afterEach(() => {

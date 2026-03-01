@@ -215,10 +215,29 @@ const formWith = (key: string, value: string): FormData => {
 // Tests
 // ---------------------------------------------------------------------------
 describe('server actions', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
+  beforeEach(async () => {
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: 'user_test' });
     mockIsAdmin.mockReturnValue(false);
+
+    // Re-establish hoisted mock implementations wiped by resetAllMocks
+    mockRedirect.mockImplementation((url: string) => {
+      throw Object.assign(new Error('NEXT_REDIRECT'), {
+        digest: `NEXT_REDIRECT;${url}`,
+      });
+    });
+    mockEnsureUserRecord.mockResolvedValue(undefined);
+    mockApplyCreditDelta.mockResolvedValue(undefined);
+    mockGetAgentSnapshots.mockResolvedValue([]);
+    mockGetFormString.mockReturnValue('');
+
+    // Re-establish vi.mock factory inline mocks wiped by resetAllMocks
+    const rl = (await import('@/lib/response-lengths')) as unknown as { resolveResponseLength: ReturnType<typeof vi.fn> };
+    rl.resolveResponseLength.mockReturnValue({ id: 'short', label: 'Short', hint: '2-4 sentences', maxOutputTokens: 200, outputTokensPerTurn: 120 });
+    const rf = (await import('@/lib/response-formats')) as unknown as { resolveResponseFormat: ReturnType<typeof vi.fn> };
+    rf.resolveResponseFormat.mockReturnValue({ id: 'spaced', label: 'Text + spacing', hint: '', instruction: '' });
+    const credits = (await import('@/lib/credits')) as unknown as { ensureCreditAccount: ReturnType<typeof vi.fn> };
+    credits.ensureCreditAccount.mockResolvedValue(undefined);
 
     // Default DB mocks
     mockDb.select.mockImplementation(() => ({
@@ -254,14 +273,16 @@ describe('server actions', () => {
     it('throws when subscriptions disabled', async () => {
       // Re-mock tier to disable subscriptions for this test
       const tierModule = await import('@/lib/tier');
+      const original = tierModule.SUBSCRIPTIONS_ENABLED;
       Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', { value: false, writable: true });
 
-      await expect(
-        createSubscriptionCheckout(formWith('plan', 'pass')),
-      ).rejects.toThrow('Subscriptions not enabled.');
-
-      // Restore
-      Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', { value: true, writable: true });
+      try {
+        await expect(
+          createSubscriptionCheckout(formWith('plan', 'pass')),
+        ).rejects.toThrow('Subscriptions not enabled.');
+      } finally {
+        Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', { value: original, writable: true });
+      }
     });
 
     it('throws on invalid plan', async () => {
@@ -342,13 +363,16 @@ describe('server actions', () => {
   describe('createBillingPortal', () => {
     it('throws when subscriptions disabled', async () => {
       const tierModule = await import('@/lib/tier');
+      const original = tierModule.SUBSCRIPTIONS_ENABLED;
       Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', { value: false, writable: true });
 
-      await expect(createBillingPortal()).rejects.toThrow(
-        'Subscriptions not enabled.',
-      );
-
-      Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', { value: true, writable: true });
+      try {
+        await expect(createBillingPortal()).rejects.toThrow(
+          'Subscriptions not enabled.',
+        );
+      } finally {
+        Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', { value: original, writable: true });
+      }
     });
 
     it('redirects to sign-in when not authenticated', async () => {
@@ -407,35 +431,41 @@ describe('server actions', () => {
     it('allows unauthenticated bout creation when demo mode is on', async () => {
       authMock.mockResolvedValue({ userId: null });
       const envModule = await import('@/lib/env');
+      const original = envModule.env.DEMO_MODE_ENABLED;
       Object.defineProperty(envModule.env, 'DEMO_MODE_ENABLED', { value: true, writable: true });
 
-      const url = await catchRedirect(() => createBout('darwin-special'));
-      expect(url).toContain('/bout/fixed-nanoid-1234567');
-      expect(mockDb.insert).toHaveBeenCalled();
-      // Verify ownerId is null for anonymous demo bout
-      const insertCall = mockDb.insert.mock.results[0];
-      const valuesCall = insertCall?.value?.values;
-      if (valuesCall) {
-        expect(valuesCall).toHaveBeenCalledWith(
-          expect.objectContaining({ ownerId: null }),
-        );
+      try {
+        const url = await catchRedirect(() => createBout('darwin-special'));
+        expect(url).toContain('/bout/fixed-nanoid-1234567');
+        expect(mockDb.insert).toHaveBeenCalled();
+        // Verify ownerId is null for anonymous demo bout
+        const insertCall = mockDb.insert.mock.results[0];
+        const valuesCall = insertCall?.value?.values;
+        if (valuesCall) {
+          expect(valuesCall).toHaveBeenCalledWith(
+            expect.objectContaining({ ownerId: null }),
+          );
+        }
+        // ensureUserRecord should NOT be called for anonymous users
+        expect(mockEnsureUserRecord).not.toHaveBeenCalled();
+      } finally {
+        Object.defineProperty(envModule.env, 'DEMO_MODE_ENABLED', { value: original, writable: true });
       }
-      // ensureUserRecord should NOT be called for anonymous users
-      expect(mockEnsureUserRecord).not.toHaveBeenCalled();
-
-      Object.defineProperty(envModule.env, 'DEMO_MODE_ENABLED', { value: false, writable: true });
     });
 
     it('still calls ensureUserRecord for authenticated users in demo mode', async () => {
       authMock.mockResolvedValue({ userId: 'user_test' });
       const envModule = await import('@/lib/env');
+      const original = envModule.env.DEMO_MODE_ENABLED;
       Object.defineProperty(envModule.env, 'DEMO_MODE_ENABLED', { value: true, writable: true });
 
-      const url = await catchRedirect(() => createBout('darwin-special'));
-      expect(url).toContain('/bout/fixed-nanoid-1234567');
-      expect(mockEnsureUserRecord).toHaveBeenCalledWith('user_test');
-
-      Object.defineProperty(envModule.env, 'DEMO_MODE_ENABLED', { value: false, writable: true });
+      try {
+        const url = await catchRedirect(() => createBout('darwin-special'));
+        expect(url).toContain('/bout/fixed-nanoid-1234567');
+        expect(mockEnsureUserRecord).toHaveBeenCalledWith('user_test');
+      } finally {
+        Object.defineProperty(envModule.env, 'DEMO_MODE_ENABLED', { value: original, writable: true });
+      }
     });
   });
 

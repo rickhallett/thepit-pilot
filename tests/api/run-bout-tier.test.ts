@@ -245,7 +245,7 @@ const setupDbUpdate = () => {
 
 describe('run-bout tier-based access control', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     // Authenticated user by default
     authMock.mockResolvedValue({ userId: 'user-1' });
     // Default preset resolution

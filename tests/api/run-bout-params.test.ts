@@ -246,7 +246,7 @@ const setupStreamMocks = () => {
 
 describe('run-bout parameter passthrough', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: 'user-1' });
     getPresetByIdMock.mockReturnValue(MINIMAL_PRESET);
     setupDbSelect();

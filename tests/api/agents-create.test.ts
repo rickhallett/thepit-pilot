@@ -153,7 +153,7 @@ const makeRequest = (body: Record<string, unknown>) =>
 // ---------------------------------------------------------------------------
 
 beforeEach(() => {
-  vi.clearAllMocks();
+  vi.resetAllMocks();
   authMock.mockResolvedValue({ userId: 'user-1' });
   canCreateAgentMock.mockResolvedValue({ allowed: true });
 

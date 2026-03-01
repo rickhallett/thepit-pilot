@@ -29,7 +29,7 @@ const ADMIN_TOKEN = 'test-admin-token';
 
 describe('research export APIs', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     vi.stubEnv('ADMIN_SEED_TOKEN', ADMIN_TOKEN);
   });
 

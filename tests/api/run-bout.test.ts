@@ -22,7 +22,7 @@ import { POST } from '@/app/api/run-bout/route';
 
 describe('run-bout api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: null });
     // Default: no existing bout
     mockDb.select.mockImplementation(() => ({

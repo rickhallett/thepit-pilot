@@ -118,7 +118,7 @@ vi.mock('@/lib/byok', () => ({
 }));
 
 beforeEach(() => {
-  vi.clearAllMocks();
+  vi.resetAllMocks();
   authMock.mockResolvedValue({ userId: 'user_test' });
   mockSelectLimit.mockResolvedValue([
     { status: 'running', presetId: 'test', transcript: [], ownerId: 'user_test' },

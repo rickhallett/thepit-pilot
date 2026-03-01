@@ -314,7 +314,7 @@ const setupAuthHappyPath = () => {
 
 describe('validateBoutRequest', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     setupHappyPath();
     // Reset process.env values that tests may change
     delete process.env.RESEARCH_API_KEY;

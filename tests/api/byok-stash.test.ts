@@ -31,7 +31,7 @@ import { readAndClearByokKey } from '@/lib/byok';
 
 describe('byok-stash', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     cookieStore._store.clear();
     authMock.mockResolvedValue({ userId: 'user_test' });
   });

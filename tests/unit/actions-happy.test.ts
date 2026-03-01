@@ -232,10 +232,29 @@ const buildFormData = (entries: Record<string, string | string[]>): FormData => 
 // ---------------------------------------------------------------------------
 // Setup
 // ---------------------------------------------------------------------------
-beforeEach(() => {
-  vi.clearAllMocks();
+beforeEach(async () => {
+  vi.resetAllMocks();
   authMock.mockResolvedValue({ userId: 'user_test' });
   mockIsAdmin.mockReturnValue(false);
+
+  // Re-establish hoisted mock implementations wiped by resetAllMocks
+  mockRedirect.mockImplementation((url: string) => {
+    throw Object.assign(new Error('NEXT_REDIRECT'), {
+      digest: `NEXT_REDIRECT;${url}`,
+    });
+  });
+  mockEnsureUserRecord.mockResolvedValue(undefined);
+  mockGetAgentSnapshots.mockResolvedValue([]);
+  mockGetFormString.mockReturnValue('');
+
+  // Re-establish vi.mock factory inline mocks wiped by resetAllMocks
+  const rl = (await import('@/lib/response-lengths')) as unknown as { resolveResponseLength: ReturnType<typeof vi.fn> };
+  rl.resolveResponseLength.mockReturnValue({ id: 'short', label: 'Short', hint: '2-4 sentences', maxOutputTokens: 200, outputTokensPerTurn: 120 });
+  const rf = (await import('@/lib/response-formats')) as unknown as { resolveResponseFormat: ReturnType<typeof vi.fn> };
+  rf.resolveResponseFormat.mockReturnValue({ id: 'spaced', label: 'Text + spacing', hint: '', instruction: '' });
+  const credits = (await import('@/lib/credits')) as unknown as { applyCreditDelta: ReturnType<typeof vi.fn>; ensureCreditAccount: ReturnType<typeof vi.fn> };
+  credits.applyCreditDelta.mockResolvedValue(undefined);
+  credits.ensureCreditAccount.mockResolvedValue(undefined);
 
   // Default DB mocks
   mockDb.select.mockImplementation(() => ({
@@ -507,143 +526,151 @@ describe('getOrCreateStripeCustomer (via createSubscriptionCheckout)', () => {
   it('returns existing stripeCustomerId from DB lookup', async () => {
     // Re-mock tier to enable subscriptions
     const tierModule = await import('@/lib/tier');
+    const original = tierModule.SUBSCRIPTIONS_ENABLED;
     Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
       value: true,
       writable: true,
     });
 
-    // DB returns user with existing stripeCustomerId
-    mockDb.select.mockImplementation(() => ({
-      from: () => ({
-        where: () => ({
-          limit: async () => [
-            { stripeCustomerId: 'cus_db_existing', email: 'a@b.com' },
-          ],
+    try {
+      // DB returns user with existing stripeCustomerId
+      mockDb.select.mockImplementation(() => ({
+        from: () => ({
+          where: () => ({
+            limit: async () => [
+              { stripeCustomerId: 'cus_db_existing', email: 'a@b.com' },
+            ],
+          }),
         }),
-      }),
-    }));
+      }));
 
-    mockStripe.checkout.sessions.create.mockResolvedValue({
-      url: 'https://checkout.stripe.com/session',
-    });
+      mockStripe.checkout.sessions.create.mockResolvedValue({
+        url: 'https://checkout.stripe.com/session',
+      });
 
-    const { createSubscriptionCheckout } = await import('@/app/actions');
+      const { createSubscriptionCheckout } = await import('@/app/actions');
 
-    const fd = buildFormData({ plan: 'pass' });
+      const fd = buildFormData({ plan: 'pass' });
 
-    await expectRedirect(
-      () => createSubscriptionCheckout(fd),
-      /checkout\.stripe\.com/,
-    );
+      await expectRedirect(
+        () => createSubscriptionCheckout(fd),
+        /checkout\.stripe\.com/,
+      );
 
-    // Stripe customer search should NOT be called because DB had the ID
-    expect(mockStripe.customers.search).not.toHaveBeenCalled();
-    expect(mockStripe.customers.create).not.toHaveBeenCalled();
-
-    // Restore
-    Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
-      value: false,
-      writable: true,
-    });
+      // Stripe customer search should NOT be called because DB had the ID
+      expect(mockStripe.customers.search).not.toHaveBeenCalled();
+      expect(mockStripe.customers.create).not.toHaveBeenCalled();
+    } finally {
+      Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
+        value: original,
+        writable: true,
+      });
+    }
   });
 
   it('finds customer via Stripe search and persists to DB', async () => {
     const tierModule = await import('@/lib/tier');
+    const original = tierModule.SUBSCRIPTIONS_ENABLED;
     Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
       value: true,
       writable: true,
     });
 
-    // DB returns user without stripeCustomerId
-    mockDb.select.mockImplementation(() => ({
-      from: () => ({
-        where: () => ({
-          limit: async () => [
-            { stripeCustomerId: null, email: 'b@c.com' },
-          ],
+    try {
+      // DB returns user without stripeCustomerId
+      mockDb.select.mockImplementation(() => ({
+        from: () => ({
+          where: () => ({
+            limit: async () => [
+              { stripeCustomerId: null, email: 'b@c.com' },
+            ],
+          }),
         }),
-      }),
-    }));
+      }));
 
-    // Stripe search finds existing customer
-    mockStripe.customers.search.mockResolvedValue({
-      data: [{ id: 'cus_stripe_found' }],
-    });
+      // Stripe search finds existing customer
+      mockStripe.customers.search.mockResolvedValue({
+        data: [{ id: 'cus_stripe_found' }],
+      });
 
-    mockStripe.checkout.sessions.create.mockResolvedValue({
-      url: 'https://checkout.stripe.com/session_found',
-    });
+      mockStripe.checkout.sessions.create.mockResolvedValue({
+        url: 'https://checkout.stripe.com/session_found',
+      });
 
-    const { createSubscriptionCheckout } = await import('@/app/actions');
+      const { createSubscriptionCheckout } = await import('@/app/actions');
 
-    const fd = buildFormData({ plan: 'pass' });
+      const fd = buildFormData({ plan: 'pass' });
 
-    await expectRedirect(
-      () => createSubscriptionCheckout(fd),
-      /checkout\.stripe\.com/,
-    );
+      await expectRedirect(
+        () => createSubscriptionCheckout(fd),
+        /checkout\.stripe\.com/,
+      );
 
-    expect(mockStripe.customers.search).toHaveBeenCalled();
-    expect(mockStripe.customers.create).not.toHaveBeenCalled();
-    // Should persist to DB
-    expect(mockDb.update).toHaveBeenCalled();
-
-    Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
-      value: false,
-      writable: true,
-    });
+      expect(mockStripe.customers.search).toHaveBeenCalled();
+      expect(mockStripe.customers.create).not.toHaveBeenCalled();
+      // Should persist to DB
+      expect(mockDb.update).toHaveBeenCalled();
+    } finally {
+      Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
+        value: original,
+        writable: true,
+      });
+    }
   });
 
   it('creates new Stripe customer when nothing found', async () => {
     const tierModule = await import('@/lib/tier');
+    const original = tierModule.SUBSCRIPTIONS_ENABLED;
     Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
       value: true,
       writable: true,
     });
 
-    // DB returns user without stripeCustomerId
-    mockDb.select.mockImplementation(() => ({
-      from: () => ({
-        where: () => ({
-          limit: async () => [
-            { stripeCustomerId: null, email: 'new@user.com' },
-          ],
+    try {
+      // DB returns user without stripeCustomerId
+      mockDb.select.mockImplementation(() => ({
+        from: () => ({
+          where: () => ({
+            limit: async () => [
+              { stripeCustomerId: null, email: 'new@user.com' },
+            ],
+          }),
         }),
-      }),
-    }));
+      }));
 
-    // Stripe search returns empty
-    mockStripe.customers.search.mockResolvedValue({ data: [] });
+      // Stripe search returns empty
+      mockStripe.customers.search.mockResolvedValue({ data: [] });
 
-    // Stripe creates new customer
-    mockStripe.customers.create.mockResolvedValue({ id: 'cus_brand_new' });
+      // Stripe creates new customer
+      mockStripe.customers.create.mockResolvedValue({ id: 'cus_brand_new' });
 
-    mockStripe.checkout.sessions.create.mockResolvedValue({
-      url: 'https://checkout.stripe.com/session_new',
-    });
+      mockStripe.checkout.sessions.create.mockResolvedValue({
+        url: 'https://checkout.stripe.com/session_new',
+      });
 
-    const { createSubscriptionCheckout } = await import('@/app/actions');
+      const { createSubscriptionCheckout } = await import('@/app/actions');
 
-    const fd = buildFormData({ plan: 'pass' });
+      const fd = buildFormData({ plan: 'pass' });
 
-    await expectRedirect(
-      () => createSubscriptionCheckout(fd),
-      /checkout\.stripe\.com/,
-    );
+      await expectRedirect(
+        () => createSubscriptionCheckout(fd),
+        /checkout\.stripe\.com/,
+      );
 
-    expect(mockStripe.customers.search).toHaveBeenCalled();
-    expect(mockStripe.customers.create).toHaveBeenCalledWith(
-      expect.objectContaining({
-        metadata: { userId: 'user_test' },
-        email: 'new@user.com',
-      }),
-    );
-    // Should persist to DB
-    expect(mockDb.update).toHaveBeenCalled();
-
-    Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
-      value: false,
-      writable: true,
-    });
+      expect(mockStripe.customers.search).toHaveBeenCalled();
+      expect(mockStripe.customers.create).toHaveBeenCalledWith(
+        expect.objectContaining({
+          metadata: { userId: 'user_test' },
+          email: 'new@user.com',
+        }),
+      );
+      // Should persist to DB
+      expect(mockDb.update).toHaveBeenCalled();
+    } finally {
+      Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
+        value: original,
+        writable: true,
+      });
+    }
   });
 });

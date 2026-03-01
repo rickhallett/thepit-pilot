@@ -276,7 +276,7 @@ const setupAuthenticated = () => {
 
 describe('bout-engine behavior (validate → execute)', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     delete process.env.RESEARCH_API_KEY;
   });
 

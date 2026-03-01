@@ -275,7 +275,7 @@ function makeContext(overrides: Partial<BoutContext> = {}): BoutContext {
 
 describe('executeBout', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
 
     // Default stream mock: return short text for each turn
     tracedStreamTextMock.mockImplementation(() =>
