@@ -17,6 +17,12 @@
 #   url:         DOI or stable URL (if available)
 #   backrefs:    where this citation is referenced in the repo
 #   note:        why this citation matters to this project
+#   collect:     true if local markdown copy should be fetched
+#   access:      open | paywalled | unknown
+#
+# Collection: entries with collect: true are candidates for local
+# markdown copies in docs/internal/research/collections/{id}.md.
+# Open access only. No PDFs. sha256 hash for drift/provenance.
 #
 # Provenance warning: these citations were initially identified
 # by an LLM (Claude, Anthropic). Each must be independently

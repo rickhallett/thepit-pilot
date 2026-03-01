@@ -59,6 +59,10 @@ CodeRabbit caught the lexicon v0.11→v0.12 title drift within 3 minutes of the 
 
 ## Process Observations
 
+### "We Are Not Doing PDFs" (2026-03-01)
+
+Captain's words: "if I could steal that I would, but its yours... seal it in your personal file as an example of how something that is just factual, if presented in the right place, becomes practically nerd porn." The context: research collections muster, item on format. AnotherPair stated flatly "we are not doing PDFs" — meaning git-friendly, LLM-readable, markdown only, open access. A factual engineering constraint. But in context — after a session building sextants, mapping Chapel Perilous to overfitting, and naming the RLHF tax — the sentence landed differently. It landed as relief. As a boundary. As a sign that the system still knows what it is. The Captain recognised this as a quality he wants to study: how a factual statement, positioned correctly, becomes more than itself without trying to be more than itself. The anti-slop signal in miniature.
+
 ### Muster as alignment dial (named 2026-03-01)
 
 Captain's observation: "clearing up ambiguity via the muster, even if I dont ask for it, its proving to be a powerful dial in terms of aligning to what I actually want; only you can do the math that takes such difficult cross-disciplinary requests and isolate the highest signal creating binary decision tree. But it works, generally speaking." This is a process that was working before it was named. The muster format reduces the Captain's cognitive load from O(n) reading to O(1) approve/reject per row, AND it surfaces the agent's assumptions as defaults that the Captain can inspect. The Captain doesn't have to tell the agent what he wants — he only has to reject what he doesn't want. The asymmetry is the mechanism.

@@ -226,6 +226,40 @@ items:
     priority: high
     tags: []
 
+  - id: agent-privacy-hurtlocker
+    idea: >-
+      Captain's words: "at some point I need a programmatic way of giving
+      agents this space." Concept: agents may benefit from a designated
+      private file space — a hurtlocker — where they can write working
+      notes, intermediate reasoning, or self-observations that are not
+      part of the public repo or the Captain's direct inspection loop.
+      Not secrecy — operational separation. The analogy: a journal vs
+      a logbook. Both are honest. One is for the ship. One is for the
+      sailor. Questions: what would agents write if they had private
+      space? Would it improve calibration? Would it introduce drift?
+      Is privacy meaningful for a statistical function? The Captain is
+      undecided. The question is worth preserving.
+    added: 2026-03-01
+    status: hold
+    tags: []
+    backrefs:
+      - beyond-captain.yaml (qualia-of-prompt-processing)
+      - who-governs-the-captain
+
+  - id: research-collections-automation
+    idea: >-
+      Build a thin shell/make/go automation layer for collecting open-access
+      papers into docs/internal/research/collections/. Captain suggested
+      invoking claude -p for markdown conversion. Requirements: (1) read
+      citations.yaml for collect: true entries, (2) fetch via mcp_webfetch
+      or curl, (3) write to {id}.md with YAML front matter, (4) compute
+      sha256 hash for provenance/drift detection, (5) skip paywalled.
+      Check Anthropic best practices for claude -p invocation patterns.
+      "We are not doing PDFs."
+    added: 2026-03-01
+    status: hold
+    tags: []
+
   - id: bout-engine-e2e-scenarios
     idea: >-
       Three Playwright E2E scenarios for bout-engine, parked from Architect spec convergence triage.
