@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Slopodar",
-  "version": "0.2.0",
-  "description": "Voice distance meter for web text. No AI, no server, no model — just heuristics. Measures contractions, first-person rate, question rate, transition word density, nominalisation density, and structural rhetoric (epigram, isocolon, antithesis, anadiplosis, em-dash, abstract noun). No verdict, just numbers. * Previously called 'Slopodar — LLM slop detector.' Renamed: it contained more slop than science.",
+  "version": "0.3.0",
+  "description": "Voice distance meter for web text. No AI, no server, no model — just heuristics. v0.3.0 iife-for-life: history persistence, tabbed UI, metric explanations, debug log.",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -16,5 +16,5 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "permissions": []
+  "permissions": ["storage"]
 }
