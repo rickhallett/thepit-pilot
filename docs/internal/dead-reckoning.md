@@ -19,13 +19,15 @@ If BLOWOUT CONFIRMED: the go-dark exclusion layer may have been disturbed. Check
 
 ---
 
-## Step 2: Read session decisions (FIRST — before anything else)
+## Step 2: Read recent session decisions (FIRST — before anything else)
 
 ```
-docs/internal/session-decisions.md
+docs/internal/session-decisions.md (LAST 30 LINES ONLY)
 ```
 
-This is your primary instrument. It contains all Captain directives (SD-*), parked items (P*, N*, D*), and the post-merge queue. Read this file. Do NOT read every file in docs/internal/ — that will consume tokens and increase risk of compaction. **Lazy Loading:** know what exists, read only when needed.
+This is your primary instrument. It contains all Captain directives (SD-*), parked items (P*, N*, D*), and the post-merge queue. **Read the last 30 lines only** — that gives you the ~15 most recent decisions, which is all you need to reconstruct current heading. The full file is 270+ entries and 33k+ tokens. Loading it all on boot is the single largest token cost in the system. The historical record exists for provenance (SD-266), not for navigation. Go deeper only if a specific decision needs tracing.
+
+Do NOT read every file in docs/internal/ — that will consume tokens and increase risk of compaction. **Lazy Loading:** know what exists, read only when needed.
 
 **Search strategy (SD-195):** BFS by default. Scan depth-1 files first (there are only 7). Go deeper only when investigating a specific question (DFS). File hierarchy depth signals read frequency: depth 1 = every session, depth 2 = when topic is relevant, depth 3+ = deliberate research only.
 
