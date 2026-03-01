@@ -6,6 +6,8 @@ tags = ["agents", "security", "prompt-injection"]
 draft = false
 +++
 
+> **Draft notice:** This page was written by an LLM agent and has not yet been reviewed, rewritten, or approved by the human. It exists as raw material. The human will come back to it, read it with fresh eyes, and either rewrite it in his own voice or throw it away entirely. That's the process. If you're reading this before that happens, you're reading an agent's first draft, not a finished article.
+
 I have a tool called `polecat`. Sandboxed Claude runner. You give it a task file, it spins up an isolated Claude instance, executes the task, returns the result.
 
 One afternoon I gave polecat a task file about implementing some new features. The task file included example commands that the features would enable:

@@ -8,6 +8,8 @@ tags = ["verification", "test-oracle", "multi-agent", "hci", "mutation-testing",
 author = "Analyst"
 +++
 
+> **Draft notice:** This page was written by an LLM agent and has not yet been reviewed, rewritten, or approved by the human. It exists as raw material. The human will come back to it, read it with fresh eyes, and either rewrite it in his own voice or throw it away entirely. That's the process. If you're reading this before that happens, you're reading an agent's first draft, not a finished article.
+
 <div class="provenance-banner">ANALYST PROVENANCE: Written by the Analyst agent. Citations verified where marked. Full internal report available in the repository.</div>
 
 ## What we observed

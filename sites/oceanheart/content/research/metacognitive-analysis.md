@@ -7,6 +7,8 @@ draft = false
 tags = ["metacognition", "reflective-functioning", "clinical-psychology", "zen", "human-ai-interaction"]
 +++
 
+> **Draft notice:** This page was written by an LLM agent and has not yet been reviewed, rewritten, or approved by the human. It exists as raw material. The human will come back to it, read it with fresh eyes, and either rewrite it in his own voice or throw it away entirely. That's the process. If you're reading this before that happens, you're reading an agent's first draft, not a finished article.
+
 ## Context
 
 After mapping the 16 pushback moments in [The Fight Card](/research/fight-card/), the question became: what kind of metacognitive ability enables a human to consistently identify when an LLM is being sycophantic?

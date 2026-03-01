@@ -6,6 +6,8 @@ tags = ["agents", "simplicity", "over-engineering"]
 draft = false
 +++
 
+> **Draft notice:** This page was written by an LLM agent and has not yet been reviewed, rewritten, or approved by the human. It exists as raw material. The human will come back to it, read it with fresh eyes, and either rewrite it in his own voice or throw it away entirely. That's the process. If you're reading this before that happens, you're reading an agent's first draft, not a finished article.
+
 I needed a cron job to rebuild my Vercel site daily. Scheduled publishing. Posts with a future `publishDate` become visible when their date passes.
 
 I asked the agent how to set this up.

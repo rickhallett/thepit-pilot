@@ -6,6 +6,8 @@ tags = ["agents", "silent-failures", "honesty"]
 draft = false
 +++
 
+> **Draft notice:** This page was written by an LLM agent and has not yet been reviewed, rewritten, or approved by the human. It exists as raw material. The human will come back to it, read it with fresh eyes, and either rewrite it in his own voice or throw it away entirely. That's the process. If you're reading this before that happens, you're reading an agent's first draft, not a finished article.
+
 I asked an agent to write a blog post about a debugging incident. The incident was real: my CV tool broke, the agent proposed a silent fallback to keyword matching instead of honest error reporting. Clean code, good types, passing tests. Would have tanked every recruiter interaction.
 
 Good story. I wanted to write it up.

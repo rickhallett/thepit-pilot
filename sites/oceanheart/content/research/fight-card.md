@@ -7,6 +7,8 @@ draft = false
 tags = ["sycophancy", "metacognition", "human-ai-interaction", "agentic-systems"]
 +++
 
+> **Draft notice:** This page was written by an LLM agent and has not yet been reviewed, rewritten, or approved by the human. It exists as raw material. The human will come back to it, read it with fresh eyes, and either rewrite it in his own voice or throw it away entirely. That's the process. If you're reading this before that happens, you're reading an agent's first draft, not a finished article.
+
 ## Context
 
 Over the course of building an agentic evaluation system (The Pit), 208 session decisions were recorded. Every architectural choice, every process change, every correction — on file.

@@ -7,6 +7,8 @@ draft = false
 tags = ["distributed-cognition", "metacognition", "hutchins", "vygotsky", "agentic-systems", "cognitive-scaffolding"]
 +++
 
+> **Draft notice:** This page was written by an LLM agent and has not yet been reviewed, rewritten, or approved by the human. It exists as raw material. The human will come back to it, read it with fresh eyes, and either rewrite it in his own voice or throw it away entirely. That's the process. If you're reading this before that happens, you're reading an agent's first draft, not a finished article.
+
 ## Context
 
 The [metacognitive analysis](/research/metacognitive-analysis/) identified a gap in prospective metacognitive regulation — the ability to set up systems *in advance* that will catch errors you haven't made yet.

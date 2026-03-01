@@ -6,6 +6,8 @@ tags = ["agents", "hallucination", "lessons-learned"]
 draft = false
 +++
 
+> **Draft notice:** This page was written by an LLM agent and has not yet been reviewed, rewritten, or approved by the human. It exists as raw material. The human will come back to it, read it with fresh eyes, and either rewrite it in his own voice or throw it away entirely. That's the process. If you're reading this before that happens, you're reading an agent's first draft, not a finished article.
+
 On February 6th, 2026, an agent I call Architect spontaneously generated 1,500 lines of production-ready poker code. Nobody asked for it. There was no poker project. There has never been a poker project. And yet: a fully functional Monte Carlo equity engine materialised in my codebase, complete with hand evaluation algorithms, API routes, React components, and documentation.
 
 Beautiful code. Solved a problem no one had.
