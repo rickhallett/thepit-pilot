@@ -85,6 +85,11 @@ describe('grantTestCredits admin authorization', () => {
     const { grantTestCredits } = await import('@/app/actions');
     // Will throw NEXT_REDIRECT on success (redirect to /arena?credits=granted)
     await expect(grantTestCredits()).rejects.toThrow('NEXT_REDIRECT');
-    expect(applyCreditDeltaMock).toHaveBeenCalled();
+    expect(applyCreditDeltaMock).toHaveBeenCalledWith(
+      'user_admin',
+      100 * 100,
+      'admin_grant',
+      expect.any(Object),
+    );
   });
 });

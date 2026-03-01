@@ -682,7 +682,10 @@ describe('validateBoutRequest', () => {
       const req = makeRequest({ boutId: 'b1', presetId: 'arena' });
       const result = await validateBoutRequest(req);
       expect(result.ok).toBe(true);
-      expect(buildArenaPresetFromLineupMock).toHaveBeenCalled();
+      expect(buildArenaPresetFromLineupMock).toHaveBeenCalledWith(
+        [{ id: 'a1', name: 'A1', systemPrompt: 'test' }],
+        4,
+      );
     });
 
     it('V-22: arena preset with no agentLineup returns 404', async () => {
@@ -787,7 +790,7 @@ describe('validateBoutRequest', () => {
         model: 'byok',
       });
       const result = await validateBoutRequest(req);
-      expect(readAndClearByokKeyMock).toHaveBeenCalled();
+      expect(readAndClearByokKeyMock).toHaveBeenCalledWith(expect.anything());
       expect(result.ok).toBe(true);
       if (result.ok) {
         expect(result.context.byokData?.provider).toBe('anthropic');

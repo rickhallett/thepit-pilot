@@ -323,7 +323,9 @@ describe('POST /api/credits/webhook', () => {
     expect(res.status).toBe(200);
 
     expect(mockResolveTierFromPriceId).toHaveBeenCalledWith('price_pass');
-    expect(mockDb.update).toHaveBeenCalled();
+    expect(mockDb.update).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id' }),
+    );
     expect(setCalls.length).toBeGreaterThanOrEqual(1);
     expect(setCalls[0]).toMatchObject({
       subscriptionTier: 'pass',
@@ -510,7 +512,9 @@ describe('POST /api/credits/webhook', () => {
     const res = await POST(makeRequest());
     expect(res.status).toBe(200);
 
-    expect(mockDb.select).toHaveBeenCalled();
+    expect(mockDb.select).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id' }),
+    );
     expect(setCalls[0]).toMatchObject({
       subscriptionTier: 'free',
       subscriptionStatus: 'past_due',
@@ -570,7 +574,9 @@ describe('POST /api/credits/webhook', () => {
     const res = await POST(makeRequest());
     expect(res.status).toBe(200);
 
-    expect(mockDb.select).toHaveBeenCalled();
+    expect(mockDb.select).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id' }),
+    );
     expect(setCalls[0]).toMatchObject({
       subscriptionTier: 'lab',
       subscriptionStatus: 'active',
@@ -760,7 +766,9 @@ describe('POST /api/credits/webhook', () => {
     expect(res.status).toBe(200);
 
     // Tier update still happens (idempotent SET), but grant is skipped
-    expect(mockDb.update).toHaveBeenCalled();
+    expect(mockDb.update).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id' }),
+    );
     expect(mockApplyCreditDelta).not.toHaveBeenCalled();
   });
 
@@ -791,7 +799,9 @@ describe('POST /api/credits/webhook', () => {
     expect(res.status).toBe(200);
 
     // Tier update still happens, but credit grant is skipped
-    expect(mockDb.update).toHaveBeenCalled();
+    expect(mockDb.update).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id' }),
+    );
     expect(mockApplyCreditDelta).not.toHaveBeenCalled();
   });
 
@@ -820,7 +830,9 @@ describe('POST /api/credits/webhook', () => {
     expect(res.status).toBe(200);
 
     // Tier restore still happens, but monthly grant is skipped
-    expect(mockDb.update).toHaveBeenCalled();
+    expect(mockDb.update).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id' }),
+    );
     expect(mockApplyCreditDelta).not.toHaveBeenCalled();
     expect(mockEnsureCreditAccount).not.toHaveBeenCalled();
   });
@@ -852,7 +864,9 @@ describe('POST /api/credits/webhook', () => {
     expect(res.status).toBe(200);
 
     // Tier restore still happens, but monthly grant is skipped
-    expect(mockDb.update).toHaveBeenCalled();
+    expect(mockDb.update).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id' }),
+    );
     expect(mockApplyCreditDelta).not.toHaveBeenCalled();
   });
 

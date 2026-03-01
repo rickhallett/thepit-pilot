@@ -223,7 +223,9 @@ describe('POST /api/agents — happy paths', () => {
         quirks: ['quotes philosophers', 'uses parentheticals'],
       }),
     );
-    expect(mockDb.insert).toHaveBeenCalled();
+    expect(mockDb.insert).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id', name: 'name', systemPrompt: 'system_prompt' }),
+    );
   });
 
   it('creates agent with systemPrompt only (no structured fields)', async () => {
@@ -254,7 +256,9 @@ describe('POST /api/agents — happy paths', () => {
     expect(res.status).toBe(200);
     const body = await res.json();
     expect(body).toHaveProperty('agentId');
-    expect(mockDb.insert).toHaveBeenCalled();
+    expect(mockDb.insert).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id', name: 'name', systemPrompt: 'system_prompt' }),
+    );
   });
 
   it('succeeds when clientManifestHash matches server hash', async () => {
@@ -384,7 +388,9 @@ describe('POST /api/agents — happy paths', () => {
         manifestHash: 'manifest-hash-abc',
       }),
     );
-    expect(mockDb.update).toHaveBeenCalled();
+    expect(mockDb.update).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id' }),
+    );
   });
 
   it('returns attestationFailed when EAS attestation throws', async () => {

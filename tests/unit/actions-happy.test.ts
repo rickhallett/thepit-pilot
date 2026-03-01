@@ -409,7 +409,9 @@ describe('createBout', () => {
     expect(url).toContain('model=gpt-4');
     expect(url).toContain('length=long');
     expect(url).toContain('format=spaced');
-    expect(mockDb.insert).toHaveBeenCalled();
+    expect(mockDb.insert).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id', presetId: 'preset_id' }),
+    );
   });
 
   it('redirects unauthenticated user to sign-up', async () => {
@@ -469,7 +471,9 @@ describe('createArenaBout', () => {
       /\/bout\/fixed-nanoid-1234567/,
     );
 
-    expect(mockDb.insert).toHaveBeenCalled();
+    expect(mockDb.insert).toHaveBeenCalledWith(
+      expect.objectContaining({ id: 'id', presetId: 'preset_id' }),
+    );
     expect(mockGetAgentSnapshots).toHaveBeenCalled();
   });
 
@@ -606,10 +610,14 @@ describe('getOrCreateStripeCustomer (via createSubscriptionCheckout)', () => {
         /checkout\.stripe\.com/,
       );
 
-      expect(mockStripe.customers.search).toHaveBeenCalled();
+      expect(mockStripe.customers.search).toHaveBeenCalledWith(
+        expect.objectContaining({ query: expect.stringContaining('user_test') }),
+      );
       expect(mockStripe.customers.create).not.toHaveBeenCalled();
       // Should persist to DB
-      expect(mockDb.update).toHaveBeenCalled();
+      expect(mockDb.update).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'id' }),
+      );
     } finally {
       Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
         value: original,
@@ -657,7 +665,9 @@ describe('getOrCreateStripeCustomer (via createSubscriptionCheckout)', () => {
         /checkout\.stripe\.com/,
       );
 
-      expect(mockStripe.customers.search).toHaveBeenCalled();
+      expect(mockStripe.customers.search).toHaveBeenCalledWith(
+        expect.objectContaining({ query: expect.stringContaining('user_test') }),
+      );
       expect(mockStripe.customers.create).toHaveBeenCalledWith(
         expect.objectContaining({
           metadata: { userId: 'user_test' },
@@ -665,7 +675,9 @@ describe('getOrCreateStripeCustomer (via createSubscriptionCheckout)', () => {
         }),
       );
       // Should persist to DB
-      expect(mockDb.update).toHaveBeenCalled();
+      expect(mockDb.update).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'id' }),
+      );
     } finally {
       Object.defineProperty(tierModule, 'SUBSCRIPTIONS_ENABLED', {
         value: original,

@@ -437,7 +437,9 @@ describe('server actions', () => {
       try {
         const url = await catchRedirect(() => createBout('darwin-special'));
         expect(url).toContain('/bout/fixed-nanoid-1234567');
-        expect(mockDb.insert).toHaveBeenCalled();
+        expect(mockDb.insert).toHaveBeenCalledWith(
+          expect.objectContaining({ id: 'id', presetId: 'preset_id' }),
+        );
         // Verify ownerId is null for anonymous demo bout
         const insertCall = mockDb.insert.mock.results[0];
         const valuesCall = insertCall?.value?.values;

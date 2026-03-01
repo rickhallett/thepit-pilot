@@ -617,7 +617,7 @@ describe('executeBout', () => {
       });
       await executeBout(ctx);
       // Should fall back through the chain: byokData.modelId → ANTHROPIC_BYOK_MODEL → FREE_MODEL_ID
-      expect(getInputTokenBudgetMock).toHaveBeenCalled();
+      expect(getInputTokenBudgetMock).toHaveBeenCalledWith(expect.any(String));
     });
 
     it('E-26: context window truncation does not crash on empty history', async () => {
@@ -636,7 +636,9 @@ describe('executeBout', () => {
     it('E-27: platform calls use tracedStreamText', async () => {
       const ctx = makeContext({ modelId: 'claude-haiku-4-5-20251001' });
       await executeBout(ctx);
-      expect(tracedStreamTextMock).toHaveBeenCalled();
+      expect(tracedStreamTextMock).toHaveBeenCalledWith(
+        expect.objectContaining({ model: 'mock-model-instance' }),
+      );
       // Turns should not use untraced
       const turnCallCount = tracedStreamTextMock.mock.calls.length;
       expect(turnCallCount).toBeGreaterThanOrEqual(2); // turns + share line
@@ -649,7 +651,9 @@ describe('executeBout', () => {
         preset: SINGLE_AGENT_PRESET,
       });
       await executeBout(ctx);
-      expect(untracedStreamTextMock).toHaveBeenCalled();
+      expect(untracedStreamTextMock).toHaveBeenCalledWith(
+        expect.objectContaining({ model: expect.anything() }),
+      );
     });
 
     it('E-29: Anthropic platform model gets cache control', async () => {
@@ -1090,7 +1094,7 @@ describe('executeBout', () => {
     it('E-60: flushServerAnalytics called after completion', async () => {
       const ctx = makeContext({ preset: SINGLE_AGENT_PRESET });
       await executeBout(ctx);
-      expect(flushServerAnalyticsMock).toHaveBeenCalled();
+      expect(flushServerAnalyticsMock).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -1158,7 +1162,12 @@ describe('executeBout', () => {
       await executeBout(ctx);
 
       // Settlement was called, which means the financial log was emitted
-      expect(settleCreditsMock).toHaveBeenCalled();
+      expect(settleCreditsMock).toHaveBeenCalledWith(
+        'user-1',
+        expect.any(Number),
+        'settlement',
+        expect.any(Object),
+      );
     });
   });
 
@@ -1182,7 +1191,9 @@ describe('executeBout', () => {
       await expect(executeBout(ctx)).rejects.toThrow('LLM failure');
 
       // DB should have been updated with error status
-      expect(mockDb.update).toHaveBeenCalled();
+      expect(mockDb.update).toHaveBeenCalledWith(
+        expect.objectContaining({ id: 'id' }),
+      );
     });
 
     it('E-68: credit refund on error', async () => {
@@ -1289,7 +1300,7 @@ describe('executeBout', () => {
       const ctx = makeContext({ preset: SINGLE_AGENT_PRESET });
       await expect(executeBout(ctx)).rejects.toThrow();
 
-      expect(flushServerAnalyticsMock).toHaveBeenCalled();
+      expect(flushServerAnalyticsMock).toHaveBeenCalledTimes(1);
     });
   });
 

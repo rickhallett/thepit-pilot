@@ -272,7 +272,9 @@ describe('run-bout arena mode', () => {
 
     expect(res.status).toBe(200);
     // streamText should have been called (bout actually ran)
-    expect(streamTextMock).toHaveBeenCalled();
+    expect(streamTextMock).toHaveBeenCalledWith(
+      expect.objectContaining({ model: 'mock-model' }),
+    );
   });
 
   // -------------------------------------------------------------------------

@@ -149,7 +149,7 @@ describe('users', () => {
       const { ensureUserRecord } = await loadUsers();
       const result = await ensureUserRecord('user_abc');
       expect(result).toEqual(createdRow);
-      expect(mockDb.insert).toHaveBeenCalled();
+      expect(mockDb.insert).toHaveBeenCalledWith(usersTable);
     });
 
     it('returns existing user when found and not stale', async () => {
@@ -205,7 +205,7 @@ describe('users', () => {
       const { ensureUserRecord } = await loadUsers();
       const result = await ensureUserRecord('user_stale');
       expect(result).toEqual(updatedRow);
-      expect(mockDb.update).toHaveBeenCalled();
+      expect(mockDb.update).toHaveBeenCalledWith(usersTable);
     });
 
     it('handles Clerk API failure gracefully (warns but continues)', async () => {
