@@ -339,3 +339,87 @@ items:
     backrefs:
       - SD-265 (test count propagation — same observability class)
       - docs/internal/keel/producer-consumer-maps.yaml (.keel-state flow)
+
+  - id: ktok-reduction-anomaly
+    idea: >-
+      Context window reported 145ktok (73%) then dropped to 114ktok without
+      compaction trigger. Cause unknown — likely harness-side (Claude Code
+      prompt harness). Not worth investigating directly but record occurrences
+      to spot patterns that help navigate context pressure. Reminder: check
+      current harness version against latest release. Do NOT auto-update —
+      verify changelog first, update deliberately.
+    added: 2026-03-01
+    status: hold
+    priority: low
+    tags: []
+
+  - id: holding-bay-oceanheart-page
+    idea: >-
+      Create /holding-bay page on sites/oceanheart showing holding-deck.yaml
+      items. Add to Hugo build chain. Sort by priority descending, then date
+      descending. Purpose: a window for recruiters who cba to click through
+      to GitHub. Shows the backlog, the thinking, the discipline — without
+      requiring repo access.
+    added: 2026-03-01
+    status: hold
+    priority: medium
+    tags: []
+
+  - id: yamakazi-pilots
+    idea: >-
+      Convert all agent/officer files (.opencode/agents/*.md) from markdown
+      to YAML. Motivation: collect data on agent metrics as we go, YAML is
+      more reliable for structured data + metrics fields. Note: MUST verify
+      prompt harness (Claude Code, OpenCode) will load YAML agent files —
+      they're downwind from AGENTS.md but verify anyway. Test with ONE agent
+      before converting all. Branch codename: yamakazi-pilots.
+    added: 2026-03-01
+    status: hold
+    priority: medium
+    tags: []
+    backrefs:
+      - SD-258 (YAML universal format)
+
+  - id: officer-book-frequency-metric
+    idea: >-
+      First officer-book metric for collection: frequency of use. Pre-commit
+      hook increments active agent file (or a separate index file) by 1 and
+      adds timestamp on each commit. Enables: which agents are actually used,
+      usage distribution, temporal patterns. Depends on yamakazi-pilots
+      (YAML agent files) for clean metric storage.
+    added: 2026-03-01
+    status: hold
+    priority: medium
+    tags: []
+    backrefs:
+      - yamakazi-pilots
+      - SD-255 (officer guardrail — KEEL_OFFICER already tracks who commits)
+
+  - id: public-roster-page
+    idea: >-
+      Public roster page on oceanheart showing agent files. Consider attesting
+      to ETH L2 for lineage recording — even if blockchain theatre (SD-250),
+      doesn't matter because we're the only ones relying on it, and
+      retroactive lineage might prove useful. Low priority, nice to have.
+    added: 2026-03-01
+    status: hold
+    priority: low
+    tags: []
+    backrefs:
+      - SD-250 (blockchain theatre assessment)
+      - agent-attestation-roi (holding-deck)
+
+  - id: hoist-the-colors
+    idea: >-
+      Update thepit.cloud with AnotherPair framing generated from thematic
+      analysis of Captain's verbatim words, values, and true north. The
+      product site should reflect the Captain's actual voice and intent,
+      not agent-smoothed copy. AnotherPair's thematic analysis work from
+      the slopodar calibration session is the source material.
+    added: 2026-03-01
+    status: hold
+    priority: high
+    tags: []
+    backrefs:
+      - SD-243 (slopodar calibration v3)
+      - sites/oceanheart/content/about.md
