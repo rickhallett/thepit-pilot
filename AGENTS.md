@@ -219,7 +219,17 @@ Think in composable units. Each unit (function, module, agent task) should:
 - Fail explicitly with actionable errors
 - Log meaningfully to stdout/stderr
 
-### Session Completion
+#### Agent Identity at Commit Time
+
+Every agent session must set `KEEL_OFFICER` before committing:
+
+```bash
+export KEEL_OFFICER=Weaver  # or Architect, Keel, etc.
+```
+
+The post-commit hook passes this to `pitkeel state-update --officer`. If unset, pitkeel aborts with a descriptive error. This is a guardrail — the officer field in `.keel-state` and git trailers must reflect who is actually at the helm.
+
+## Session Completion
 
 Work is not complete until changes are:
 1. Verified (gate passes)
