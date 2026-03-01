@@ -28,7 +28,13 @@ import { POST } from '@/app/api/newsletter/route';
 
 describe('newsletter api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish DB mock chain (wiped by resetAllMocks)
+    mockOnConflictDoNothing.mockResolvedValue(undefined);
+    mockValues.mockReturnValue({ onConflictDoNothing: mockOnConflictDoNothing });
+    mockInsert.mockReturnValue({ values: mockValues });
+
     getClientIdentifierMock.mockReturnValue('127.0.0.1');
     checkRateLimitMock.mockReturnValue({
       success: true,
@@ -45,6 +51,8 @@ describe('newsletter api', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Invalid JSON.');
   });
 
   it('returns 400 for missing email', async () => {
@@ -55,6 +63,8 @@ describe('newsletter api', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Email required.');
   });
 
   it('returns 400 for invalid email format', async () => {
@@ -65,6 +75,8 @@ describe('newsletter api', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Invalid email address.');
   });
 
   it('returns { ok: true } for valid email', async () => {

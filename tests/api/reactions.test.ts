@@ -15,7 +15,7 @@ import { POST } from '@/app/api/reactions/route';
 
 describe('reactions api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     // Default: allow all requests
     getClientIdentifierMock.mockReturnValue('127.0.0.1');
     checkRateLimitMock.mockReturnValue({
@@ -33,6 +33,8 @@ describe('reactions api', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Invalid JSON.');
   });
 
   it('returns 400 for missing fields', async () => {
@@ -43,6 +45,8 @@ describe('reactions api', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Invalid boutId format.');
   });
 
   it('returns 400 for invalid reaction type', async () => {
@@ -57,6 +61,8 @@ describe('reactions api', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Invalid reaction type.');
   });
 
   it('returns 429 when rate limited', async () => {

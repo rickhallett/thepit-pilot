@@ -66,7 +66,13 @@ const VALID_JUSTIFICATION =
 
 describe('paper-submissions api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish DB mock chain (wiped by resetAllMocks)
+    mockOnConflictDoNothing.mockResolvedValue(undefined);
+    mockValues.mockReturnValue({ onConflictDoNothing: mockOnConflictDoNothing });
+    mockInsert.mockReturnValue({ values: mockValues });
+
     authMock.mockResolvedValue({ userId: 'user_123' });
     checkRateLimitMock.mockReturnValue({
       success: true,
@@ -269,7 +275,13 @@ describe('paper-submissions api', () => {
     ];
 
     for (const area of areas) {
-      vi.clearAllMocks();
+      vi.resetAllMocks();
+
+      // Re-establish DB mock chain (wiped by resetAllMocks)
+      mockOnConflictDoNothing.mockResolvedValue(undefined);
+      mockValues.mockReturnValue({ onConflictDoNothing: mockOnConflictDoNothing });
+      mockInsert.mockReturnValue({ values: mockValues });
+
       authMock.mockResolvedValue({ userId: 'user_123' });
       checkRateLimitMock.mockReturnValue({
         success: true,

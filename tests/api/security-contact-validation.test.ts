@@ -15,7 +15,7 @@ vi.mock('@/lib/rate-limit', () => ({
 }));
 
 beforeEach(() => {
-  vi.clearAllMocks();
+  vi.resetAllMocks();
   getClientIdentifierMock.mockReturnValue('127.0.0.1');
   checkRateLimitMock.mockReturnValue({
     success: true,

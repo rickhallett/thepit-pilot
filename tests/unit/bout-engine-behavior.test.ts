@@ -276,7 +276,7 @@ const setupAuthenticated = () => {
 
 describe('bout-engine behavior (validate → execute)', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     delete process.env.RESEARCH_API_KEY;
   });
 
@@ -332,7 +332,9 @@ describe('bout-engine behavior (validate → execute)', () => {
 
     const boutResult = await executeBout(result.context);
     expect(boutResult.transcript).toHaveLength(2);
-    expect(untracedStreamTextMock).toHaveBeenCalled();
+    expect(untracedStreamTextMock).toHaveBeenCalledWith(
+      expect.objectContaining({ model: expect.anything() }),
+    );
   });
 
   it('B-04: LLM fails turn 2 of 2 — partial transcript, refund, re-throw', async () => {
@@ -383,7 +385,9 @@ describe('bout-engine behavior (validate → execute)', () => {
 
     expect(result.context.introPoolConsumedMicro).toBeGreaterThan(0);
     await expect(executeBout(result.context)).rejects.toThrow('anon error');
-    expect(refundIntroPoolMock).toHaveBeenCalled();
+    expect(refundIntroPoolMock).toHaveBeenCalledWith(
+      expect.any(Number),
+    );
   });
 
   it('B-06: idempotency — completed bout returns 409', async () => {
@@ -406,6 +410,8 @@ describe('bout-engine behavior (validate → execute)', () => {
     expect(result.ok).toBe(false);
     if (!result.ok) {
       expect(result.error.status).toBe(409);
+      const body = await result.error.json();
+      expect(body.error).toBe('Bout has already completed.');
     }
   });
 
@@ -481,7 +487,10 @@ describe('bout-engine behavior (validate → execute)', () => {
     expect(result.ok).toBe(true);
     if (!result.ok) return;
 
-    expect(buildArenaPresetFromLineupMock).toHaveBeenCalled();
+    expect(buildArenaPresetFromLineupMock).toHaveBeenCalledWith(
+      [{ id: 'custom-1', name: 'Custom1', systemPrompt: 'Custom.' }],
+      2,
+    );
     expect(result.context.preset.id).toBe('arena');
   });
 

@@ -22,7 +22,7 @@ import { POST } from '@/app/api/run-bout/route';
 
 describe('run-bout api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: null });
     // Default: no existing bout
     mockDb.select.mockImplementation(() => ({
@@ -42,6 +42,8 @@ describe('run-bout api', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Invalid JSON.');
   });
 
   it('returns 400 for missing boutId', async () => {
@@ -52,6 +54,8 @@ describe('run-bout api', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Missing boutId.');
   });
 
   it('returns 409 when bout is already running with transcript', async () => {

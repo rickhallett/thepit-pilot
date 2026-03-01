@@ -149,7 +149,7 @@ const VALID_PAYLOAD = { name: 'TestAgent', systemPrompt: 'Be helpful.' };
 
 describe('agents tier-based slot limits', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: 'user-1' });
 
     // DB select: agent count query returns 0 by default

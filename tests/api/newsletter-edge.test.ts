@@ -35,7 +35,13 @@ import { POST } from '@/app/api/newsletter/route';
 
 describe('newsletter edge cases', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish DB mock chain (wiped by resetAllMocks)
+    mockOnConflictDoNothing.mockResolvedValue(undefined);
+    mockValues.mockReturnValue({ onConflictDoNothing: mockOnConflictDoNothing });
+    mockInsert.mockReturnValue({ values: mockValues });
+
     getClientIdentifierMock.mockReturnValue('127.0.0.1');
     checkRateLimitMock.mockReturnValue({
       success: true,

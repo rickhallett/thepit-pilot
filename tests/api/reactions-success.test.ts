@@ -85,7 +85,16 @@ import { POST } from '@/app/api/reactions/route';
 
 describe('reactions success paths', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish mock implementations wiped by resetAllMocks
+    sha256HexMock.mockResolvedValue('0xhashed_ip');
+    mockOnConflict.mockResolvedValue(undefined);
+    mockValues.mockReturnValue({ onConflictDoNothing: mockOnConflict });
+    mockInsert.mockReturnValue({ values: mockValues });
+    const mockDeleteWhere = vi.fn().mockResolvedValue(undefined);
+    mockDelete.mockReturnValue({ where: mockDeleteWhere });
+
     getClientIdentifierMock.mockReturnValue('127.0.0.1');
     checkRateLimitMock.mockReturnValue({
       success: true,

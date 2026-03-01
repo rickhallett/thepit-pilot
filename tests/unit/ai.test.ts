@@ -17,7 +17,7 @@ vi.mock('@openrouter/ai-sdk-provider', () => ({
 describe('lib/ai', () => {
   beforeEach(() => {
     vi.resetModules();
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     delete process.env.ANTHROPIC_FREE_MODEL;
     delete process.env.ANTHROPIC_MODEL;
     delete process.env.ANTHROPIC_PREMIUM_MODELS;

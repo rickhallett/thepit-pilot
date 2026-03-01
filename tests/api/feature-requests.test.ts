@@ -76,7 +76,13 @@ const VALID_DESCRIPTION =
 
 describe('feature-requests POST api', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish DB mock chain (wiped by resetAllMocks)
+    _mockReturning.mockResolvedValue([{ id: 42 }]);
+    mockValues.mockReturnValue({ returning: _mockReturning });
+    mockInsert.mockReturnValue({ values: mockValues });
+
     authMock.mockResolvedValue({ userId: 'user_123' });
     checkRateLimitMock.mockReturnValue({
       success: true,
@@ -215,6 +221,7 @@ describe('feature-requests POST api', () => {
       }),
     );
     expect(res.status).toBe(429);
+    expect(await res.json()).toMatchObject({ error: 'Rate limit exceeded.', code: 'RATE_LIMITED' });
   });
 
   it('U9: UNSAFE_PATTERN in title returns 400', async () => {
@@ -246,7 +253,13 @@ describe('feature-requests POST api', () => {
     const categories = ['agents', 'arena', 'presets', 'research', 'ui', 'other'];
 
     for (const cat of categories) {
-      vi.clearAllMocks();
+      vi.resetAllMocks();
+
+      // Re-establish DB mock chain (wiped by resetAllMocks)
+      _mockReturning.mockResolvedValue([{ id: 42 }]);
+      mockValues.mockReturnValue({ returning: _mockReturning });
+      mockInsert.mockReturnValue({ values: mockValues });
+
       authMock.mockResolvedValue({ userId: 'user_123' });
       checkRateLimitMock.mockReturnValue({
         success: true,

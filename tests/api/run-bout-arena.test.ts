@@ -218,7 +218,7 @@ const setupStreamMocks = () => {
 
 describe('run-bout arena mode', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: 'user-1' });
     // By default, getPresetById returns undefined for 'arena' — the route
     // then falls through to the DB lookup path.
@@ -272,7 +272,9 @@ describe('run-bout arena mode', () => {
 
     expect(res.status).toBe(200);
     // streamText should have been called (bout actually ran)
-    expect(streamTextMock).toHaveBeenCalled();
+    expect(streamTextMock).toHaveBeenCalledWith(
+      expect.objectContaining({ model: 'mock-model' }),
+    );
   });
 
   // -------------------------------------------------------------------------

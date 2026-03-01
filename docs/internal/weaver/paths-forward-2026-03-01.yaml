@@ -9,46 +9,60 @@ phases:
   - id: 0
     name: Clear the Decks
     description: Merge #407, close #406, clean master
-    status: in_progress
+    status: done
     estimate_agent_min: 5
+    actual_agent_min: 8
     captain_decisions: 1
     notes: >-
-      PR #407 is superset of #406. Squash merge #407, close #406 as superseded.
-      Security job CI fix (pnpm audit continue-on-error) included.
+      PR #407 merged (squash), #406 closed as superseded. CI fix included.
+      Post-merge gate green: 1279 tests, 96.06% coverage.
 
   - id: 1
     name: Testing Broadside — PoA Phases 1-5
     description: Test suite hardening, all phases in succession
-    status: pending
+    status: done
     estimate_agent_min: 105
-    captain_decisions: 3-5
-    back_ref: SD-264, poa-test-suite-hardening-2026-02-28.md
+    actual_agent_min: 25
+    captain_decisions: 0
+    back_ref: SD-264, SD-277, poa-test-suite-hardening-2026-02-28.md
+    pr: 408
     sub_phases:
       - id: 1a
         name: clearAllMocks → resetAllMocks (44 instances)
         executor: Janitor
         estimate_agent_min: 15
-        status: pending
+        actual_agent_min: 8
+        status: done
       - id: 1b
-        name: Object.defineProperty try/finally (18 instances)
+        name: Object.defineProperty try/finally (7 wrapped, 8 already safe)
         executor: Janitor
         estimate_agent_min: 10
-        status: pending
+        actual_agent_min: 3
+        status: done
       - id: 2a
-        name: Audit 25 status-code-only assertions (bout-engine-validate)
+        name: Audit 64 tests in bout-engine-validate (13 strengthened)
         executor: Watchdog
         estimate_agent_min: 20
-        status: pending
+        actual_agent_min: 5
+        status: done
       - id: 2b
-        name: Audit bout-engine-execute + behavior assertions
+        name: Audit 90 tests in execute+behavior (1 strengthened, 89 already strong)
         executor: Watchdog
         estimate_agent_min: 15
-        status: pending
-      - id: 3-5
-        name: Systematic sweep, bare .toHaveBeenCalled(), coverage
-        executor: Various
-        estimate_agent_min: 45
-        status: pending
+        actual_agent_min: 5
+        status: done
+      - id: 3a
+        name: API sweep — 246 assertions audited, 30 strengthened (88% already strong)
+        executor: Watchdog
+        estimate_agent_min: 30
+        actual_agent_min: 5
+        status: done
+      - id: 3b
+        name: Bare toHaveBeenCalled — 44 audited, 34 strengthened, 10 acceptable
+        executor: Watchdog
+        estimate_agent_min: 15
+        actual_agent_min: 4
+        status: done
 
   - id: 2
     name: Hoist the Colors

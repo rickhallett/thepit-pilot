@@ -35,7 +35,11 @@ describe('contact form', () => {
   const originalEnv = { ...process.env };
 
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish DB mock chain (wiped by resetAllMocks)
+    mockInsert.mockReturnValue({ values: vi.fn().mockResolvedValue(undefined) });
+
     getClientIdentifierMock.mockReturnValue('127.0.0.1');
     checkRateLimitMock.mockReturnValue({
       success: true,

@@ -249,7 +249,7 @@ const setupStreamMocks = () => {
 
 describe('run-bout credit flow (CREDITS_ENABLED=true)', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: 'user-1' });
     getPresetByIdMock.mockReturnValue(MINIMAL_PRESET);
     setupDbSelect();
@@ -586,7 +586,7 @@ describe('run-bout credit flow (CREDITS_ENABLED=true)', () => {
 
 describe('run-bout anonymous intro-pool flow (CREDITS_ENABLED=true)', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     authMock.mockResolvedValue({ userId: null });
     getPresetByIdMock.mockReturnValue(MINIMAL_PRESET);
     setupDbSelect();

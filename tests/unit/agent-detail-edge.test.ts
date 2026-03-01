@@ -1,16 +1,13 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest';
 
 // Hoist mock helpers before any imports
-const { mockSelect, mockDbRows } = vi.hoisted(() => {
+const { mockSelect, mockDbRows, limitFn, whereFn, fromFn } = vi.hoisted(() => {
   const mockDbRows: Record<string, unknown>[] = [];
 
-  const limitFn = vi.fn().mockImplementation(() => {
-    const row = mockDbRows.shift();
-    return row ? [row] : [];
-  });
-  const whereFn = vi.fn().mockReturnValue({ limit: limitFn });
-  const fromFn = vi.fn().mockReturnValue({ where: whereFn });
-  const mockSelect = vi.fn().mockReturnValue({ from: fromFn });
+  const limitFn = vi.fn();
+  const whereFn = vi.fn();
+  const fromFn = vi.fn();
+  const mockSelect = vi.fn();
 
   return { mockSelect, mockDbRows, limitFn, whereFn, fromFn };
 });
@@ -76,8 +73,17 @@ const makeAgentRow = (
 
 describe('agent-detail edge cases', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     mockDbRows.length = 0;
+
+    // Re-establish the mock chain wiped by resetAllMocks
+    limitFn.mockImplementation(() => {
+      const row = mockDbRows.shift();
+      return row ? [row] : [];
+    });
+    whereFn.mockReturnValue({ limit: limitFn });
+    fromFn.mockReturnValue({ where: whereFn });
+    mockSelect.mockReturnValue({ from: fromFn });
   });
 
   // U1: Lineage chain longer than maxDepth → truncated

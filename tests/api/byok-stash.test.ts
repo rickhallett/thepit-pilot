@@ -31,7 +31,7 @@ import { readAndClearByokKey } from '@/lib/byok';
 
 describe('byok-stash', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     cookieStore._store.clear();
     authMock.mockResolvedValue({ userId: 'user_test' });
   });
@@ -44,6 +44,8 @@ describe('byok-stash', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Invalid JSON.');
   });
 
   it('POST returns 400 when key is missing/empty', async () => {
@@ -54,6 +56,8 @@ describe('byok-stash', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
+    const body = await res.json();
+    expect(body.error).toBe('Missing key.');
   });
 
   it('POST returns 401 when unauthenticated', async () => {
@@ -65,6 +69,8 @@ describe('byok-stash', () => {
     });
     const res = await POST(req);
     expect(res.status).toBe(401);
+    const body = await res.json();
+    expect(body.error).toBe('Authentication required.');
   });
 
   it('POST returns 400 for invalid key format', async () => {

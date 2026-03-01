@@ -126,7 +126,15 @@ const setupUpdate = () => {
 // ---------------------------------------------------------------------------
 describe('POST /api/credits/webhook edge cases', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish mock implementations wiped by resetAllMocks
+    mockApplyCreditDelta.mockResolvedValue(undefined);
+    mockEnsureCreditAccount.mockResolvedValue(undefined);
+    mockHeaders.fn.mockResolvedValue({
+      get: (name: string) => mockHeaders.map.get(name) ?? null,
+    });
+
     mockHeaders.map.clear();
     process.env.STRIPE_WEBHOOK_SECRET = 'whsec_test_secret';
     mockHeaders.map.set('stripe-signature', 'sig_valid');

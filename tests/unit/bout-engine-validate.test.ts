@@ -314,7 +314,7 @@ const setupAuthHappyPath = () => {
 
 describe('validateBoutRequest', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
     setupHappyPath();
     // Reset process.env values that tests may change
     delete process.env.RESEARCH_API_KEY;
@@ -342,6 +342,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(400);
+        const body = await result.error.json();
+        expect(body.error).toBe('Invalid JSON.');
       }
     });
 
@@ -351,6 +353,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(400);
+        const body = await result.error.json();
+        expect(body.error).toBe('Invalid JSON.');
       }
     });
 
@@ -360,6 +364,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(400);
+        const body = await result.error.json();
+        expect(body.error).toBe('Invalid JSON.');
       }
     });
 
@@ -483,6 +489,8 @@ describe('validateBoutRequest', () => {
         expect(result.ok).toBe(false);
         if (!result.ok) {
           expect(result.error.status).toBe(503);
+          const body = await result.error.json();
+          expect(body.error).toBe('Service unavailable.');
         }
       } finally {
         // Restore
@@ -674,7 +682,10 @@ describe('validateBoutRequest', () => {
       const req = makeRequest({ boutId: 'b1', presetId: 'arena' });
       const result = await validateBoutRequest(req);
       expect(result.ok).toBe(true);
-      expect(buildArenaPresetFromLineupMock).toHaveBeenCalled();
+      expect(buildArenaPresetFromLineupMock).toHaveBeenCalledWith(
+        [{ id: 'a1', name: 'A1', systemPrompt: 'test' }],
+        4,
+      );
     });
 
     it('V-22: arena preset with no agentLineup returns 404', async () => {
@@ -698,6 +709,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(404);
+        const body = await result.error.json();
+        expect(body.error).toBe('Unknown preset.');
       }
     });
 
@@ -777,7 +790,7 @@ describe('validateBoutRequest', () => {
         model: 'byok',
       });
       const result = await validateBoutRequest(req);
-      expect(readAndClearByokKeyMock).toHaveBeenCalled();
+      expect(readAndClearByokKeyMock).toHaveBeenCalledWith(expect.anything());
       expect(result.ok).toBe(true);
       if (result.ok) {
         expect(result.context.byokData?.provider).toBe('anthropic');
@@ -816,6 +829,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(403);
+        const body = await result.error.json();
+        expect(body.error).toBe('Forbidden.');
       }
     });
 
@@ -1075,6 +1090,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(402);
+        const body = await result.error.json();
+        expect(body.error).toBe('Account suspended');
       }
     });
 
@@ -1147,6 +1164,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(402);
+        const body = await result.error.json();
+        expect(body.error).toContain('does not include access');
       }
     });
 
@@ -1285,6 +1304,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(401);
+        const body = await result.error.json();
+        expect(body.error).toBe('Authentication required.');
       }
     });
 
@@ -1297,6 +1318,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(401);
+        const body = await result.error.json();
+        expect(body.error).toBe('Authentication required.');
       }
     });
 
@@ -1309,6 +1332,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(402);
+        const body = await result.error.json();
+        expect(body.error).toBe('Intro pool exhausted. Sign in to continue.');
       }
     });
 
@@ -1333,6 +1358,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(402);
+        const body = await result.error.json();
+        expect(body.error).toBe('Insufficient credits.');
       }
     });
   });
@@ -1369,6 +1396,8 @@ describe('validateBoutRequest', () => {
       expect(result.ok).toBe(false);
       if (!result.ok) {
         expect(result.error.status).toBe(503);
+        const body = await result.error.json();
+        expect(body.error).toBe('Service temporarily unavailable.');
       }
     });
 

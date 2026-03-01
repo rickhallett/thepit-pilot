@@ -114,7 +114,7 @@ describe('users edge cases', () => {
     const { ensureUserRecord } = await loadUsers();
     const result = await ensureUserRecord('user_jd');
     expect(result).toEqual(createdRow);
-    expect(mockDb.insert).toHaveBeenCalled();
+    expect(mockDb.insert).toHaveBeenCalledWith(usersTable);
   });
 
   // U3: getUserDisplayName for non-existent user → truncated ID

@@ -66,9 +66,13 @@ import { recordRemixEvent, getRemixStats } from '@/lib/remix-events';
 
 describe('remix-events', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    vi.resetAllMocks();
+
+    // Re-establish hoisted mock implementations wiped by resetAllMocks
     mockQueryResult.mockResolvedValue([]);
     mockInsertReturning.mockResolvedValue([{ id: 1 }]);
+    mockInsertValues.mockReturnValue({ returning: mockInsertReturning });
+    applyCreditDeltaMock.mockResolvedValue(undefined);
   });
 
   describe('recordRemixEvent', () => {
