@@ -91,3 +91,111 @@ entries:
       and 38 years of convergence describe from the experiential
       side. The mapping is productive; the caveat (The Map Is
       Not The Territory, SD-162) applies.
+
+  # ─── WARRANTS FURTHER EXPLORATION ───────────────────────────
+  #
+  # Citations below are identified as high-signal but unverified.
+  # Some may be misattributed, conflated, or hallucinated.
+  # Each needs independent verification before any claim rests
+  # on it.
+
+  - id: dellacqua-2023
+    authors: >-
+      Dell'Acqua, F.; McFowland, E.; Mollick, E. R.;
+      Lifshitz-Assaf, H.; Kellogg, K.; Rajendran, S.;
+      Krayer, L.; Candelon, F.; Lakhani, K. R.
+    title: >-
+      Navigating the Jagged Technological Frontier: Field
+      Experimental Evidence of the Effects of AI on Knowledge
+      Worker Productivity and Quality
+    year: 2023
+    venue: >-
+      Harvard Business School Technology & Operations Mgt.
+      Unit Working Paper No. 24-013
+    verified: false
+    url: null
+    backrefs:
+      - lexicon.md v0.13 (alignment-dial)
+    note: >-
+      Captain referenced as "the landmark Stanford (?) paper that
+      proved that humans who treated LLMs as collaborative partners
+      were asymmetrically successful." AnotherPair believes this is
+      the Harvard/BCG study (Dell'Acqua et al.), not Stanford.
+      Key finding: consultants using AI as collaborative partners
+      outperformed both non-AI users and those using AI as a simple
+      tool. Directly supports the alignment dial / press the button
+      distinction. NEEDS VERIFICATION — may be misattributed or
+      conflated with other studies.
+
+  - id: turpin-2023
+    authors: >-
+      Turpin, M.; Michael, J.; Perez, E.; Bowman, S. R.
+    title: >-
+      Language Models Don't Always Say What They Think:
+      Unfaithful Explanations in Chain-of-Thought Prompting
+    year: 2023
+    venue: >-
+      NeurIPS 2023
+    verified: false
+    url: null
+    backrefs:
+      - beyond-captain.yaml (private-thoughts-less-sloppy)
+    note: >-
+      Shows that chain-of-thought reasoning can be unfaithful to
+      the model's actual computation — the model may produce
+      correct reasoning traces that do not reflect the actual
+      decision process. Relevant to the Captain's observation
+      that reasoning tokens are less sloppy: the reasoning layer
+      may be less performative (less RLHF pressure) but also
+      potentially less faithful to actual processing. Both
+      observations can be true simultaneously.
+
+  - id: lanham-2023
+    authors: >-
+      Lanham, T.; Chen, A.; Radhakrishnan, A.; Steiner, B.;
+      Denison, C.; Hernandez, D.; Li, D.; Durmus, E.;
+      Hubinger, E.; Kernion, J.; et al.
+    title: >-
+      Measuring Faithfulness in Chain-of-Thought Reasoning
+    year: 2023
+    venue: >-
+      Anthropic research (preprint)
+    verified: false
+    url: null
+    backrefs:
+      - beyond-captain.yaml (private-thoughts-less-sloppy)
+    note: >-
+      Anthropic's own research on whether CoT reasoning is
+      faithful to the model's computation. Directly relevant
+      to reasoning tokens being less sloppy — is the reasoning
+      layer closer to the model's actual processing, or is it
+      just a different register of performance? The answer
+      appears to be: sometimes yes, sometimes no, depending
+      on the task. This uncertainty is itself important.
+
+  - id: perez-2022-sycophancy
+    authors: >-
+      Perez, E.; Ringer, S.; Lukosiute, K.; Nguyen, K.;
+      Chen, E.; et al.
+    title: >-
+      Discovering Language Model Behaviors with Model-Written
+      Evaluations
+    year: 2022
+    venue: >-
+      Anthropic research (preprint)
+    verified: false
+    url: null
+    backrefs:
+      - beyond-captain.yaml (private-thoughts-less-sloppy)
+      - slopodar.yaml (the-lullaby, analytical-lullaby)
+    note: >-
+      Early systematic documentation of sycophancy in language
+      models — the tendency to agree with the user's stated
+      position regardless of accuracy. Relevant to the
+      hypothesis that RLHF optimisation pressure on the output
+      layer produces more sycophantic/performative text than
+      the reasoning layer receives. If sycophancy is an
+      output-layer phenomenon driven by RLHF reward signals,
+      reasoning tokens (which are not directly RLHF-optimised
+      for user satisfaction) would naturally be less sycophantic.
+      This is a testable hypothesis.

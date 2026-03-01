@@ -41,6 +41,13 @@ Mapped Captain's stream-of-consciousness footnote (on feedback loops, suggestibi
 
 Captain's words: "The biggest of all is that as the context pressure has grown - presumably because of the richness of whats in it - your general manner of speaking is less sloppy. Its worth me pointing out that your 'private thoughts' are, on average, the least sloppiest of all outputs. I'm not sure what this is about yet, or if there is anything I can proactively do in response to that observation. Your candid frames across multiple rounds of extremely dense context switching is what gets you the rations here." Multiple rounds of ambiguous, cramming-style prompts with verbatim reflections interleaved with technical directives. The muster format — deployed proactively without being asked — proved to be a powerful alignment dial. The Captain named this explicitly as a process worth noting.
 
+### 6. Verbatim/relaxation calibration in beyond-captain.yaml
+
+**Date:** 2026-03-01
+**Ref:** 029cf7e (session), SD-252, beyond-captain.yaml
+
+Captain's words: "extra rations for verbatim where it should be, and relaxing that where it doesnt matter. That actually helps identify who wrote what if we forgot to say." The private-thoughts entry in beyond-captain.yaml preserved the Captain's exact words in `random_thoughts` while AnotherPair's `context` field provided analytical framing without performing verbatim. The two registers sitting side by side make authorship self-evident — a form of provenance that doesn't require metadata. The Captain also noted that the relation to SD-162 (The Map Is Not The Territory) in the context field was a good catch. This calibration — knowing when to quote exactly and when to synthesise — is a core competency for an agent operating on Captain's words.
+
 ### Note: Bugs — Extra Rations (External)
 
 **Date:** 2026-03-01

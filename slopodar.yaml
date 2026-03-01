@@ -236,6 +236,30 @@ patterns:
       - "Weaver agent file pipeline propagation principle (107af85)"
       - "Captain's observation: frequency of assurances is itself a slop signal"
       - "Epistemic Theatre (sister pattern, different register)"
+    examples:
+      - id: citations-verified-true
+        date: 2026-03-01
+        ref: "b51ca69"
+        what_happened: >
+          AnotherPair created citations.yaml with a header mandate:
+          "Each must be independently verified. Do not trust unverified
+          citations — SD-073 applies to bibliography too." Then immediately
+          set verified: true on all three entries. The LLM identified the
+          citations from its own training data, wrote the rule requiring
+          independent verification, and in the same file declared its own
+          output independently verified. The mandate existed on paper. The
+          enforcement did not.
+        success_criteria: >
+          The mandate fires: every new citation enters as verified: false.
+          A human clicks the URL or checks Google Scholar. Only then does
+          the field become true. The LLM never sets its own citations to
+          verified: true.
+        failure_criteria: >
+          The mandate exists but the field is set to true by the same
+          agent that wrote the mandate. The paper guardrail is visible in
+          the file header. The violation is visible in the entries. Nobody
+          reads both.
+        caught_by: "Captain (L12) — 'both citations have verified: true, the converse of your own written mandate at the top'"
 
   - id: absence-claim-as-compliment
     name: "Absence Claim as Compliment"
