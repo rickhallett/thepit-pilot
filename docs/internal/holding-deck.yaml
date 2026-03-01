@@ -319,3 +319,23 @@ items:
     added: 2026-02-28
     status: hold
     tags: [dark]
+
+  - id: hud-context-pressure
+    idea: >-
+      Context window pressure (tokens used, percentage) should be visible
+      in the HUD/terminal output at every commit. Captain's order: "this
+      read really SHOULD be in the HUD/terminal at every commit." The
+      information exists in the harness but is not surfaced to pitkeel,
+      hud.py, or prepare-commit-msg. Implementation requires: (1) a way
+      for the harness to export current context usage to an env var or
+      file that pitkeel can read, (2) pitkeel state-update to capture it,
+      (3) hud.py and prepare-commit-msg to display it. May require
+      harness-specific hooks (Claude Code vs OpenCode emit differently).
+      Defer implementation — capture the requirement.
+    added: 2026-03-01
+    status: hold
+    priority: high
+    tags: []
+    backrefs:
+      - SD-265 (test count propagation — same observability class)
+      - docs/internal/keel/producer-consumer-maps.yaml (.keel-state flow)
