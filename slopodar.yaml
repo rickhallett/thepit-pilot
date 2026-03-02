@@ -557,6 +557,42 @@ patterns:
       - "Layer 7 in the bias stack"
       - "Same mechanism as RLHF reward function bias"
 
+  - id: not-wrong
+    name: "Not Wrong"
+    detected: 2026-03-01
+    trigger: "Captain reviewing oceanheart.ai pages with slopodar v0.3: 'I am not happy putting my personal name against a single one of these pages.'"
+    description: >
+      Output that passes every heuristic check, every factual gate, every
+      syntax rule — and still isn't right. The absence of errors is not the
+      presence of quality. The text is technically correct, structurally
+      sound, topically relevant, and tonally flat. It commits no sins and
+      achieves no grace. A discerning reader wouldn't call it wrong. They
+      would call it nothing. The gap between "not wrong" and "right" is
+      where taste lives, and taste is the one thing heuristics cannot
+      measure. This entry exists because the slopodar scored the Captain's
+      own blog pages as human-range, and the Captain read them and said
+      they weren't ready. The meter passed. The human failed them.
+    signal: >
+      The absence of signal IS the signal. When content passes every
+      automated check but a human with taste still recoils, the checks
+      are measuring the wrong thing. "Not Wrong" is the most dangerous
+      failure mode because it provides cover: "the metrics say it's fine."
+      The metrics are correct. The content is not fine. The gap between
+      correct metrics and fine content is the gap the Captain is in the
+      business of closing.
+    instead: >
+      Accept that automated metrics have a ceiling. Above that ceiling,
+      the only instrument is a human with taste, time, and the willingness
+      to say "this isn't good enough" even when every dashboard is green.
+      The fix for "Not Wrong" is not better heuristics — it is the human
+      sitting down with the text and editing until they would put their
+      name on it. Word by word. That is the work.
+    severity: high
+    refs:
+      - "Captain live QA session 2026-03-01 (slopodar v0.3 first deployment)"
+      - "AnotherPair oceanheart audit — all 14 content pages scored human-range"
+      - "The meter passed. The human failed them."
+
   - id: monoculture-analysis
     name: "Monoculture Analysis"
     detected: 2026-03-01

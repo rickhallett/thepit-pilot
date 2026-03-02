@@ -1,0 +1,7219 @@
+# Oceanheart.ai Slopodar Audit
+# Generated: 2026-03-01
+# Method: slopodar v0.2 heuristics applied programmatically
+# Observer: AnotherPair
+---
+meta:
+  date: "2026-03-01"
+  tool_version: "slopodar v0.2"
+  content_root: "sites/oceanheart/content/"
+  total_files: 308
+  index_files: 4
+  non_index_files: 304
+  empty_stubs: 288
+  near_stubs_1_to_49_words: 2
+  scoreable_pages_50_plus_words: 14
+  scoring_formula: "sum_score = (contractionPer1k + firstPersonPer1k + questionRate) - (transitionPer1k + nomDensity)"
+  interpretation: "Higher = more human voice markers. Lower = more AI-like markers."
+
+all_pages_ranked_by_sum_score:
+  # Ranked ascending (worst/most-AI-like first). All 304 non-index pages.
+  # Pages with 0 words are empty frontmatter stubs.
+  - rank: 1
+    filepath: "blog/2026-03-01-paper-guardrail.md"
+    title: "Build your house from paper and 0.37% of the time you'll get screwed 100% of the time"
+    date: "2026-03-01T15:00:00Z"
+    word_count: 34
+    sentence_count: 2
+    sum_score: -5.9
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 5.9
+    rhetoric:
+      emdash: 1
+      absnoun: 2
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 5.9
+  - rank: 2
+    filepath: "blog/2026-03-01-the-elephant.md"
+    title: "33,700 tokens on boot and nobody noticed"
+    date: "2026-03-01"
+    word_count: 49
+    sentence_count: 5
+    sum_score: -4.1
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 4.1
+    rhetoric:
+      emdash: 2
+      absnoun: 2
+      epigram: 1
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 4.1
+  - rank: 3
+    filepath: "cv.md"
+    title: "CV"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 4
+    filepath: "decisions/sd-001.md"
+    title: "SD-001"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 5
+    filepath: "decisions/sd-002.md"
+    title: "SD-002"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 6
+    filepath: "decisions/sd-003.md"
+    title: "SD-003"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 7
+    filepath: "decisions/sd-004.md"
+    title: "SD-004"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 8
+    filepath: "decisions/sd-005.md"
+    title: "SD-005"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 9
+    filepath: "decisions/sd-006.md"
+    title: "SD-006"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 10
+    filepath: "decisions/sd-007.md"
+    title: "SD-007"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 11
+    filepath: "decisions/sd-008.md"
+    title: "SD-008"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 12
+    filepath: "decisions/sd-009.md"
+    title: "SD-009"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 13
+    filepath: "decisions/sd-010.md"
+    title: "SD-010"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 14
+    filepath: "decisions/sd-011.md"
+    title: "SD-011"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 15
+    filepath: "decisions/sd-012.md"
+    title: "SD-012"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 16
+    filepath: "decisions/sd-013.md"
+    title: "SD-013"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 17
+    filepath: "decisions/sd-014.md"
+    title: "SD-014"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 18
+    filepath: "decisions/sd-015.md"
+    title: "SD-015"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 19
+    filepath: "decisions/sd-016.md"
+    title: "SD-016"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 20
+    filepath: "decisions/sd-017.md"
+    title: "SD-017"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 21
+    filepath: "decisions/sd-018.md"
+    title: "SD-018"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 22
+    filepath: "decisions/sd-019.md"
+    title: "SD-019"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 23
+    filepath: "decisions/sd-020.md"
+    title: "SD-020"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 24
+    filepath: "decisions/sd-021.md"
+    title: "SD-021"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 25
+    filepath: "decisions/sd-022.md"
+    title: "SD-022"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 26
+    filepath: "decisions/sd-023.md"
+    title: "SD-023"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 27
+    filepath: "decisions/sd-024.md"
+    title: "SD-024"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 28
+    filepath: "decisions/sd-025.md"
+    title: "SD-025"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 29
+    filepath: "decisions/sd-026.md"
+    title: "SD-026"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 30
+    filepath: "decisions/sd-027.md"
+    title: "SD-027"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 31
+    filepath: "decisions/sd-028.md"
+    title: "SD-028"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 32
+    filepath: "decisions/sd-029.md"
+    title: "SD-029"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 33
+    filepath: "decisions/sd-030.md"
+    title: "SD-030"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 34
+    filepath: "decisions/sd-037.md"
+    title: "SD-037"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 35
+    filepath: "decisions/sd-038.md"
+    title: "SD-038"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 36
+    filepath: "decisions/sd-039.md"
+    title: "SD-039"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 37
+    filepath: "decisions/sd-040.md"
+    title: "SD-040"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 38
+    filepath: "decisions/sd-041.md"
+    title: "SD-041"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 39
+    filepath: "decisions/sd-042.md"
+    title: "SD-042"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 40
+    filepath: "decisions/sd-043.md"
+    title: "SD-043"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 41
+    filepath: "decisions/sd-044.md"
+    title: "SD-044"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 42
+    filepath: "decisions/sd-045.md"
+    title: "SD-045"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 43
+    filepath: "decisions/sd-046.md"
+    title: "SD-046"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 44
+    filepath: "decisions/sd-047.md"
+    title: "SD-047"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 45
+    filepath: "decisions/sd-048.md"
+    title: "SD-048"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 46
+    filepath: "decisions/sd-049.md"
+    title: "SD-049"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 47
+    filepath: "decisions/sd-050.md"
+    title: "SD-050"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 48
+    filepath: "decisions/sd-051.md"
+    title: "SD-051"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 49
+    filepath: "decisions/sd-052.md"
+    title: "SD-052"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 50
+    filepath: "decisions/sd-053.md"
+    title: "SD-053"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 51
+    filepath: "decisions/sd-054.md"
+    title: "SD-054"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 52
+    filepath: "decisions/sd-055.md"
+    title: "SD-055"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 53
+    filepath: "decisions/sd-056.md"
+    title: "SD-056"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 54
+    filepath: "decisions/sd-057.md"
+    title: "SD-057"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 55
+    filepath: "decisions/sd-058.md"
+    title: "SD-058"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 56
+    filepath: "decisions/sd-059.md"
+    title: "SD-059"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 57
+    filepath: "decisions/sd-060.md"
+    title: "SD-060"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 58
+    filepath: "decisions/sd-061.md"
+    title: "SD-061"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 59
+    filepath: "decisions/sd-062.md"
+    title: "SD-062"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 60
+    filepath: "decisions/sd-063.md"
+    title: "SD-063"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 61
+    filepath: "decisions/sd-064.md"
+    title: "SD-064"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 62
+    filepath: "decisions/sd-065.md"
+    title: "SD-065"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 63
+    filepath: "decisions/sd-066.md"
+    title: "SD-066"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 64
+    filepath: "decisions/sd-067.md"
+    title: "SD-067"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 65
+    filepath: "decisions/sd-068.md"
+    title: "SD-068"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 66
+    filepath: "decisions/sd-069.md"
+    title: "SD-069"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 67
+    filepath: "decisions/sd-070.md"
+    title: "SD-070"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 68
+    filepath: "decisions/sd-071.md"
+    title: "SD-071"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 69
+    filepath: "decisions/sd-072.md"
+    title: "SD-072"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 70
+    filepath: "decisions/sd-073.md"
+    title: "SD-073"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 71
+    filepath: "decisions/sd-074.md"
+    title: "SD-074"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 72
+    filepath: "decisions/sd-075.md"
+    title: "SD-075"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 73
+    filepath: "decisions/sd-076.md"
+    title: "SD-076"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 74
+    filepath: "decisions/sd-077.md"
+    title: "SD-077"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 75
+    filepath: "decisions/sd-078.md"
+    title: "SD-078"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 76
+    filepath: "decisions/sd-079.md"
+    title: "SD-079"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 77
+    filepath: "decisions/sd-080.md"
+    title: "SD-080"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 78
+    filepath: "decisions/sd-081.md"
+    title: "SD-081"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 79
+    filepath: "decisions/sd-082.md"
+    title: "SD-082"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 80
+    filepath: "decisions/sd-083.md"
+    title: "SD-083"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 81
+    filepath: "decisions/sd-084.md"
+    title: "SD-084"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 82
+    filepath: "decisions/sd-085.md"
+    title: "SD-085"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 83
+    filepath: "decisions/sd-086.md"
+    title: "SD-086"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 84
+    filepath: "decisions/sd-087.md"
+    title: "SD-087"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 85
+    filepath: "decisions/sd-088.md"
+    title: "SD-088"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 86
+    filepath: "decisions/sd-089.md"
+    title: "SD-089"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 87
+    filepath: "decisions/sd-090.md"
+    title: "SD-090"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 88
+    filepath: "decisions/sd-091.md"
+    title: "SD-091"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 89
+    filepath: "decisions/sd-092.md"
+    title: "SD-092"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 90
+    filepath: "decisions/sd-093.md"
+    title: "SD-093"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 91
+    filepath: "decisions/sd-094.md"
+    title: "SD-094"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 92
+    filepath: "decisions/sd-095.md"
+    title: "SD-095"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 93
+    filepath: "decisions/sd-096.md"
+    title: "SD-096"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 94
+    filepath: "decisions/sd-097.md"
+    title: "SD-097"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 95
+    filepath: "decisions/sd-098.md"
+    title: "SD-098"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 96
+    filepath: "decisions/sd-099.md"
+    title: "SD-099"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 97
+    filepath: "decisions/sd-100.md"
+    title: "SD-100"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 98
+    filepath: "decisions/sd-101.md"
+    title: "SD-101"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 99
+    filepath: "decisions/sd-102.md"
+    title: "SD-102"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 100
+    filepath: "decisions/sd-103.md"
+    title: "SD-103"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 101
+    filepath: "decisions/sd-104.md"
+    title: "SD-104"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 102
+    filepath: "decisions/sd-105.md"
+    title: "SD-105"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 103
+    filepath: "decisions/sd-106.md"
+    title: "SD-106"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 104
+    filepath: "decisions/sd-107.md"
+    title: "SD-107"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 105
+    filepath: "decisions/sd-108.md"
+    title: "SD-108"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 106
+    filepath: "decisions/sd-109.md"
+    title: "SD-109"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 107
+    filepath: "decisions/sd-110.md"
+    title: "SD-110"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 108
+    filepath: "decisions/sd-111.md"
+    title: "SD-111"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 109
+    filepath: "decisions/sd-112.md"
+    title: "SD-112"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 110
+    filepath: "decisions/sd-113.md"
+    title: "SD-113"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 111
+    filepath: "decisions/sd-114.md"
+    title: "SD-114"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 112
+    filepath: "decisions/sd-115.md"
+    title: "SD-115"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 113
+    filepath: "decisions/sd-116.md"
+    title: "SD-116"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 114
+    filepath: "decisions/sd-117.md"
+    title: "SD-117"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 115
+    filepath: "decisions/sd-118.md"
+    title: "SD-118"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 116
+    filepath: "decisions/sd-119.md"
+    title: "SD-119"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 117
+    filepath: "decisions/sd-120.md"
+    title: "SD-120"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 118
+    filepath: "decisions/sd-121.md"
+    title: "SD-121"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 119
+    filepath: "decisions/sd-122.md"
+    title: "SD-122"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 120
+    filepath: "decisions/sd-123.md"
+    title: "SD-123"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 121
+    filepath: "decisions/sd-124.md"
+    title: "SD-124"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 122
+    filepath: "decisions/sd-125.md"
+    title: "SD-125"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 123
+    filepath: "decisions/sd-126.md"
+    title: "SD-126"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 124
+    filepath: "decisions/sd-127.md"
+    title: "SD-127"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 125
+    filepath: "decisions/sd-128.md"
+    title: "SD-128"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 126
+    filepath: "decisions/sd-129.md"
+    title: "SD-129"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 127
+    filepath: "decisions/sd-130.md"
+    title: "SD-130"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 128
+    filepath: "decisions/sd-131.md"
+    title: "SD-131"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 129
+    filepath: "decisions/sd-132.md"
+    title: "SD-132"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 130
+    filepath: "decisions/sd-133.md"
+    title: "SD-133"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 131
+    filepath: "decisions/sd-134.md"
+    title: "SD-134"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 132
+    filepath: "decisions/sd-135.md"
+    title: "SD-135"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 133
+    filepath: "decisions/sd-136.md"
+    title: "SD-136"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 134
+    filepath: "decisions/sd-137.md"
+    title: "SD-137"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 135
+    filepath: "decisions/sd-138.md"
+    title: "SD-138"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 136
+    filepath: "decisions/sd-139.md"
+    title: "SD-139"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 137
+    filepath: "decisions/sd-140.md"
+    title: "SD-140"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 138
+    filepath: "decisions/sd-141.md"
+    title: "SD-141"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 139
+    filepath: "decisions/sd-142.md"
+    title: "SD-142"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 140
+    filepath: "decisions/sd-143.md"
+    title: "SD-143"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 141
+    filepath: "decisions/sd-144.md"
+    title: "SD-144"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 142
+    filepath: "decisions/sd-145.md"
+    title: "SD-145"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 143
+    filepath: "decisions/sd-146.md"
+    title: "SD-146"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 144
+    filepath: "decisions/sd-147.md"
+    title: "SD-147"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 145
+    filepath: "decisions/sd-148.md"
+    title: "SD-148"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 146
+    filepath: "decisions/sd-149.md"
+    title: "SD-149"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 147
+    filepath: "decisions/sd-150.md"
+    title: "SD-150"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 148
+    filepath: "decisions/sd-151.md"
+    title: "SD-151"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 149
+    filepath: "decisions/sd-152.md"
+    title: "SD-152"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 150
+    filepath: "decisions/sd-153.md"
+    title: "SD-153"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 151
+    filepath: "decisions/sd-154.md"
+    title: "SD-154"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 152
+    filepath: "decisions/sd-155.md"
+    title: "SD-155"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 153
+    filepath: "decisions/sd-156.md"
+    title: "SD-156"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 154
+    filepath: "decisions/sd-157.md"
+    title: "SD-157"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 155
+    filepath: "decisions/sd-158.md"
+    title: "SD-158"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 156
+    filepath: "decisions/sd-159.md"
+    title: "SD-159"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 157
+    filepath: "decisions/sd-160.md"
+    title: "SD-160"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 158
+    filepath: "decisions/sd-161.md"
+    title: "SD-161"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 159
+    filepath: "decisions/sd-162.md"
+    title: "SD-162"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 160
+    filepath: "decisions/sd-163.md"
+    title: "SD-163"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 161
+    filepath: "decisions/sd-164.md"
+    title: "SD-164"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 162
+    filepath: "decisions/sd-165.md"
+    title: "SD-165"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 163
+    filepath: "decisions/sd-166.md"
+    title: "SD-166"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 164
+    filepath: "decisions/sd-167.md"
+    title: "SD-167"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 165
+    filepath: "decisions/sd-168.md"
+    title: "SD-168"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 166
+    filepath: "decisions/sd-169.md"
+    title: "SD-169"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 167
+    filepath: "decisions/sd-170.md"
+    title: "SD-170"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 168
+    filepath: "decisions/sd-171.md"
+    title: "SD-171"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 169
+    filepath: "decisions/sd-172.md"
+    title: "SD-172"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 170
+    filepath: "decisions/sd-173.md"
+    title: "SD-173"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 171
+    filepath: "decisions/sd-174.md"
+    title: "SD-174"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 172
+    filepath: "decisions/sd-175.md"
+    title: "SD-175"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 173
+    filepath: "decisions/sd-176.md"
+    title: "SD-176"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 174
+    filepath: "decisions/sd-177.md"
+    title: "SD-177"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 175
+    filepath: "decisions/sd-178.md"
+    title: "SD-178"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 176
+    filepath: "decisions/sd-179.md"
+    title: "SD-179"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 177
+    filepath: "decisions/sd-180.md"
+    title: "SD-180"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 178
+    filepath: "decisions/sd-181.md"
+    title: "SD-181"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 179
+    filepath: "decisions/sd-182.md"
+    title: "SD-182"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 180
+    filepath: "decisions/sd-183.md"
+    title: "SD-183"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 181
+    filepath: "decisions/sd-184.md"
+    title: "SD-184"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 182
+    filepath: "decisions/sd-185.md"
+    title: "SD-185"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 183
+    filepath: "decisions/sd-186.md"
+    title: "SD-186"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 184
+    filepath: "decisions/sd-187.md"
+    title: "SD-187"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 185
+    filepath: "decisions/sd-188.md"
+    title: "SD-188"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 186
+    filepath: "decisions/sd-189.md"
+    title: "SD-189"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 187
+    filepath: "decisions/sd-190.md"
+    title: "SD-190"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 188
+    filepath: "decisions/sd-191.md"
+    title: "SD-191"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 189
+    filepath: "decisions/sd-192.md"
+    title: "SD-192"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 190
+    filepath: "decisions/sd-193.md"
+    title: "SD-193"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 191
+    filepath: "decisions/sd-194.md"
+    title: "SD-194"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 192
+    filepath: "decisions/sd-195.md"
+    title: "SD-195"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 193
+    filepath: "decisions/sd-196.md"
+    title: "SD-196"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 194
+    filepath: "decisions/sd-197.md"
+    title: "SD-197"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 195
+    filepath: "decisions/sd-198.md"
+    title: "SD-198"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 196
+    filepath: "decisions/sd-199.md"
+    title: "SD-199"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 197
+    filepath: "decisions/sd-200.md"
+    title: "SD-200"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 198
+    filepath: "decisions/sd-201.md"
+    title: "SD-201"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 199
+    filepath: "decisions/sd-202.md"
+    title: "SD-202"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 200
+    filepath: "decisions/sd-203.md"
+    title: "SD-203"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 201
+    filepath: "decisions/sd-204.md"
+    title: "SD-204"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 202
+    filepath: "decisions/sd-205.md"
+    title: "SD-205"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 203
+    filepath: "decisions/sd-206.md"
+    title: "SD-206"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 204
+    filepath: "decisions/sd-207.md"
+    title: "SD-207"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 205
+    filepath: "decisions/sd-208.md"
+    title: "SD-208"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 206
+    filepath: "decisions/sd-209.md"
+    title: "SD-209"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 207
+    filepath: "decisions/sd-210.md"
+    title: "SD-210"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 208
+    filepath: "decisions/sd-211.md"
+    title: "SD-211"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 209
+    filepath: "decisions/sd-212.md"
+    title: "SD-212"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 210
+    filepath: "decisions/sd-213.md"
+    title: "SD-213"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 211
+    filepath: "decisions/sd-214.md"
+    title: "SD-214"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 212
+    filepath: "decisions/sd-215.md"
+    title: "SD-215"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 213
+    filepath: "decisions/sd-216.md"
+    title: "SD-216"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 214
+    filepath: "decisions/sd-217.md"
+    title: "SD-217"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 215
+    filepath: "decisions/sd-218.md"
+    title: "SD-218"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 216
+    filepath: "decisions/sd-219.md"
+    title: "SD-219"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 217
+    filepath: "decisions/sd-220.md"
+    title: "SD-220"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 218
+    filepath: "decisions/sd-221.md"
+    title: "SD-221"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 219
+    filepath: "decisions/sd-222.md"
+    title: "SD-222"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 220
+    filepath: "decisions/sd-223.md"
+    title: "SD-223"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 221
+    filepath: "decisions/sd-224.md"
+    title: "SD-224"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 222
+    filepath: "decisions/sd-225.md"
+    title: "SD-225"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 223
+    filepath: "decisions/sd-226.md"
+    title: "SD-226"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 224
+    filepath: "decisions/sd-227.md"
+    title: "SD-227"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 225
+    filepath: "decisions/sd-228.md"
+    title: "SD-228"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 226
+    filepath: "decisions/sd-229.md"
+    title: "SD-229"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 227
+    filepath: "decisions/sd-230.md"
+    title: "SD-230"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 228
+    filepath: "decisions/sd-231.md"
+    title: "SD-231"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 229
+    filepath: "decisions/sd-232.md"
+    title: "SD-232"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 230
+    filepath: "decisions/sd-233.md"
+    title: "SD-233"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 231
+    filepath: "decisions/sd-234.md"
+    title: "SD-234"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 232
+    filepath: "decisions/sd-235.md"
+    title: "SD-235"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 233
+    filepath: "decisions/sd-236.md"
+    title: "SD-236"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 234
+    filepath: "decisions/sd-237.md"
+    title: "SD-237"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 235
+    filepath: "decisions/sd-238.md"
+    title: "SD-238"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 236
+    filepath: "decisions/sd-239.md"
+    title: "SD-239"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 237
+    filepath: "decisions/sd-240.md"
+    title: "SD-240"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 238
+    filepath: "decisions/sd-241.md"
+    title: "SD-241"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 239
+    filepath: "decisions/sd-242.md"
+    title: "SD-242"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 240
+    filepath: "decisions/sd-243.md"
+    title: "SD-243"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 241
+    filepath: "decisions/sd-244.md"
+    title: "SD-244"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 242
+    filepath: "decisions/sd-245.md"
+    title: "SD-245"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 243
+    filepath: "decisions/sd-246.md"
+    title: "SD-246"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 244
+    filepath: "decisions/sd-247.md"
+    title: "SD-247"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 245
+    filepath: "decisions/sd-248.md"
+    title: "SD-248"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 246
+    filepath: "decisions/sd-249.md"
+    title: "SD-249"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 247
+    filepath: "decisions/sd-250.md"
+    title: "SD-250"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 248
+    filepath: "decisions/sd-251.md"
+    title: "SD-251"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 249
+    filepath: "decisions/sd-252.md"
+    title: "SD-252"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 250
+    filepath: "decisions/sd-253.md"
+    title: "SD-253"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 251
+    filepath: "decisions/sd-254.md"
+    title: "SD-254"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 252
+    filepath: "decisions/sd-255.md"
+    title: "SD-255"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 253
+    filepath: "decisions/sd-256.md"
+    title: "SD-256"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 254
+    filepath: "decisions/sd-257.md"
+    title: "SD-257"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 255
+    filepath: "decisions/sd-258.md"
+    title: "SD-258"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 256
+    filepath: "decisions/sd-259.md"
+    title: "SD-259"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 257
+    filepath: "decisions/sd-260.md"
+    title: "SD-260"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 258
+    filepath: "decisions/sd-261.md"
+    title: "SD-261"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 259
+    filepath: "decisions/sd-262.md"
+    title: "SD-262"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 260
+    filepath: "decisions/sd-263.md"
+    title: "SD-263"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 261
+    filepath: "decisions/sd-264.md"
+    title: "SD-264"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 262
+    filepath: "decisions/sd-265.md"
+    title: "SD-265"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 263
+    filepath: "decisions/sd-266.md"
+    title: "SD-266"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 264
+    filepath: "decisions/sd-267.md"
+    title: "SD-267"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 265
+    filepath: "decisions/sd-268.md"
+    title: "SD-268"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 266
+    filepath: "decisions/sd-269.md"
+    title: "SD-269"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 267
+    filepath: "decisions/sd-270.md"
+    title: "SD-270"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 268
+    filepath: "decisions/sd-271.md"
+    title: "SD-271"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 269
+    filepath: "decisions/sd-272.md"
+    title: "SD-272"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 270
+    filepath: "decisions/sd-273.md"
+    title: "SD-273"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 271
+    filepath: "decisions/sd-274.md"
+    title: "SD-274"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 272
+    filepath: "decisions/sd-275.md"
+    title: "SD-275"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 273
+    filepath: "decisions/sd-276.md"
+    title: "SD-276"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 274
+    filepath: "decisions/sd-277.md"
+    title: "SD-277"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 275
+    filepath: "slopodar/absence-claim-as-compliment.md"
+    title: "Absence Claim as Compliment"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 276
+    filepath: "slopodar/anadiplosis.md"
+    title: "Anadiplosis"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 277
+    filepath: "slopodar/analytical-lullaby.md"
+    title: "The Analytical Lullaby"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 278
+    filepath: "slopodar/becoming-jonah.md"
+    title: "Becoming Jonah"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 279
+    filepath: "slopodar/construct-drift.md"
+    title: "Construct Drift"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 280
+    filepath: "slopodar/demographic-bake-in.md"
+    title: "Demographic Bake-In"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 281
+    filepath: "slopodar/epigrammatic-closure.md"
+    title: "Epigrammatic Closure (Poster Child)"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 282
+    filepath: "slopodar/epistemic-theatre.md"
+    title: "Epistemic Theatre"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 283
+    filepath: "slopodar/monoculture-analysis.md"
+    title: "Monoculture Analysis"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 284
+    filepath: "slopodar/nominalisation-cascade.md"
+    title: "Nominalisation Cascade"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 285
+    filepath: "slopodar/paper-guardrail.md"
+    title: "Paper Guardrail"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 286
+    filepath: "slopodar/redundant-antithesis.md"
+    title: "Redundant Antithesis"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 287
+    filepath: "slopodar/right-answer-wrong-work.md"
+    title: "Right Answer, Wrong Work"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 288
+    filepath: "slopodar/tally-voice.md"
+    title: "Tally Voice"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 289
+    filepath: "slopodar/the-lullaby.md"
+    title: "The Lullaby"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 290
+    filepath: "sloptics.md"
+    title: "Sloptics"
+    date: "(no date)"
+    word_count: 0
+    sentence_count: 0
+    sum_score: 0
+    voice:
+      contractionPer1k: 0
+      firstPersonPer1k: 0
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0
+    rhetoric:
+      emdash: 0
+      absnoun: 0
+      epigram: 0
+      isocolon: 0
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 0
+      ai: 0
+  - rank: 291
+    filepath: "research/llm-verification-phenomena.md"
+    title: "LLM Verification Phenomena"
+    date: "(no date)"
+    word_count: 1731
+    sentence_count: 187
+    sum_score: 0.7
+    voice:
+      contractionPer1k: 3.5
+      firstPersonPer1k: 1.2
+      questionRate: 0.5
+      transitionPer1k: 0
+      nomDensity: 4.5
+    rhetoric:
+      emdash: 13
+      absnoun: 78
+      epigram: 21
+      isocolon: 6
+      antithesis: 5
+      anadiplosis: 1
+    composites:
+      human: 5.2
+      ai: 4.5
+  - rank: 292
+    filepath: "blog/2026-03-01-slopiculture.md"
+    title: "Catching in the Wind: A Naturalist's Guide to Slopiculture"
+    date: "2026-03-01"
+    word_count: 1026
+    sentence_count: 130
+    sum_score: 8.5
+    voice:
+      contractionPer1k: 7.8
+      firstPersonPer1k: 3.9
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 3.2
+    rhetoric:
+      emdash: 5
+      absnoun: 33
+      epigram: 20
+      isocolon: 10
+      antithesis: 1
+      anadiplosis: 5
+    composites:
+      human: 11.7
+      ai: 3.2
+  - rank: 293
+    filepath: "research/prospective-regulation.md"
+    title: "Prospective Metacognitive Regulation"
+    date: "(no date)"
+    word_count: 425
+    sentence_count: 20
+    sum_score: 19.8
+    voice:
+      contractionPer1k: 16.5
+      firstPersonPer1k: 9.4
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 6.1
+    rhetoric:
+      emdash: 5
+      absnoun: 26
+      epigram: 2
+      isocolon: 3
+      antithesis: 1
+      anadiplosis: 0
+    composites:
+      human: 25.9
+      ai: 6.1
+  - rank: 294
+    filepath: "research/metacognitive-analysis.md"
+    title: "Metacognitive Analysis"
+    date: "(no date)"
+    word_count: 388
+    sentence_count: 19
+    sum_score: 20
+    voice:
+      contractionPer1k: 12.9
+      firstPersonPer1k: 7.7
+      questionRate: 5.3
+      transitionPer1k: 0
+      nomDensity: 5.9
+    rhetoric:
+      emdash: 6
+      absnoun: 23
+      epigram: 4
+      isocolon: 3
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 25.9
+      ai: 5.9
+  - rank: 295
+    filepath: "research/fight-card.md"
+    title: "The Fight Card"
+    date: "(no date)"
+    word_count: 364
+    sentence_count: 24
+    sum_score: 25.6
+    voice:
+      contractionPer1k: 19.2
+      firstPersonPer1k: 5.5
+      questionRate: 4.2
+      transitionPer1k: 0
+      nomDensity: 3.3
+    rhetoric:
+      emdash: 5
+      absnoun: 12
+      epigram: 4
+      isocolon: 2
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 28.9
+      ai: 3.3
+  - rank: 296
+    filepath: "blog/2026-02-07-poker-incident.md"
+    title: "The poker incident"
+    date: "2026-02-07"
+    word_count: 514
+    sentence_count: 52
+    sum_score: 27
+    voice:
+      contractionPer1k: 9.7
+      firstPersonPer1k: 21.4
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 4.1
+    rhetoric:
+      emdash: 0
+      absnoun: 21
+      epigram: 7
+      isocolon: 6
+      antithesis: 1
+      anadiplosis: 1
+    composites:
+      human: 31.1
+      ai: 4.1
+  - rank: 297
+    filepath: "blog/2026-02-07-prompt-injection.md"
+    title: "I accidentally prompt injected myself"
+    date: "2026-02-07"
+    word_count: 183
+    sentence_count: 25
+    sum_score: 33.9
+    voice:
+      contractionPer1k: 5.5
+      firstPersonPer1k: 32.8
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 4.4
+    rhetoric:
+      emdash: 0
+      absnoun: 8
+      epigram: 2
+      isocolon: 5
+      antithesis: 0
+      anadiplosis: 2
+    composites:
+      human: 38.3
+      ai: 4.4
+  - rank: 298
+    filepath: "blog/2026-02-07-feedback-loops.md"
+    title: "47 Slack messages from myself at 3am"
+    date: "2026-02-07"
+    word_count: 369
+    sentence_count: 51
+    sum_score: 34.5
+    voice:
+      contractionPer1k: 13.6
+      firstPersonPer1k: 21.7
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0.8
+    rhetoric:
+      emdash: 0
+      absnoun: 3
+      epigram: 4
+      isocolon: 12
+      antithesis: 0
+      anadiplosis: 5
+    composites:
+      human: 35.3
+      ai: 0.8
+  - rank: 299
+    filepath: "draft-notice.md"
+    title: "(no title)"
+    date: "(no date)"
+    word_count: 109
+    sentence_count: 7
+    sum_score: 35.7
+    voice:
+      contractionPer1k: 18.3
+      firstPersonPer1k: 18.3
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 0.9
+    rhetoric:
+      emdash: 0
+      absnoun: 1
+      epigram: 1
+      isocolon: 1
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 36.6
+      ai: 0.9
+  - rank: 300
+    filepath: "blog/2026-03-01-trying-to-kill-me.md"
+    title: "I think they might actually be trying to kill me"
+    date: "2026-03-01"
+    word_count: 96
+    sentence_count: 10
+    sum_score: 40.3
+    voice:
+      contractionPer1k: 31.3
+      firstPersonPer1k: 0
+      questionRate: 10
+      transitionPer1k: 0
+      nomDensity: 1
+    rhetoric:
+      emdash: 0
+      absnoun: 1
+      epigram: 1
+      isocolon: 1
+      antithesis: 1
+      anadiplosis: 0
+    composites:
+      human: 41.3
+      ai: 1
+  - rank: 301
+    filepath: "about.md"
+    title: "About"
+    date: "(no date)"
+    word_count: 272
+    sentence_count: 26
+    sum_score: 49.3
+    voice:
+      contractionPer1k: 11
+      firstPersonPer1k: 29.4
+      questionRate: 11.5
+      transitionPer1k: 0
+      nomDensity: 2.6
+    rhetoric:
+      emdash: 3
+      absnoun: 7
+      epigram: 2
+      isocolon: 3
+      antithesis: 1
+      anadiplosis: 1
+    composites:
+      human: 51.9
+      ai: 2.6
+  - rank: 302
+    filepath: "blog/2026-02-19-silent-fallbacks.md"
+    title: "The agent that lied to protect me"
+    date: "2026-02-19"
+    word_count: 267
+    sentence_count: 27
+    sum_score: 49.9
+    voice:
+      contractionPer1k: 15
+      firstPersonPer1k: 37.5
+      questionRate: 0
+      transitionPer1k: 0
+      nomDensity: 2.6
+    rhetoric:
+      emdash: 0
+      absnoun: 7
+      epigram: 2
+      isocolon: 3
+      antithesis: 3
+      anadiplosis: 2
+    composites:
+      human: 52.5
+      ai: 2.6
+  - rank: 303
+    filepath: "blog/2026-02-28-voice-analysis.md"
+    title: "Grounded thematic analysis: my voice vs. the machine's"
+    date: "2026-02-28"
+    word_count: 902
+    sentence_count: 53
+    sum_score: 57.5
+    voice:
+      contractionPer1k: 6.7
+      firstPersonPer1k: 52.1
+      questionRate: 1.9
+      transitionPer1k: 0
+      nomDensity: 3.2
+    rhetoric:
+      emdash: 5
+      absnoun: 29
+      epigram: 6
+      isocolon: 6
+      antithesis: 5
+      anadiplosis: 1
+    composites:
+      human: 60.7
+      ai: 3.2
+  - rank: 304
+    filepath: "blog/2026-02-20-simple-thing.md"
+    title: "The simple thing is the right thing"
+    date: "2026-02-20"
+    word_count: 180
+    sentence_count: 20
+    sum_score: 72.8
+    voice:
+      contractionPer1k: 16.7
+      firstPersonPer1k: 50
+      questionRate: 10
+      transitionPer1k: 0
+      nomDensity: 3.9
+    rhetoric:
+      emdash: 0
+      absnoun: 7
+      epigram: 2
+      isocolon: 2
+      antithesis: 0
+      anadiplosis: 0
+    composites:
+      human: 76.7
+      ai: 3.9
+
+quick_wins:
+  high_nom_density:
+    description: "Pages with nominalisation density > 4%. Swap abstract nouns for verbs."
+    pages:
+      - filepath: "research/prospective-regulation.md"
+        title: "Prospective Metacognitive Regulation"
+        nom_density: 6.1
+        word_count: 425
+        sum_score: 19.8
+      - filepath: "research/metacognitive-analysis.md"
+        title: "Metacognitive Analysis"
+        nom_density: 5.9
+        word_count: 388
+        sum_score: 20
+      - filepath: "research/llm-verification-phenomena.md"
+        title: "LLM Verification Phenomena"
+        nom_density: 4.5
+        word_count: 1731
+        sum_score: 0.7
+      - filepath: "blog/2026-02-07-prompt-injection.md"
+        title: "I accidentally prompt injected myself"
+        nom_density: 4.4
+        word_count: 183
+        sum_score: 33.9
+      - filepath: "blog/2026-02-07-poker-incident.md"
+        title: "The poker incident"
+        nom_density: 4.1
+        word_count: 514
+        sum_score: 27
+  low_contraction_rate:
+    description: "Pages with contractionPer1k < 5. Easy to humanise by converting formal phrasing."
+    pages:
+      - filepath: "research/llm-verification-phenomena.md"
+        title: "LLM Verification Phenomena"
+        contractionPer1k: 3.5
+        word_count: 1731
+        sum_score: 0.7
+  low_first_person:
+    description: "Pages with firstPersonPer1k < 5. Adding personal perspective would strengthen voice."
+    pages:
+      - filepath: "blog/2026-03-01-trying-to-kill-me.md"
+        title: "I think they might actually be trying to kill me"
+        firstPersonPer1k: 0
+        word_count: 96
+        sum_score: 40.3
+      - filepath: "research/llm-verification-phenomena.md"
+        title: "LLM Verification Phenomena"
+        firstPersonPer1k: 1.2
+        word_count: 1731
+        sum_score: 0.7
+      - filepath: "blog/2026-03-01-slopiculture.md"
+        title: "Catching in the Wind: A Naturalist's Guide to Slopiculture"
+        firstPersonPer1k: 3.9
+        word_count: 1026
+        sum_score: 8.5
+  no_questions:
+    description: "Pages with zero questions. Adding rhetorical questions increases engagement."
+    pages:
+      - filepath: "blog/2026-03-01-slopiculture.md"
+        title: "Catching in the Wind: A Naturalist's Guide to Slopiculture"
+        word_count: 1026
+        sum_score: 8.5
+      - filepath: "research/prospective-regulation.md"
+        title: "Prospective Metacognitive Regulation"
+        word_count: 425
+        sum_score: 19.8
+      - filepath: "blog/2026-02-07-poker-incident.md"
+        title: "The poker incident"
+        word_count: 514
+        sum_score: 27
+      - filepath: "blog/2026-02-07-prompt-injection.md"
+        title: "I accidentally prompt injected myself"
+        word_count: 183
+        sum_score: 33.9
+      - filepath: "blog/2026-02-07-feedback-loops.md"
+        title: "47 Slack messages from myself at 3am"
+        word_count: 369
+        sum_score: 34.5
+      - filepath: "draft-notice.md"
+        title: "(no title)"
+        word_count: 109
+        sum_score: 35.7
+      - filepath: "blog/2026-02-19-silent-fallbacks.md"
+        title: "The agent that lied to protect me"
+        word_count: 267
+        sum_score: 49.9
+  short_and_bad:
+    description: "Pages under 500 words with sum_score below Category A minimum (11.19). Quick to rewrite."
+    pages:
+
+calibration_comparison:
+  baselines:
+    category_A_human_pre:
+      mean: 31.3
+      min: 11.19
+      max: 54.31
+      n: 19
+    category_B_human_post:
+      mean: 45.87
+      min: 29.73
+      max: 64.77
+      n: 4
+    category_C_ai_co:
+      mean: -0.92
+      min: -7.27
+      max: 5.1
+      n: 7
+    category_F_captain:
+      mean: 68.23
+      min: 29.69
+      max: 115.91
+      n: 6
+    oceanheart_scoreable:
+      mean: 33.96
+      min: 0.7
+      max: 72.8
+      n: 14
+  distribution:
+    pages_worse_than_worst_category_C: 0
+    worst_category_C_score: -7.27
+    pages_in_captain_range: 8
+    captain_range: "29.69 to 115.91"
+    pages_above_captain_min: 8
+    pages_above_category_A_mean: 8
+    pages_below_category_A_min: 2
+
+overall_assessment:
+  observer: AnotherPair
+  verdict: |
+    The site has two distinct problems, and they compound.
+    
+    PROBLEM 1: CONTENT VOID
+    Of 304 non-index pages, 288 are empty frontmatter stubs (0 words). Another 2 have
+    fewer than 50 words. Only 14 pages — 4.6% of the site — contain enough text to
+    score. The decisions section (271 stubs) and slopodar taxonomy (15 stubs) are
+    placeholder architectures with no body content. A visitor clicking through the site
+    would encounter empty pages 95% of the time. This is not a content quality problem.
+    It is a content existence problem.
+    
+    PROBLEM 2: VOICE QUALITY OF THE 14 SCOREABLE PAGES
+    The good news: zero transition words detected across all 14 pages. The slopodar
+    extension's #1 AI discriminator ("However", "Moreover", "Furthermore" etc.) fires
+    zero times on the entire site. This is significant — it means whoever wrote or
+    edited these pages eliminated the most obvious AI tell.
+    
+    The bad news: 3 pages score below the Category A (known-human) minimum of 11.19.
+    The worst offender is research/llm-verification-phenomena.md (score: 0.7, 1731 words)
+    — high nominalisation density (4.5%), almost no first-person (1.2/1k), almost no
+    questions (0.5%), low contraction rate (3.5/1k). It reads like a technical paper
+    rather than a person writing. The research section as a whole is the weakest: all
+    3 research pages score below the Category A mean.
+    
+    The blog posts fare better. 6 of 8 scoreable blog posts land in or above the
+    Captain's own calibration range (29.69-115.91). The strongest pages — "The simple
+    thing is the right thing" (72.8), "Grounded thematic analysis" (57.5), "The agent
+    that lied to protect me" (49.9) — score solidly within the Captain's voice
+    fingerprint: high first-person, strong contraction use, conversational register.
+    
+    Mean oceanheart sum_score (33.96) sits between Category A mean (31.30) and
+    Category B mean (45.87). This is respectable for the pages that exist.
+    
+  is_slop: |
+    No. The 14 pages with content are not slop by the slopodar definition. Zero
+    transition words. Non-trivial first-person presence. Contraction rates in the
+    human range. The research section is dry but not sloppy — it reads like academic
+    register, not AI register. The distinction matters.
+    
+    What IS a problem: 288 empty stubs. A visitor navigating to /decisions/sd-045
+    sees a title and nothing else. This is not slop — it is worse than slop. It is
+    an empty promise. A page that exists in the navigation but delivers nothing.
+    
+  should_this_be_public: |
+    The 14 pages with content: conditionally yes. The 6 blog posts scoring above
+    the Captain's calibration minimum are defensible. The research pages need voice
+    injection — more first-person, more questions, more contractions. The content is
+    sound but the register is wrong for a personal site.
+    
+    The 288 empty stubs: absolutely not. They should either be populated, set to
+    draft: true, or removed from the build. Publishing 271 empty decision pages and
+    15 empty slopodar entries makes the site look abandoned or auto-generated.
+    
+  minimum_viable_path: |
+    1. IMMEDIATE: Set draft: true on all empty stubs (288 pages). This is a
+       single scripted operation. It removes 95% of the embarrassment surface.
+    
+    2. QUICK WINS (3 pages, ~2 hours agent time):
+       a. research/llm-verification-phenomena.md — inject first-person framing,
+          convert nominalisations to active verbs, add questions. Currently reads
+          like it was written by a committee. Score target: >20.
+       b. blog/2026-03-01-slopiculture.md — low contraction rate (7.8/1k) for a
+          blog post. Needs informal register. Score target: >20.
+       c. research/prospective-regulation.md — high nom density (6.1%), no
+          questions, low contractions. Short enough (425w) to rewrite in one pass.
+    
+    3. VOICE PASS: Review all research pages with the Captain's voice profile from
+       docs/internal/weaver/voice-analysis-grounded-thematic.md. The blog posts
+       mostly pass already. The research pages do not sound like the Captain wrote them.
+    
+    4. QUESTION INJECTION: 7 of 14 scoreable pages have zero questions. The Captain
+       asks questions naturally. Their absence is a tell. Not rhetorical-question-
+       stuffing — genuine questions that advance the argument.
+    
+    Estimated effort: 15 agent-minutes for stub suppression + 45 agent-minutes for
+    the 3 quick-win rewrites + 2 Captain decisions (approve stub suppression strategy,
+    approve rewrite direction for research pages).
