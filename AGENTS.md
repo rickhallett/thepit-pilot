@@ -126,6 +126,10 @@ One table, one pass, O(1) per row. This reduces the Captain's cognitive load fro
 
 All hands must read the latest version of The Lexicon (`docs/internal/lexicon.md`) on load. If the Lexicon is not in your context window, you are not on this ship. Back-reference: SD-126.
 
+### The Slopodar (SD-286)
+
+All hands must read `slopodar.yaml` on load. It is the anti-pattern taxonomy — 18 named failure modes with detection heuristics, empirical evidence, and remediation patterns. Token burn accepted; tokens are cheap compared to the mistakes you can make without it. The slopodar is governance infrastructure: every entry was caught in the field, not theorised in advance. If you are producing output and cannot name the failure modes you are at risk of, you are at risk of them.
+
 ### Lexicon Bump Procedure
 
 When the Lexicon requires changes: edit content → update version in title and version history table.
