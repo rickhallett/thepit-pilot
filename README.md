@@ -24,8 +24,12 @@ The product — a real-time AI debate arena — is still live at [thepit.cloud](
 
 The application code, 1,289 tests, the CI pipeline, and six of eight Go CLIs shipped to the `wake` branch when the study ended. Two CLIs survive here (`pitctl`, `pitkeel`) for site administration and operational state. The Hugo site for [oceanheart.ai](https://oceanheart.ai) is in `sites/oceanheart/`.
 
+[thepit.cloud](https://thepit.cloud) is preserved as-was, incomplete roadmap and all. Like a hallucination frozen in time. What a trip. gg.
+
 ## Context
 
-Built between late 2025 and early March 2026. Solo developer, background in clinical psychology and software engineering. Claude (Anthropic) was the primary agent, with Gemini brought in for triangulation. The governance methodology grew out of necessity — things kept going wrong in ways that were hard to see because the output looked right.
+Built between 7 February and 2 March 2026. Solo developer, background in clinical psychology and software engineering. Claude Opus 4.6 (Anthropic) was the primary agent, with Gemini 3.1 and Codex 5.2 Max brought in for cross-examination. The governance methodology grew out of necessity — things kept going wrong in ways that were hard to see because the output looked right.
 
 The honest version: I wanted to know if one person could govern LLM agents well enough to ship a real product under engineering discipline. The answer is yes, and the caveats take up most of `docs/internal/`.
+
+[The more honest version.](docs/the-more-honest-version.md)
