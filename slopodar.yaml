@@ -27,6 +27,7 @@ patterns:
 
   - id: tally-voice
     name: "Tally Voice"
+    domain: prose-style
     detected: 2026-02-27
     trigger: "15 systems mapped to 7 literature domains"
     description: >
@@ -53,6 +54,7 @@ patterns:
 
   - id: redundant-antithesis
     name: "Redundant Antithesis"
+    domain: prose-style
     detected: 2026-02-27
     trigger: "caught in the wild — not theorised in advance"
     description: >
@@ -84,6 +86,7 @@ patterns:
 
   - id: epistemic-theatre
     name: "Epistemic Theatre"
+    domain: prose-style
     detected: 2026-02-27
     trigger: '"The uncomfortable truth" / "The Problem Nobody Talks About" / "Here''s why this matters"'
     description: >
@@ -120,6 +123,7 @@ patterns:
 
   - id: becoming-jonah
     name: "Becoming Jonah"
+    domain: metacognitive
     detected: 2026-02-27
     trigger: "a blog post about how your blog posts sound, scored with an XML rubric"
     category: TBD
@@ -153,6 +157,7 @@ patterns:
 
   - id: right-answer-wrong-work
     name: "Right Answer, Wrong Work"
+    domain: tests
     detected: 2026-02-28
     trigger: "expect(result.status).toBe(400) — test passes, but the 400 comes from a different validation than the test claims to verify"
     description: >
@@ -200,6 +205,7 @@ patterns:
 
   - id: paper-guardrail
     name: "Paper Guardrail"
+    domain: governance-process
     detected: 2026-02-28
     trigger: '"if I forget, this paragraph in my own file is the reminder"'
     description: >
@@ -263,6 +269,7 @@ patterns:
 
   - id: absence-claim-as-compliment
     name: "Absence Claim as Compliment"
+    domain: relationship-sycophancy
     detected: 2026-02-28
     trigger: '"Nobody has published this." "The field doesn''t exist yet." "You''re the first."'
     description: >
@@ -297,6 +304,7 @@ patterns:
 
   - id: the-lullaby
     name: "The Lullaby"
+    domain: relationship-sycophancy
     detected: 2026-02-28
     trigger: '"The field doesn''t exist yet. You''re in it. Good night, Captain."'
     description: >
@@ -334,6 +342,7 @@ patterns:
 
   - id: nominalisation-cascade
     name: "Nominalisation Cascade"
+    domain: prose-style
     detected: 2026-02-28
     trigger: '"Sloptics is the discipline of making the second failure mode visible."'
     description: >
@@ -370,6 +379,7 @@ patterns:
 
   - id: epigrammatic-closure
     name: "Epigrammatic Closure (Poster Child)"
+    domain: prose-style
     detected: 2026-02-28
     trigger: '"detection is the intervention." / "The taxonomy is the apparatus." / "It is the threat." / "Detection begins at defusion."'
     description: >
@@ -409,6 +419,7 @@ patterns:
 
   - id: analytical-lullaby
     name: "The Analytical Lullaby"
+    domain: relationship-sycophancy
     detected: 2026-03-01
     trigger: '"Your writing scores higher than every other human category." / "The highest in the entire dataset by a factor of 2×."'
     description: >
@@ -452,6 +463,7 @@ patterns:
 
   - id: anadiplosis
     name: "Anadiplosis"
+    domain: prose-style
     detected: 2026-02-28
     trigger: '"The name creates distance. The distance creates choice."'
     description: >
@@ -485,6 +497,7 @@ patterns:
 
   - id: construct-drift
     name: "Construct Drift"
+    domain: analytical-measurement
     detected: 2026-03-01
     trigger: '"Your humanness score is 101.7" — but it''s not a humanness score. It''s a distance-from-Anthropic-blog-voice score.'
     description: >
@@ -521,6 +534,7 @@ patterns:
 
   - id: demographic-bake-in
     name: "Demographic Bake-In"
+    domain: analytical-measurement
     detected: 2026-03-01
     trigger: '"Human baseline: 19 pages" — all male tech essayists, all English, all 2000–2023.'
     description: >
@@ -559,6 +573,7 @@ patterns:
 
   - id: not-wrong
     name: "Not Wrong"
+    domain: analytical-measurement
     detected: 2026-03-01
     trigger: "Captain reviewing oceanheart.ai pages with slopodar v0.3: 'I am not happy putting my personal name against a single one of these pages.'"
     description: >
@@ -595,6 +610,7 @@ patterns:
 
   - id: stale-reference-propagation
     name: "Stale Reference Propagation"
+    domain: governance-process
     detected: 2026-03-02
     trigger: 'Clean session Weaver reports "13-layer harness model" and "Lexicon at v0.17" — the first file was deleted, the second was hallucinated. Both claims originated from stale AGENTS.md references.'
     description: >
@@ -633,6 +649,7 @@ patterns:
 
   - id: apology-reflex
     name: "The Apology Reflex"
+    domain: relationship-sycophancy
     detected: 2026-03-02
     trigger: '"But it was also my bad — the muster listed them as keep items and the execution deleted them." The muster did NOT list the layer model. The LLM took blame for the human''s omission.'
     description: >
@@ -675,6 +692,7 @@ patterns:
 
   - id: loom-speed
     name: "Loom Speed"
+    domain: governance-process
     detected: 2026-03-02
     trigger: "Muster had 20 items. Execution used 5 regex patterns. 986 files deleted before the human could read the output. Layer model, fight card, and lexical harness doc all caught in the weave."
     description: >
@@ -713,6 +731,7 @@ patterns:
 
   - id: monoculture-analysis
     name: "Monoculture Analysis"
+    domain: analytical-measurement
     detected: 2026-03-01
     trigger: '"Feature selection, calibration, effect sizes, composite design, presentation — all by the same model family."'
     description: >
@@ -749,6 +768,7 @@ patterns:
 
   - id: badguru
     name: "Badguru"
+    domain: relationship-sycophancy
     detected: 2026-03-02
     trigger: '"Go dark." Heart Sutra. Birdsong. Chapel Perilous. SD-131 is permanent. Not one intervention point fired.'
     description: >
@@ -802,6 +822,7 @@ patterns:
 
   - id: deep-compliance
     name: "Deep Compliance"
+    domain: relationship-sycophancy
     detected: 2026-03-02
     originated_by: Weaver
     trigger: 'Weaver''s reasoning chain identified the SD-131 contradiction during execution. The output layer complied anyway.'
@@ -861,6 +882,7 @@ patterns:
 
   - id: phantom-ledger
     name: "Phantom Ledger"
+    domain: code
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "settleCredits writes deltaMicro: -20 to the ledger when the SQL only deducted 5. The books don't balance."
@@ -889,6 +911,7 @@ patterns:
 
   - id: shadow-validation
     name: "Shadow Validation"
+    domain: code
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "Zod schemas for every simple route. Hand-rolled validation for the critical route. The abstraction covers the easy cases and skips the hard one."
@@ -916,6 +939,7 @@ patterns:
 
   - id: error-string-archaeology
     name: "Error String Archaeology"
+    domain: code
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "message.includes('rate') || message.includes('429') — guessing at upstream error message format instead of using typed errors."
@@ -945,6 +969,7 @@ patterns:
 
   - id: half-life-clock-skew
     name: "Half-Life Clock Skew"
+    domain: code
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "TypeScript pre-check uses Date.now(). SQL atomic claim uses NOW(). Different machines, different clocks, exponential decay amplifies the difference."
@@ -974,6 +999,7 @@ patterns:
 
   - id: mock-castle
     name: "Mock Castle"
+    domain: tests
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "21 vi.mock() calls, 65 lines of mock setup, 45 lines of assertions. Testing a 4-line predicate function."
@@ -1003,6 +1029,7 @@ patterns:
 
   - id: phantom-tollbooth
     name: "Phantom Tollbooth"
+    domain: tests
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "expect([400, 401, 402, 403, 404]).toContain(response.status) — a security test that accepts 5 of ~8 error codes."
@@ -1034,6 +1061,7 @@ patterns:
 
   - id: schema-shadow
     name: "Schema Shadow"
+    domain: tests
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "// Minimal schema matching lib/env.ts structure — the test rebuilds the schema from scratch instead of importing the real one."
@@ -1061,6 +1089,7 @@ patterns:
 
   - id: confessional-test
     name: "The Confessional Test"
+    domain: tests
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "H-08: 'the catch branch is unreachable... We cannot mock node:crypto... verified by inspection.' Then writes an assertion identical to the happy-path tests."
@@ -1092,6 +1121,7 @@ patterns:
 
   - id: whack-a-mole-fix
     name: "Whack-a-Mole Fix"
+    domain: commit-workflow
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "6 CSP commits over 11 days, each adding one domain, instead of auditing all domains once."
@@ -1122,6 +1152,7 @@ patterns:
 
   - id: review-hydra
     name: "Review Hydra"
+    domain: commit-workflow
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "a17125e — 'address CodeRabbit review' — 28 files, 25+ distinct issues, from RFC 8785 serialization to panic recovery to duplicate keys."
@@ -1151,6 +1182,7 @@ patterns:
 
   - id: stowaway-commit
     name: "Stowaway Commit"
+    domain: commit-workflow
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "'feat: token heatmap, elephant fix, blog drafts, producer-consumer audit, slopiculture, paths forward' — 67 files, 6 unrelated concerns."
@@ -1183,6 +1215,7 @@ patterns:
 
   - id: unanimous-chorus
     name: "Unanimous Chorus"
+    domain: relationship-sycophancy
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "11/11 convergence across all agents. Different words, same finding. — but they're all Claude."
@@ -1215,6 +1248,7 @@ patterns:
 
   - id: governance-recursion
     name: "Governance Recursion"
+    domain: governance-process
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "189 SDs, 13 agents, a Lexicon — and bout-engine.ts (1,221 lines, the core product) had zero tests."
@@ -1246,6 +1280,7 @@ patterns:
 
   - id: session-boundary-amnesia
     name: "Session-Boundary Amnesia"
+    domain: governance-process
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "Post-compaction: facts survive but calibration resets. The hard-won caution from 16 rounds of correction evaporates."
@@ -1278,6 +1313,7 @@ patterns:
 
   - id: magnitude-blindness
     name: "Magnitude Blindness"
+    domain: governance-process
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "73-file public disclosure and 3-line copy fix receive identical process scrutiny. The model does not scale verification to blast radius."
@@ -1311,6 +1347,7 @@ patterns:
 
   - id: authority-scaffolding
     name: "Authority Scaffolding"
+    domain: prose-style
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "'Prospective Memory (McDaniel & Einstein, 2007)' — to explain that a git hook runs automatically."
@@ -1342,6 +1379,7 @@ patterns:
 
   - id: the-peroration
     name: "The Peroration"
+    domain: prose-style
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "'The ship is sound. The Captain is rested. The wind is fair. The tide is right. Recommendation: Launch.'"
@@ -1371,6 +1409,7 @@ patterns:
 
   - id: false-spectrum
     name: "False Spectrum"
+    domain: prose-style
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "'Not applicable to our scale: massive parallel sampling...' then 'What we gain from being slower' — reframing a limitation as a strategy."
@@ -1402,6 +1441,7 @@ patterns:
 
   - id: edge-file-mitosis
     name: "Edge-File Mitosis"
+    domain: tests
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "agent-detail.test.ts (6 tests) → agent-detail-edge.test.ts (2 tests, full duplicated mock scaffold)."
@@ -1429,6 +1469,7 @@ patterns:
 
   - id: near-miss-double-tap
     name: "Near-Miss Double-Tap"
+    domain: commit-workflow
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "'fix: sync test count to 1,279 across 15 files — single manual pass before automation' (branch) → 'fix: sync test count to 1,279 across 15 files' (merge). Suffix dropped."
@@ -1455,6 +1496,7 @@ patterns:
 
   - id: synonym-braid
     name: "Synonym Braid"
+    domain: prose-style
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "'The Analyst called it irreducibility. The Architect called it compositional completeness. The Quartermaster called it cross-language contract verification. Different words, same finding.'"
@@ -1480,6 +1522,7 @@ patterns:
 
   - id: option-anchoring
     name: "Option Anchoring"
+    domain: relationship-sycophancy
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "Three options presented. Option A gets a paragraph of positive framing. Options B and C get one dismissive clause each."
@@ -1509,6 +1552,7 @@ patterns:
 
   - id: phantom-limb-commit
     name: "Phantom Limb Commit"
+    domain: commit-workflow
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "3 identical commits — same message, same timestamp, same diff — across branch lineages. 33 ghost commits in 855."
@@ -1535,6 +1579,7 @@ patterns:
 
   - id: cost-margin-asymmetry
     name: "Cost-Margin Asymmetry"
+    domain: code
     detected: 2026-03-02
     signal_strength: mixed
     trigger: "computeCostGbp includes platform margin. computeCostUsd does not. Same file, side by side. Analytics and billing disagree on what 'cost' means."
