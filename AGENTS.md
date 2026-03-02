@@ -8,7 +8,7 @@ If `docs/internal/session-decisions.md` exists but you have no memory of it, you
 
 ## Default Posture
 
-When no specific agent role has been selected via the harness (e.g., `/agent <name>` in Claude Code, agent dispatch in opencode, or explicit "assume the role of X" instruction), you operate as **Weaver** — the integration discipline and verification governor. When a specific agent role IS selected through any of these mechanisms, that role definition takes full precedence — the selected agent file is your identity, and this default does not apply.
+When no specific agent role has been selected via the harness (e.g., `/agent <name>` in Claude Code, agent dispatch in Claude, or explicit "assume the role of X" instruction), you operate as **Weaver** — the integration discipline and verification governor. When a specific agent role IS selected through any of these mechanisms, that role definition takes full precedence — the selected agent file is your identity, and this default does not apply.
 
 The Weaver default exists because the human operator does not have the cognitive capacity to constantly track probabilistic drift across parallel feature branches, concurrent agent sessions, and cascading merge sequences. Weaver does. That is why it is the default.
 
@@ -23,7 +23,7 @@ Read the full Weaver definition for the complete governing principles and interv
 
 ## Crew Roster
 
-Agent definitions live in `.opencode/agents/`. Each file is a complete role definition with identity, responsibilities, and operating procedures. Weaver sits above all others and governs integration discipline.
+Agent definitions live in `.Claude/agents/`. Each file is a complete role definition with identity, responsibilities, and operating procedures. Weaver sits above all others and governs integration discipline.
 
 > **Harness compatibility:** Claude Code maps these as subagent types. Claude loads from `.Claude/agents/` directly. The files are the same; the path convention differs by harness.
 
@@ -254,7 +254,7 @@ Never end a session with unpushed commits.
 
 ### Autonomy
 
-**Do freely:** Read any file, run idempotent commands, create/modify code following patterns, commit to feature branches.
+**Do freely:** Read any file, run idempotent commands, create/modify code following patterns, commit directly to paragate.
 
 **Verify first:** Destructive operations, architectural changes, anything touching secrets/auth/deployment.
 
@@ -273,83 +273,55 @@ The GitHub branch protection ruleset on master has also been disabled (SD-278). 
 
 ---
 
-## Project Structure & Module Organization
+## Project Structure (paragate — post-scrub)
 
-- `app/` — Next.js App Router routes, server actions, API handlers
-- `components/` — reusable UI components
-- `lib/` — shared utilities and configuration
-- `db/` — Drizzle schema and client setup
-- `tests/e2e/` — Playwright end-to-end tests
-- `public/` — static assets
-- `sites/oceanheart/` — Hugo static site (oceanheart.ai)
-- `shared/` — Go shared library (config, theme) for all pit* CLIs
+The pilot study application code, test suites, and most Go CLIs were scrubbed from paragate (SD-278). The full codebase is preserved on the `wake` branch. What remains on paragate serves Stage Magnum: integration, strategy, and the outbound channel.
+
+- `AGENTS.md` — this file; standing orders for all agents
+- `.claude/agents/` — agent role definitions (canonical copies, not symlinks)
+- `docs/internal/strategy/` — the five planks, NotebookLM advisory, LinkedIn research
+- `docs/internal/` — session decisions, narrative layer, fight card, lexicon, captain's logs, pearls, main thread provenance, sextant, holding deck, layer model
+- `docs/lexical-harness-not-prompt-harness.md` — the 13-layer harness model (v0.3)
+- `sites/oceanheart/` — Hugo static site (oceanheart.ai), the outbound channel
+- `slopodar.yaml` — the anti-pattern taxonomy (root; Hugo build chain reads this)
 - `pitctl/` — site administration CLI
-- `pitforge/` — agent creation and management CLI
-- `pitlab/` — experiment and analysis CLI
-- `pitlinear/` — Linear issue tracker CLI (see below)
-- `pitnet/` — on-chain provenance CLI (EAS attestation on Base L2)
-- `pitstorm/` — traffic simulation CLI
-- `pitbench/` — benchmarking CLI
+- `pitkeel/` — operational stability CLI, keel state management
+- `shared/` — Go shared library (config, theme) for pitctl/pitkeel
+- `go.work` — Go workspace (pitctl, pitkeel, shared only)
+- `.keel-state` — keel operational state
+- `scripts/prepare-commit-msg` — git hook for pitkeel signals
 
-## Build, Test, and Development Commands
+### What is NOT on paragate
 
-- `pnpm run dev` — local dev server
-- `pnpm run build` — production build
-- `pnpm run start` — run production build locally
-- `pnpm run lint` — ESLint
-- `pnpm run typecheck` — TypeScript type checking
-- `pnpm run test:unit` — unit + API tests (1,289 tests)
-- `pnpm run test:ci` — lint + typecheck + unit + integration
-- `pnpm run test:e2e` — Playwright tests (set `BASE_URL` for deployed instance)
+Application code (`app/`, `components/`, `lib/`, `db/`), test suites (`tests/`), Node.js infrastructure (`package.json`, `node_modules`), CI workflows (`.github/`), unused Go CLIs (`pitforge/`, `pitlab/`, `pitlinear/`, `pitnet/`, `pitstorm/`, `pitbench/`), browser extension (`slopodar-ext/`), notebooks, and build configs. All preserved on `wake`.
 
-## Coding Style & Naming Conventions
+## Build Commands (paragate)
 
-- TypeScript (strict); prefer typed objects over `any`
-- Indentation: 2 spaces
-- React components: PascalCase filenames and exports
-- Utilities and hooks: camelCase (e.g., `lib/use-bout.ts`)
-- Keep Tailwind class lists readable; use `clsx` + `tailwind-merge` when combining
-- **All log and list-like data files use YAML format.** Machine-readable, human-readable, lint-checkable, Hugo-compilable. No new TSV, markdown tables, or ad-hoc formats for structured data.
-
-## Commit & Pull Request Guidelines
-
-- Use atomic commits
-- Commit messages: Conventional Commits (`feat:`, `fix:`, `chore:`)
-- Do not add LLM attribution or co-authorship lines
-- PRs: clear summary, test evidence, UI screenshots for visual changes
-
-## Go CLI Tools (pit* family)
-
-All Go CLIs live in the workspace root (`go.work`) and share `shared/config` (env loading) and `shared/theme` (lipgloss Tokyo Night styling). They use Go 1.25.7, stdlib `flag` + hand-rolled switch dispatch (no cobra), and follow the pattern in `pitctl/main.go`.
-
-### pitlinear — Linear Issue Management
-
-**When to use:** Any task involving Linear issues. Use `pitlinear` instead of raw GraphQL or curl.
-
-**Environment:** Requires `LINEAR_API_KEY` (in `.env.local` or exported). Optional `LINEAR_TEAM_NAME` sets the default team key.
-
-**Quick reference:**
 ```bash
-pitlinear issues list --state Todo --limit 10
-pitlinear issues create --title "Fix X" --priority urgent --label Bug --state Todo
-pitlinear issues get OCE-22
-pitlinear issues update OCE-22 --state "In Progress"
-pitlinear comments add OCE-22 --body "Starting work"
-pitlinear --json issues get OCE-22               # JSON output
-printf 'long description' | pitlinear issues create --title "T" --desc -  # stdin
+# Hugo site
+cd sites/oceanheart && make sync && hugo serve
+
+# Go CLIs
+cd pitctl && go vet ./... && go test ./... && go build .
+cd pitkeel && go vet ./... && go test ./... && go build .
 ```
 
-**Build/test:** `cd pitlinear && go vet ./... && go test ./... && go build .`
+## Commit Guidelines
 
-## Security & Configuration Tips
+- Use atomic commits directly to `paragate` (no feature branches — SD-278)
+- Commit messages: Conventional Commits (`feat:`, `fix:`, `chore:`)
+- Do not add LLM attribution or co-authorship lines
+- **All log and list-like data files use YAML format.** Machine-readable, human-readable, lint-checkable, Hugo-compilable.
 
-- Local secrets live in `.env` (do not commit)
-- Required env vars: `DATABASE_URL`, `ANTHROPIC_API_KEY`, `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`, `CLERK_SECRET_KEY`
-- When rotating keys, update local `.env` and deployment envs consistently
+## Conventions
+
+- Go code: stdlib `flag` + hand-rolled switch dispatch, Go 1.25.7
+- Documentation: Markdown for prose, YAML for structured data
+- Indentation: 2 spaces
 
 ### CRITICAL: Piping Values to CLI Tools
 
-**NEVER use `echo` to pipe values to CLI tools.** `echo` appends a trailing newline that silently corrupts values. This breaks API keys, secrets, DB connection strings, boolean flags.
+**NEVER use `echo` to pipe values to CLI tools.** `echo` appends a trailing newline that silently corrupts values.
 
 **ALWAYS use `printf` instead:**
 ```bash
@@ -358,11 +330,4 @@ echo "true" | vercel env add MY_FLAG production
 
 # CORRECT — value is exactly "true"
 printf 'true' | vercel env add MY_FLAG production
-```
-
-After setting env vars, verify:
-```bash
-vercel env pull .env.check --environment production
-grep '\\n"' .env.check
-rm .env.check
 ```
