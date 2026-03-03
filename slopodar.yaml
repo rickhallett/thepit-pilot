@@ -1,7 +1,8 @@
 # slopodar.yaml — Anti-patterns of LLM authenticity
 #
-# A living inventory of tells, tics, and tendencies that make LLM output
-# sound like LLM output. Each entry is a pattern to watch for and ward off.
+# A field taxonomy from one project, one model family, 23 days.
+# The patterns are hypotheses. If you recognise them in your own
+# work, they replicate. If you don't, they don't.
 #
 # Named after the radar that detects slop before it reaches production.
 # Maintained by the Captain and crew. Entries are added when caught

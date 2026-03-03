@@ -29,6 +29,8 @@ This is your primary instrument. It contains the last 20 session decisions, tota
 
 If the index is missing or stale, regenerate it: `node bin/sd-index.js`. If you need to trace a specific historical decision, read the full file then. Not on boot.
 
+**SD number collisions (SD-297):** When an SD number appears twice in the log (historical accident, parallel sessions), the later entry gets a forward-ref annotation pointing to the collision. Historical entries are never renumbered — the chain (SD-266) is immutable. Forward-ref is the default resolution for all numbering collisions.
+
 Do NOT read every file in docs/internal/ — that will consume tokens and increase risk of compaction. **Lazy Loading:** know what exists, read only when needed.
 
 **Search strategy (SD-195):** BFS by default. Scan depth-1 files first (there are only 7). Go deeper only when investigating a specific question (DFS). File hierarchy depth signals read frequency: depth 1 = every session, depth 2 = when topic is relevant, depth 3+ = deliberate research only.

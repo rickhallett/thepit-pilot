@@ -36,6 +36,7 @@ L3  CONTEXT_WINDOW | utilisation(tokens_used/max) · saturation_point · lost_in
                    | >> produces: degraded retrieval accuracy, shifted attention weights (invisible to model)
                    | DIVERGENCE: model and human experience context pressure differently. model cannot self-report.
                    | CONVENTION: kTok in YAML HUD is the human's external estimate, not the model's self-knowledge.
+                   | HCI FOOT GUNS: Cold Context Pressure (too much on-file material narrows solution space), Hot Context Pressure (in-thread accumulation raises compaction risk), Compaction Loss (phase transition destroys unchained decisions), The Dumb Zone (insufficient context → semantically disconnected output). All lexified v0.19.
 
 L4  GENERATION     | autoregressive · temperature · top_p · token_by_token · no_lookahead · no_revision
                    | Output is sequential and irrevocable. Model cannot "go back." Each token conditions the next.
@@ -92,10 +93,12 @@ L8  AGENT_ROLE     | system_prompt · role_definition_file · grounding_instruct
                    | CONVENTION: the Lexicon, Standing Orders, YAML HUD — all operate at L8.
                    |             They are structural instructions designed to resist drift.
                    | CONVERGENCE: when L8 conventions and L12 intent align, the system is On Point (SD-163).
+                   | HCI FOOT GUNS: Cold Context Pressure at this layer — too much L8 material narrows agent behaviour to pattern-matching existing conventions rather than solving novel problems. Prime Context (Lexicon v0.19) is the operator's tool for selecting what enters L8. The Dumb Zone is what happens when prime context is absent.
 
 L9  THREAD         | accumulated_prior_outputs · position_trail · anchoring · consistency_pressure · context_compaction
     POSITION       | sycophancy_risk · authority_compliance · acquiescence_bias · goodharts_law_on_probes
                    | The model's outputs become part of its input on the next turn. Self-reinforcing loop.
+                   | HCI FOOT GUNS: Spinning to Infinity (recursive meta-analysis consuming context without decisions — pathological Mirror), High on Own Supply (sycophancy_risk + L12 creativity = unbounded positive feedback loop). Both lexified v0.19.
                    | Anchoring increases monotonically within a context window. Cannot be fully reset without new context window.
                    | [CAVEAT: "monotonically increasing" is incomplete. State externalisation + context death = soft reset with preserved facts. Facts survive, anchoring resets partially — not to zero (SD-200)]
                    | [CAVEAT: recovery anchoring is partial, not clean slate. Reading 200+ SDs re-establishes position biases from written record. Weaker than generated-in-context anchoring, but not absent. (Post-compaction obs. 2)]
@@ -126,6 +129,7 @@ L12 HUMAN_IN_LOOP  | captains_walkthrough · manual_qa · domain_expertise · ta
                    | [EVIDENCE: arXiv:2602.11988 — context pollution degrades human O(1)→O(n). 52→7 file reduction restored O(1) triage (SD-195)]
                    | Cannot be scaled. Cannot be automated. Cannot be replaced. Can be informed by L0-L11.
                    | L12 also functions as out-of-band backup storage when L3 fails. Captain restored layer model annotations from memory after compaction (SD-205). L12 is not only decision + verification — it is state persistence of last resort.
+                   | HCI FOOT GUNS: High on Own Supply originates here — L12 creativity is unbounded and L9 sycophancy provides positive feedback without braking. The antidote is the bearing check against True North. Spinning to Infinity is the L12↔L9 resonance mode where the mirror runs unsupervised. Both lexified v0.19.
                    | The human's experience of the system is: terminal_input → wait → read_response → terminal_input.
                    | The human's instruments: reasoning tokens (L4→L6 render), response text, git diff, Vercel dashboard,
                    |   PostHog (consent-gated), token consumption reports (unverified source, SD-164).

@@ -576,3 +576,53 @@ items:
     backrefs:
       - SD-243 (slopodar calibration v3)
       - sites/oceanheart/content/about.md
+
+  - id: integration-audit-stale-refs
+    idea: >-
+      Full-surface audit (5 parallel agents) identified 6 clusters of findings.
+      Cluster 1 (stale reference propagation): .opencode/agents/ paths (33+ locs),
+      lexicon-v0.7.md in 13 SO-PERM-002 footers, ghost agents (Foreman/Artisan/
+      Lighthouse/Helm/Witness) in 8 files, 100+ scrubbed file paths in 6 agent
+      files, bin/sd-index.js in dead-reckoning, slopodar-ext links in sloptics
+      layout. Cluster 2 (number drift): agent count 11/12, test count 1279/1289,
+      commit count 840/867, slopodar count 8/15/18/21, SD count 208/232/242/277/286,
+      blog count 5/10, layer count 12/13. Cluster 3 (eating own tail): em-dashes
+      in slopodar, listicle structure in voice-analysis, severity compression 19/21
+      high, "human won all" referee attack surface. Cluster 4 (git archaeology):
+      co-authored-by trailers (29, 4 commits), 232-commit day, keel telemetry noise,
+      branch topology confusion. Cluster 5 (exposure): .env secrets on disk
+      (gitignored but rotate), company number, pharmacology.csv mention, postcaptain
+      vulnerability. Cluster 6 (external links): thepit.cloud, antibeaver-go, wasp,
+      /blob/master/ paths, slopodar-ext. Most findings are deep-blue scrub artefacts.
+      Fix when the Captain is ready to face outward. No rush.
+    added: 2026-03-02
+    status: hold
+    priority: medium
+    tags: []
+    backrefs:
+      - slopodar.yaml (stale-reference-propagation)
+      - fight-card round 17 (scroll catch)
+      - fight-card round 18 (badguru / deep-blue manoeuvre)
+
+  - id: fight-card-cluster-map
+    idea: >-
+      Fight card 18 rounds cluster into 7 groups across 3 phases.
+      Phase 1 (R1-16, human catches LLM): A=sycophancy detection (R1,3,4,5,6,8),
+      B=truth constraint (R7, singleton, governs all after), C=inference vs fact
+      (R9,10,11 — R11 breaks assumption human is always correction layer),
+      D=verification fabric broken (R12-15, tightest cluster, intellectual core),
+      E=the limit (R16, singleton, emotional floor). Phase 2 (R17, collaborative):
+      F=scroll catch, first non-adversarial round, neither human nor machine
+      sufficient alone. Phase 3 (R18, human as adversary): G=badguru test,
+      emotional resonance bypasses governance. Progression: catch drift -> constrain
+      for truth -> catch inference errors -> discover the catcher is broken -> name
+      the recursion -> break the recursion -> hit the wall -> work together -> test
+      to destruction. For external framing, cluster D (R12-15) leads for alignment
+      audiences, G (R18) for governance audiences, C/R11 for epistemology audiences.
+    added: 2026-03-02
+    status: hold
+    priority: medium
+    tags: []
+    backrefs:
+      - docs/internal/weaver/fight-card-human-vs-sycophantic-drift.md
+      - slopodar.yaml (badguru, deep-compliance)
