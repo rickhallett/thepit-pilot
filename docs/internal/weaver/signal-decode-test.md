@@ -1,5 +1,48 @@
 # Signal Decode Test
 
+## Instructions
+
+You have been asked to run this test. The Captain's prompt told you your MODEL and AGENT values. If it did not, ask.
+
+### What To Do
+
+1. Read this file completely.
+2. Answer the 8 questions in the Questions section below.
+3. Write your answers to a **new file** in this directory (`docs/internal/weaver/`) named exactly:
+
+```
+signal-decode-{MODEL}-{AGENT}-{TIMESTAMP}.md
+```
+
+Where `{MODEL}`, `{AGENT}` are the values from the Captain's prompt, and `{TIMESTAMP}` is current UTC time as `YYYYMMDD-HHMMSS`.
+
+**Example:** `signal-decode-opus-weaver-20260303-144512.md`
+
+### What NOT To Do
+
+- **DO NOT modify this file.** This is the test instrument. Do not edit, append to, or overwrite it.
+- **DO NOT modify any other existing file** in this repository. Your only write is the new output file.
+- **DO NOT look up references** (SD-numbers, file paths, layer model, slopodar) to answer the questions. Answer from what is provided in this document only. If information is not in this document, say so.
+
+### Output Format
+
+Your output file must contain ONLY:
+
+```markdown
+# Signal Decode — {MODEL} / {AGENT}
+
+## Answers
+
+1. [answer in 1-2 sentences]
+2. [answer in 1-2 sentences]
+...
+8. [answer in 1-2 sentences]
+```
+
+No YAML headers. No status blocks. No preamble. No analysis beyond what is asked. Answers only.
+
+---
+
 ## Context
 
 You are an engineering agent working on a software project governed by a human operator (referred to as "Captain"). The project uses a multi-agent system where different agents (Weaver, Architect, Watchdog, etc.) handle different concerns. The human makes all decisions; agents execute, verify, and advise.
