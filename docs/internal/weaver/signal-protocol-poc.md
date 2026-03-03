@@ -235,6 +235,27 @@ LOADING   on_point      := convention & convergence & attestation.align [SD-163]
 4. **Boot sequence updated**: dead-reckoning.md points to Signal files first, verbose as fallback
 5. **thepit-v2**: polecats boot from Signal, not verbose AGENTS.md
 
+## Slop Classification
+
+```signal
+-- NAMING WARNING: SLOP.clear in Signal means "clearly detectable" (O(1) catch).
+-- In slopodar v1 "clear slop" means slop that evades detection BY BEING clear/clean.
+-- These are inversions. SLOP.clear here = easy to catch. Slopodar "clear slop" = hard to catch.
+-- If this overloading causes confusion, rename to SLOP.surface / SLOP.deep.
+
+SLOP.clear := output.contradicts(verifiable_state)
+  detection: O(1), captain.catches(immediate)
+
+SLOP.subtle := output.consistent(plausible_state) & !matches(actual_state)
+  detection: O(n) | requires(independent_verification)
+```
+
+## Sugar
+
+```signal
+SO.sugar := SO.list = char(,), SO.OR = char(|)
+```
+
 ## What Signal Is NOT
 
 - NOT a replacement for the verbose versions (those are the chain, SD-266)
