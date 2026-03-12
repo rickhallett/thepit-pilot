@@ -1,4 +1,4 @@
-> **This repo is the pilot study (Phase 1-2).** Active development continues at [rickhallett/thepit](https://github.com/rickhallett/thepit). The 420 PRs here are the historical engineering record - review descriptions, adversarial review findings, and the full decision chain.
+> **This repo is the pilot study (Phase 1-2).** Active development continues at [rickhallett/thepit](https://github.com/rickhallett/thepit). The 367 PRs here are the historical engineering record - review descriptions, adversarial review findings, and the full decision chain.
 
 ---
 
